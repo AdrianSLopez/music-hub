@@ -1,5 +1,5 @@
 const axios = require("axios");
-const config = require('../config.json');
+const config = require('../../config.json');
 
 // get list of tracks related to user search input
 const getTracks = async (name, resultLimit) => {
