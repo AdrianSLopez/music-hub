@@ -1,17 +1,13 @@
 const axios = require("axios");
-const base = 'https://spotify81.p.rapidapi.com';
-const headers = {
-    'X-RapidAPI-Key': 'GET API KEY',
-    'X-RapidAPI-Host': 'spotify81.p.rapidapi.com'
-  };
+const config = require('../config.json');
 
 // get list of tracks related to user search input
 const getTracks = async (name, resultLimit) => {
     const options = {
       method: 'GET',
-      url: `${base}/search`,
+      url: `${config.base}/search`,
       params: {q:`${name}`, type: 'tracks', limit: `${resultLimit}`},
-      headers
+      headers: config.headers
     };
     
     try {
@@ -28,9 +24,9 @@ const getTracks = async (name, resultLimit) => {
 const getTrackInfo = async (id) => {
     const options = {
         method: 'GET',
-        url: `${base}/tracks`,
+        url: `${config.base}/tracks`,
         params: {ids: `${id}`},
-        headers
+        headers: config.headers
     }
     
     try {
