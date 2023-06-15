@@ -1,7 +1,10 @@
 const express = require('express');
+const api = require('spotify-api');
 const mongo = require('./db');
-const port = 8888;
 const app = express();
+const port = 8888;
+
+api.generateToken()
 
 const search = require('./routes/search.js');
 app.use('/search', search);

@@ -1,2 +1,3 @@
-spotify-application/node_modules
-spotify-application/config.json
+/spotify-application/node_modules
+/spotify-application/config.json
+/spotify-application/package-lock.json
