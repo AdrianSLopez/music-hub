@@ -4,7 +4,7 @@ const config = require('../config.json');
 
 
 const mongo = () => {
-    const mongoURL = `mongodb+srv://${config.username}:${config.password}@cluster0.ycvperg.mongodb.net/${config.database_name}?retryWrites=true&w=majority`;
+    const mongoURL = `mongodb+srv://${config.mongoDBUsername}:${config.mongoPassword}@music-hub-temp.sdtmsmo.mongodb.net/${config.mongoDatabaseName}?retryWrites=true&w=majority`;
     let db = null;
 
     async function connect() {
