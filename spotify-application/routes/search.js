@@ -15,30 +15,29 @@ router.use((req, res, next) => {
     next();
 });
 
-const _filterResults = (tracks) => {
+const _filterTracks = (tracks) => {
     return tracks.map((track) => {
-        const id = track.data.id;
-        const artists = track.data.artists.items.map((artist) => {
-            return artist.profile.name;
+        const id = track.id;
+        const artists = track.artists.map((artist) => {
+            return artist.name;
         }).join(", ");
-        const display = `${track.data.name} by ${artists}`;
+        const displayTitle = `${track.name} by ${artists}`;
 
-        return {id, display};
+        return {id, displayTitle};
     });
 };
 
 router.get('/', async (req, res) => {
     try {
         const { song, limit=10, metadata } = req.query;
+        const tracks = await api.getTracks(song, limit);
+        const filteredTracks = _filterTracks(tracks.items);
 
-        const songs = await api.getTracks(song, limit);
-        const results = _filterResults(songs);
+        res.json({ searchTerm: song, filteredTracks});
 
-        res.json({ searchTerm: song, results});
-
-        const data = { searchTerm: song, searchCount: limit, lastSearched: metadata.lastSearched};
-        
-        (await database.find('History', song) == null)? database.save('History',  data ) : database.update('History', data );
+        // save to database
+        // const data = { searchTerm: song, searchCount: limit, lastSearched: metadata.lastSearched};
+        // (await database.find('search-history', song) == null)? database.save('search-history',  data ) : database.update('search-history', data );
     } catch (error) {
         res.status(500).json(error.toString());
     }
@@ -57,26 +56,26 @@ const _filterSongInfo = (track) => {
     });
 };
 
+        // 3XCpEFU4uXsBq5WmVQQKC9 test id
 router.get('/:id/details', async (req, res) => {
     try {
         const { id } = req.params
         const { searchTerm } = req.query
-
         const trackInfo = await api.getTrackInfo(id)
-        const display = _filterSongInfo(trackInfo.data.tracks);
+        const display = _filterSongInfo(trackInfo);
         const selection = { id, display }
 
         res.json({ searchTerm, ...selection});
 
-        const dbSearch = await database.find('History', searchTerm)
+        // const dbSearch = await database.find('search-history', searchTerm)
 
-        if(dbSearch.selections == undefined) {
-            database.update('History', {searchTerm, selections: [selection]})
-        }else {
-            updatedSelections = dbSearch.selections
-            updatedSelections.push(selection)
-            database.update('History', {searchTerm, selections: updatedSelections})
-        }
+        // if(dbSearch.selections == undefined) {
+        //     database.update('search-history', {searchTerm, selections: [selection]})
+        // }else {
+        //     updatedSelections = dbSearch.selections
+        //     updatedSelections.push(selection)
+        //     database.update('search-history', {searchTerm, selections: updatedSelections})
+        // }
     } catch (error) {
         res.status(500).json(error.toString());        
     }
