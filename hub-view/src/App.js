@@ -1,9 +1,9 @@
 import "./App.css";
 import React from "react"
-import TopBar from "./pieces/TopBar"
-import SearchBar from "./pieces/searchBar";
-import SearchResults from "./pieces/searchResults";
-import SongInfo from "./pieces/SongInfo";
+import TopBar from "./views/TopBar"
+import SearchBar from "./views/searchBar";
+import SearchResults from "./views/searchResults";
+import SongInfo from "./views/SongInfo";
 
 function App() {
   return (
