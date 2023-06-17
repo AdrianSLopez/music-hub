@@ -4,3 +4,21 @@
   display: flex;
   justify-content: center;
 }
+.body {
+  background-color:bisque;
+  margin: 3% 2% 0% 2%;
+  display: flex;
+  justify-content: center;
+}
+
+.left-body, .right-body {
+  width: 50%;
+}
+.left-body {
+  background-color: darkcyan;
+  margin-right: 5%;
+}
+
+.right-body {
+  background-color: darkgray;
+}
