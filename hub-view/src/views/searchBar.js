@@ -8,15 +8,13 @@ function handleSubmit(e) {
   const form = e.target;
   const formData = new FormData(form);
 
-  console.log(form.method);
-  console.log(formData)
+  console.log(formData.get('song'))
 
   // You can pass formData as a fetch body directly:
-  fetch(`/search/?song=youmightbesleeping`, { method: form.method, body: formData });
-
-  // Or you can work with it as a plain object:
-  // const formJson = Object.fromEntries(formData.entries());
-  // console.log(formJson);
+  // fetch(`/search/?song=youmightbesleeping`).then( response => {
+  //   console.log(response)
+  //   return response.json
+  // })
 }
 
 const SearchBar = () => {
