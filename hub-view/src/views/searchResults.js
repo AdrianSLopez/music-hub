@@ -1,20 +1,12 @@
 import React from "react"
 
-const SearchResults = () => {
-  return (
-    <div>
-        <p> SONG NAME BY ARTIST, ARTIST, ARTIST, and ARTIST</p>
-        <p> SONG NAME BY ARTIST, ARTIST, ARTIST, and ARTIST</p>
-        <p> SONG NAME BY ARTIST, ARTIST, ARTIST, and ARTIST</p>
-        <p> SONG NAME BY ARTIST, ARTIST, ARTIST, and ARTIST</p>
-        <p> SONG NAME BY ARTIST, ARTIST, ARTIST, and ARTIST</p>
-        <p> SONG NAME BY ARTIST, ARTIST, ARTIST, and ARTIST</p>
-        <p> SONG NAME BY ARTIST, ARTIST, ARTIST, and ARTIST</p>
-        <p> SONG NAME BY ARTIST, ARTIST, ARTIST, and ARTIST</p>
-        <p> SONG NAME BY ARTIST, ARTIST, ARTIST, and ARTIST</p>
-        <p> SONG NAME BY ARTIST, ARTIST, ARTIST, and ARTIST</p>
-    </div>
-  );
+export default function SearchResults(props) {
+  if(props.results === undefined) return (<h1>DISPLAY #1 song on initial load</h1>)
+  return(
+    <ul>
+      {props.results.map( (song, i) => {
+        return <li key={i}>{song.displayTitle}</li>
+      })}
+    </ul>
+  )
 }
-  
-export default SearchResults;

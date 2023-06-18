@@ -1,31 +1,35 @@
-import React from "react"
+import React, { useState } from "react"
+import SearchResults from "./searchResults";
 
-function handleSubmit(e) {
-  // Prevent the browser from reloading the page
-  e.preventDefault();
+export default function SearchBar() {
+  const [songs, setSongs] = useState([])
+  // console.log(songs)
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  
+    const form = e.target;
+    const formData = new FormData(form);
+    
+    if(formData.get('song') === ''){
+      console.log("No song inputted")
+      return
+    }
+    
+    fetch(`/search/?song=${formData.get('song')}`)
+      .then(response => {
+          return response.json()
+      }).then(data => {
+          setSongs(data.filteredTracks)
+      })
+  }
 
-  // Read the form data
-  const form = e.target;
-  const formData = new FormData(form);
-
-  console.log(formData.get('song'))
-
-  // You can pass formData as a fetch body directly:
-  // fetch(`/search/?song=youmightbesleeping`).then( response => {
-  //   console.log(response)
-  //   return response.json
-  // })
-}
-
-const SearchBar = () => {
   return (
     <div>
       <form method="post" onSubmit={handleSubmit}>
         <input name="song" placeholder="Search for a song..."/>
       </form>
-        
+      
+      {songs.length === 0? <SearchResults />: <SearchResults results={songs}/>}
     </div>
   );
 }
-
-export default SearchBar;
