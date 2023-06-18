@@ -1,5 +1,5 @@
 # music-hub
-
+A website to search for songs. Being developed with MongoDB, Node.js, react.js, and Spotify Web API.
 
 ## History
 
