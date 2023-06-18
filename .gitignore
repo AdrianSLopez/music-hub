@@ -1,3 +1,5 @@
-/spotify-application/node_modules
-/spotify-application/config.json
-/spotify-application/package-lock.json
+/hub-application/node_modules
+/hub-application/config.json
+/hub-application/package-lock.json
+/hub-view/node_modules
+/hub-view/package-lock.json
