@@ -1,22 +1,32 @@
 import "./App.css";
-import React from "react"
-import TopBar from "./views/topBar"
+import React, {useState} from "react"
+import Logo from "./views/logo";
 import SearchBar from "./views/searchBar";
+import SearchResults from "./views/searchResults";
 import SongInfo from "./views/songInfo";
 
 export default function App() {
+  const [songResults, setSongResults] = useState([])
+
+  const sendSongResults = (inputResults) => {
+    setSongResults(inputResults)
+  }
+
   return (
     <div>
-      <TopBar />
-      <div className="body">  
+      <div className="topBar-container">
+        <Logo />
+        <SearchBar sendSongResults={sendSongResults}/>
+      </div>
+      <div className="body">
         <div className="left-body"> 
-          <SearchBar />
-        </div>
+          {songResults.length === 0? <SearchResults />: <SearchResults results={songResults}/>}
+         </div>
         <div className="right-body">
           <SongInfo />
         </div>
       </div>
-      
     </div>
+    
   );
 }
