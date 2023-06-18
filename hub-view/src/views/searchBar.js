@@ -15,7 +15,9 @@ export default function SearchBar(props) {
           return response.json()
       })
       .then(data => {
-          props.sendSongResults(data.filteredTracks)
+        props.sendUserSearchTerm(data.searchTerm)
+        props.sendSongResults(data.filteredTracks)
+        props.sendChosenSongId(data.filteredTracks[0].id)
       })
       .catch( e => { 
         console.log(e)
