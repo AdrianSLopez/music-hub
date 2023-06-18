@@ -48,15 +48,20 @@ const _filterSongInfo = (track) => {
         const artists = trackInfo.artists.map((artist) => {
             return {id: artist.id, name: artist.name, url: artist.external_urls.spotify, };
         })
-        const displayArtist = trackInfo.artists.map((artist) => {
-            return artist.name
-        }).join(", ");
-        const title = `${trackInfo.name} by ${displayArtist}`;
-        const albumInfo = `Track ${trackInfo.track_number} from album titled ${trackInfo.album.name}`;
-        const releaseDate = `Released in ${trackInfo.album.release_date}`;
         const time = `${((trackInfo.duration_ms)/60000).toFixed(2)} minutes`;
 
-        return {title, artists, albumInfo, albumUrl: trackInfo.album.external_urls.spotify, albumImages: trackInfo.album.images, releaseDate, time: time.replace('.', ':')};
+        return {
+            title: trackInfo.name, 
+            artists, 
+            songUrl: trackInfo.external_urls.spotify,
+            albumName: trackInfo.album.name, 
+            albumUrl: trackInfo.album.external_urls.spotify, 
+            albumImages: trackInfo.album.images, 
+            albumReleaseDate: trackInfo.album.release_date,
+            trackNumber: trackInfo.track_number,
+            time: time.replace('.', ':'),
+            preview: trackInfo.preview_url
+        };
     });
 };
 
