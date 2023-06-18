@@ -22,3 +22,45 @@
 .right-body {
   background-color: darkgray;
 }
+
+.topBar-container {
+  margin-left: 2%;
+  margin-right: 2%;
+  background-color: burlywood;
+  display: flex;
+}
+
+.topBar-container-header {
+  display: flex;
+  background-color: darkgrey;
+}
+
+.topBar-container-header-title {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.topBar-container-header-subtitle {
+  padding-top: 10%;
+  font-weight: 400;
+}
+
+.searchBar-container {
+  background-color: aliceblue;
+  margin-left: 60%;
+}
+
+.searchResults-container {
+  padding-top: 2%;  
+}
+
+.searchResults-container-result {
+  margin-bottom: 2%;
+  font-size: 25px;
+  padding-left: 2%;
+}
+
+.searchResults-container-result:hover {
+  background-color: darkgray;
+  cursor: pointer;
+}

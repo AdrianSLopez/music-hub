@@ -1,35 +1,32 @@
-import React, { useState } from "react"
-import SearchResults from "./searchResults";
+import React from "react"
 
-export default function SearchBar() {
-  const [songs, setSongs] = useState([])
-  // console.log(songs)
+export default function SearchBar(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
   
     const form = e.target;
     const formData = new FormData(form);
+    const userInput = formData.get('song')
+
+    if(userInput === '') return
     
-    if(formData.get('song') === ''){
-      console.log("No song inputted")
-      return
-    }
-    
-    fetch(`/search/?song=${formData.get('song')}`)
+    fetch(`/search/?song=${userInput}`)
       .then(response => {
           return response.json()
-      }).then(data => {
-          setSongs(data.filteredTracks)
+      })
+      .then(data => {
+          props.sendSongResults(data.filteredTracks)
+      })
+      .catch( e => { 
+        console.log(e)
       })
   }
 
   return (
-    <div>
+    <div className="searchBar-container">
       <form method="post" onSubmit={handleSubmit}>
         <input name="song" placeholder="Search for a song..."/>
       </form>
-      
-      {songs.length === 0? <SearchResults />: <SearchResults results={songs}/>}
     </div>
   );
 }
