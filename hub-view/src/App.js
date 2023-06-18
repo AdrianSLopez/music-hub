@@ -1,18 +1,16 @@
 import "./App.css";
 import React from "react"
-import TopBar from "./views/TopBar"
+import TopBar from "./views/topBar"
 import SearchBar from "./views/searchBar";
-import SearchResults from "./views/searchResults";
-import SongInfo from "./views/SongInfo";
+import SongInfo from "./views/songInfo";
 
-function App() {
+export default function App() {
   return (
     <div>
       <TopBar />
       <div className="body">  
         <div className="left-body"> 
           <SearchBar />
-          <SearchResults />
         </div>
         <div className="right-body">
           <SongInfo />
@@ -22,5 +20,3 @@ function App() {
     </div>
   );
 }
-  
-export default App;
