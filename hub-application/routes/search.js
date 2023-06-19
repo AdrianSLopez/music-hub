@@ -21,9 +21,9 @@ const _filterTracks = (tracks) => {
         const artists = track.artists.map((artist) => {
             return artist.name;
         }).join(", ");
-        const displayTitle = `${track.name} by ${artists}`;
+        const title = `${track.name} by ${artists}`;
 
-        return {id, displayTitle};
+        return {id, title};
     });
 };
 

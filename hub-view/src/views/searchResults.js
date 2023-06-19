@@ -23,7 +23,7 @@ export default function SearchResults(props) {
   }
 
   const songResults = props.results.map( (song) => {
-    return <div key={song.id} data-index-songid={song.id} onClick={onSongClick} className={props.chosenSongId === song.id? "searchResults-container-result-chosen": "searchResults-container-result"}>{song.displayTitle}</div>
+    return <div key={song.id} data-index-songid={song.id} onClick={onSongClick} className={props.chosenSongId === song.id? "searchResults-container-result-chosen": "searchResults-container-result"}>{song.title}</div>
   })
 
   return(
