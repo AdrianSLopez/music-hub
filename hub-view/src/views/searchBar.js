@@ -9,27 +9,9 @@ export default function SearchBar(props) {
     const userInput = formData.get('song')
 
     if(userInput === '') return
-    
-    fetch(`/search/?song=${userInput}`)
-      .then(response => {
-          return response.json()
-      })
-      .then(data => {
-        props.sendUserSearchTerm(data.searchTerm)
-        props.sendSongResults(data.filteredTracks)
-        
-        fetch(`/search/${data.filteredTracks[0].id}/details?searchTerm=${data.searchTerm}`)
-          .then(response => {
-              return response.json()
-          })
-          .then(data => {
-            props.sendChosenSongId(data.id)
-            props.sendSongInfo(data.display[0])
-          })
-      })
-      .catch( e => { 
-        console.log(e)
-      })
+
+    props.sendUserSearchTerm(userInput)
+    props.sendUrl(`/search/?song=${userInput}`)
   }
 
   return (

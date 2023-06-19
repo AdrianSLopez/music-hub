@@ -10,16 +10,7 @@ const _filterTracks = (tracks) => {
 
         return {
             id: track.id,
-            title: track.name, 
-            artists, 
-            songUrl: track.external_urls.spotify,
-            albumName: track.album.name, 
-            albumUrl: track.album.external_urls.spotify, 
-            albumImages: track.album.images, 
-            albumReleaseDate: track.album.release_date,
-            trackNumber: track.track_number,
-            time: time.replace('.', ':'),
-            preview: track.preview_url
+            title: track.name
         };
     });
 }
