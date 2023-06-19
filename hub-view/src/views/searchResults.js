@@ -7,19 +7,8 @@ export default function SearchResults(props) {
     e.preventDefault()
 
     const songId = e.target.getAttribute("data-index-songid")
-
-    fetch(`/search/${songId}/details?searchTerm=${props.userSearchTerm}`)
-      .then(response => {
-          return response.json()
-      })
-      .then(data => {
-        props.sendChosenSongId(songId)
-        props.sendSongInfo(data.display[0])
-      })
-      .catch( e => { 
-        console.log(e)
-      })
-    
+    props.sendChosenSongId(songId)
+    props.sendUrl(`/search/${songId}/details?searchTerm=${props.userSearchTerm}`)
   }
 
   const songResults = props.results.map( (song) => {

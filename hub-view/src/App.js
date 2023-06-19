@@ -6,14 +6,11 @@ import SearchResults from "./views/searchResults";
 import SongInfo from "./views/songInfo";
 
 export default function App() {
-  const [userSearchTerm, setUserSearchTerm] = useState([])
+  const [userSearchTerm, setUserSearchTerm] = useState('topGlobalSongs')
   const [songResults, setSongResults] = useState([])
-  const [chosenSongId, setChosenSongId] = useState([])
+  const [chosenSongId, setChosenSongId] = useState(0)
   const [songInfo, setSongInfo] = useState([])
-
-  const sendSongResults = (inputResults) => {
-    setSongResults(inputResults)
-  }
+  const [url, setUrl] = useState('/topGlobalSongs')
 
   const sendChosenSongId = (song) => {
     setChosenSongId(song)
@@ -23,35 +20,46 @@ export default function App() {
     setUserSearchTerm(term)
   }
 
-  const sendSongInfo = (info) => {
-    setSongInfo(info)
+  const sendUrl = (newUrl) => {
+    setUrl(newUrl)
   }
 
   useEffect(() => {
-    fetch(`/topGlobalSongs`)
-      .then(response => {
+    if(!url.includes('details')){
+      fetch(url)
+        .then(response => {
+            return response.json()
+        })
+        .then(data => {
+          setUserSearchTerm(userSearchTerm)
+          setSongResults(data)
+          setChosenSongId(data[0].id)
+          setUrl(`/search/${data[0].id}/details?searchTerm=${userSearchTerm}`)
+          return
+        })
+        .catch(error => {
+          console.log(error)
+        })
+    }else {
+      fetch(url)
+        .then(response => {
           return response.json()
-      })
-      .then(data => {
-        setUserSearchTerm("topGlobalSongs")
-        setSongResults(data)
-        setChosenSongId(data[0].id)
-        setSongInfo(data[0])
-      })
-      .catch(error => {
-        console.log(error)
-      })
-  }, []);
+        })
+        .then(data => {
+          setSongInfo(data.display[0])
+        })
+    }
+  }, [url, userSearchTerm, chosenSongId]);
 
   return (
     <div>
       <div className="topBar-container">
         <Logo />
-        <SearchBar sendSongResults={sendSongResults} sendChosenSongId={sendChosenSongId} sendUserSearchTerm={sendUserSearchTerm} sendSongInfo={sendSongInfo}/>
+        <SearchBar sendUserSearchTerm={sendUserSearchTerm} sendUrl={sendUrl}/>
       </div>
       <div className="body">
         <div className="left-body"> 
-          {songResults.length === 0? <SearchResults />: <SearchResults results={songResults} sendChosenSongId={sendChosenSongId} sendSongInfo={sendSongInfo} chosenSongId={chosenSongId} userSearchTerm={userSearchTerm}/>}
+          {songResults.length === 0? <SearchResults />: <SearchResults results={songResults} sendChosenSongId={sendChosenSongId}  chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl}/>}
          </div>
         <div className="right-body">
           {songInfo.length === 0? <SongInfo />: <SongInfo songInfo={songInfo}/>}
