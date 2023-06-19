@@ -31,7 +31,7 @@ export default function App() {
     <div>
       <div className="topBar-container">
         <Logo />
-        <SearchBar sendSongResults={sendSongResults} sendChosenSongId={sendChosenSongId} sendUserSearchTerm={sendUserSearchTerm}/>
+        <SearchBar sendSongResults={sendSongResults} sendChosenSongId={sendChosenSongId} sendUserSearchTerm={sendUserSearchTerm} sendSongInfo={sendSongInfo}/>
       </div>
       <div className="body">
         <div className="left-body"> 
