@@ -1,7 +1,7 @@
 import React from "react"
 
 export default function SearchResults(props) {
-  if(props.results === undefined) return (<h1>DISPLAY #1 song on initial load</h1>)
+  if(props.results === undefined) return (<div>loading...</div>)
 
   const onSongClick = (e) => {
     e.preventDefault()

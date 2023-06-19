@@ -1,5 +1,5 @@
 import "./App.css";
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import Logo from "./views/logo";
 import SearchBar from "./views/searchBar";
 import SearchResults from "./views/searchResults";
@@ -26,6 +26,22 @@ export default function App() {
   const sendSongInfo = (info) => {
     setSongInfo(info)
   }
+
+  useEffect(() => {
+    fetch(`/topGlobalSongs`)
+      .then(response => {
+          return response.json()
+      })
+      .then(data => {
+        setUserSearchTerm("topGlobalSongs")
+        setSongResults(data)
+        setChosenSongId(data[0].id)
+        setSongInfo(data[0])
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }, []);
 
   return (
     <div>

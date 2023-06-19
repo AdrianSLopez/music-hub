@@ -3,11 +3,7 @@ import React from "react"
 const SongInfo = (props) => {
   if(props.songInfo === undefined) return(
     <div>
-      <h1>#1 Popular Song</h1>
-        <div><h1>IMAGE</h1></div>
-        <div><h2>EMBED</h2></div>
-        <div><h2>SONG INFO</h2></div>
-        <div><h2>ARTIST HEADSHOT</h2></div>
+      loading....
     </div>
   )
 
