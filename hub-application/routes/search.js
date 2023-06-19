@@ -33,7 +33,7 @@ router.get('/', async (req, res) => {
         const tracks = await api.getTracks(song, limit);
         const filteredTracks = _filterTracks(tracks.items);
 
-        res.json({ searchTerm: song, filteredTracks});
+        res.json(filteredTracks);
 
         // save to database
         // const data = { searchTerm: song, searchCount: limit, lastSearched: metadata.lastSearched};
