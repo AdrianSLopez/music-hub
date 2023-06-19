@@ -9,6 +9,7 @@ const _filterTracks = (tracks) => {
         const time = `${((track.duration_ms)/60000).toFixed(2)} minutes`;
 
         return {
+            id: track.id,
             title: track.name, 
             artists, 
             songUrl: track.external_urls.spotify,
