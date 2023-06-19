@@ -54,7 +54,8 @@
   padding-top: 2%;  
 }
 
-.searchResults-container-result {
+.searchResults-container-result,
+.searchResults-container-result-chosen {
   margin-bottom: 2%;
   font-size: 25px;
   padding-left: 2%;
@@ -63,4 +64,16 @@
 .searchResults-container-result:hover {
   background-color: darkgray;
   cursor: pointer;
+}
+
+.searchResults-container-result-chosen {
+  background-color: darkgray;
+}
+
+.songInfo-song-title-container {
+  display: flex;
+}
+
+.songInfo-artists-container {
+  display: flex;
 }

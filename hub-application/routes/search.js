@@ -21,9 +21,9 @@ const _filterTracks = (tracks) => {
         const artists = track.artists.map((artist) => {
             return artist.name;
         }).join(", ");
-        const displayTitle = `${track.name} by ${artists}`;
+        const title = `${track.name} by ${artists}`;
 
-        return {id, displayTitle};
+        return {id, title};
     });
 };
 
@@ -46,17 +46,25 @@ router.get('/', async (req, res) => {
 const _filterSongInfo = (track) => {
     return track.map((trackInfo) => {
         const artists = trackInfo.artists.map((artist) => {
-            return artist.name;
-        }).join(", ");
-        const title = `${trackInfo.name} by ${artists}`;
-        const albumInfo = `Track ${trackInfo.track_number} from album titled ${trackInfo.album.name}`;
-        const releaseDate = `Released in ${trackInfo.album.release_date}`;
+            return {id: artist.id, name: artist.name, url: artist.external_urls.spotify, };
+        })
         const time = `${((trackInfo.duration_ms)/60000).toFixed(2)} minutes`;
-        return {title, albumInfo, releaseDate, time: time.replace('.', ':')};
+
+        return {
+            title: trackInfo.name, 
+            artists, 
+            songUrl: trackInfo.external_urls.spotify,
+            albumName: trackInfo.album.name, 
+            albumUrl: trackInfo.album.external_urls.spotify, 
+            albumImages: trackInfo.album.images, 
+            albumReleaseDate: trackInfo.album.release_date,
+            trackNumber: trackInfo.track_number,
+            time: time.replace('.', ':'),
+            preview: trackInfo.preview_url
+        };
     });
 };
 
-        // 3XCpEFU4uXsBq5WmVQQKC9 test id
 router.get('/:id/details', async (req, res) => {
     try {
         const { id } = req.params
@@ -64,9 +72,8 @@ router.get('/:id/details', async (req, res) => {
         const trackInfo = await api.getTrackInfo(id)
         const display = _filterSongInfo(trackInfo);
         const selection = { id, display }
-
+        
         res.json({ searchTerm, ...selection});
-
         // const dbSearch = await database.find('search-history', searchTerm)
 
         // if(dbSearch.selections == undefined) {
