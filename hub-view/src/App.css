@@ -1,9 +1,17 @@
-.body {
-  background-color:bisque;
-  margin: 3% 2% 0% 2%;
-  display: flex;
-  justify-content: center;
+.bg-color-cover {
+  width: 100%;
+  height: 100%;
+  z-index: -4;
+  position: absolute;
+  overflow: hidden;
 }
+.bg-cover-img {
+  margin-left: -5%;
+  width: 120%;
+  height: 120%;
+  filter: blur(45px)
+}
+
 .body {
   background-color:bisque;
   margin: 3% 2% 0% 2%;

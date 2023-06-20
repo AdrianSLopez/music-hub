@@ -53,6 +53,9 @@ export default function App() {
 
   return (
     <div>
+      <div className="bg-color-cover">
+        <img src={songInfo.albumImages[0].url} className="bg-cover-img" alt="background-color"/>
+      </div>
       <div className="topBar-container">
         <Logo />
         <SearchBar sendUserSearchTerm={sendUserSearchTerm} sendUrl={sendUrl}/>
