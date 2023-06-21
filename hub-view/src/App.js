@@ -54,7 +54,7 @@ export default function App() {
   return (
     <div>
       <div className="bg-color-cover">
-        <img src={songInfo.albumImages[0].url} className="bg-cover-img" alt="background-color"/>
+        {songInfo.albumImages!==undefined? <img src={songInfo.albumImages[0].url} className="bg-cover-img" alt="background-color"/>: <div></div>}
       </div>
       <div className="topBar-container">
         <Logo />
