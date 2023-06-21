@@ -70,7 +70,7 @@ const getTrackInfo = async (id) => {
 const getTopGlobalSongs = async () => {
     const options = {
         method: 'get',
-        url: `${config.spotifyBaseURL}/playlists/37i9dQZEVXbNG2KDcFcKOF/tracks?offset=0&limit=10`,
+        url: `${config.spotifyBaseURL}/playlists/37i9dQZEVXbNG2KDcFcKOF/tracks?offset=0&limit=11`,
         headers
     }
 
