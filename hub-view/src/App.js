@@ -6,7 +6,7 @@ import SearchResults from "./views/searchResults";
 import SongInfo from "./views/songInfo";
 
 export default function App() {
-  const [userSearchTerm, setUserSearchTerm] = useState('topGlobalSongs')
+  const [userSearchTerm, setUserSearchTerm] = useState('Displaying top global songs')
   const [songResults, setSongResults] = useState([])
   const [chosenSongId, setChosenSongId] = useState(0)
   const [songInfo, setSongInfo] = useState([])
@@ -58,12 +58,12 @@ export default function App() {
       </div>
       <div className="topBar-container">
         <Logo />
-        <SearchBar sendUserSearchTerm={sendUserSearchTerm} sendUrl={sendUrl}/>
+        <SearchBar sendUserSearchTerm={sendUserSearchTerm} sendUrl={sendUrl} userSearchTerm={userSearchTerm}/>
       </div>
       <div className="body">
         <div className="left-body"> 
           {songResults.length === 0? <SearchResults />: <SearchResults results={songResults} sendChosenSongId={sendChosenSongId}  chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl}/>}
-         </div>
+        </div>
         <div className="right-body">
           {songInfo.length === 0? <SongInfo />: <SongInfo songInfo={songInfo}/>}
         </div>
