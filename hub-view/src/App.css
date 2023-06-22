@@ -51,7 +51,7 @@ body{
   padding: 5px;
   padding-left: 10px;
   background-color: rgba(0, 0, 0, 0.1);
-  background-image: url('../public/search-icon.png');
+  background-image: url('./views/assets/search-icon.png');
   background-position: 275px 5px; 
   background-size: 10%;
   background-repeat:no-repeat;
@@ -101,18 +101,45 @@ body{
 .right-body-songInfo-container {
   width: 100%;
   height: 100%;
+  text-align: center;
 }
 .right-body-songInfo-image-container {
+  width: 300px;
+  height: 300px;
+  margin: 0% 20% 0% 20%;
   text-align: center;
+}
+.right-body-songInfo-image {
+  transition: 0.5s;
+}
+.right-body-songInfo-image img {
+  position: relative;
+  z-index: 5;
+}
+.right-body-songInfo-image:hover {
+  animation: 5s;
+  transition: 0.5s;
+  margin: 0px 0px 0px -50%;
+}
+.right-body-songInfo-image:hover ~.right-body-songInfo-vinyl img{
+  animation: 5s;
+  transition: 0.5s;
+  margin: -100% 0% 12% 28%;
+}
+.right-body-songInfo-vinyl img{
+  transition: 0.5s;
+  z-index: 0;
+  width: 95%;
+  height: 95%;
+  margin: -100% 0% 12% 0%;
 }
 .right-body-songInfo-info-container {
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 2%;
   margin-top: 5%;
   padding: 1px 20px 1px 20px;
-}
-.right-body-songInfo-info-container{
   font-size: 21px;
+  text-align: left;
 }
 .right-body-songInfo-info-title{
   margin-top: -8%;
