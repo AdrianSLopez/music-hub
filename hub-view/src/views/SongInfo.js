@@ -1,4 +1,7 @@
 import React from "react"
+import AudioPreview from "./audioPreview";
+import SongImage from "./songImage";
+import SongDescription from "./songDescription";
 
 const SongInfo = (props) => {
   if(props.songInfo === undefined) return(
@@ -8,26 +11,14 @@ const SongInfo = (props) => {
   )
 
   return (
-    <div>
-        <div>
-          <a href={props.songInfo.albumUrl}><img src={props.songInfo.albumImages[1].url} alt="Song Cover"/></a>
-        </div>
+    <div className="right-body">
+      <div className="right-body-songInfo-container">
+          <SongImage albumUrl={props.songInfo.albumUrl} albumImages={props.songInfo.albumImages}/>
 
-        <div className="songInfo-song-title-container">
-          <div><h2><a href={props.songInfo.songUrl}>{props.songInfo.title}</a> by</h2></div>
-          <div className="songInfo-artists-container">
-            {props.songInfo.artists.map((artist, i) => {
-              return  <h2 key={artist.id}>&nbsp;<a  href={artist.url}>{artist.name}</a>{i !== props.songInfo.artists.length-1? ",":""}</h2>
-            })}
-          </div>
-        </div>
+          <AudioPreview songPreview={props.songInfo.preview}/>
 
-        <div>
-          <h2>Track {props.songInfo.trackNumber} on <a href={props.songInfo.albumUrl}>{props.songInfo.albumName}</a></h2>
-          <h3>{props.songInfo.time}</h3>
-          <h3>Released {props.songInfo.albumReleaseDate}</h3>
-        </div>
-        <div><h2>ARTIST HEADSHOT</h2></div>
+          <SongDescription songInfo={props.songInfo}/>
+      </div>
     </div>
   );
 }

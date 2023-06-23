@@ -1,79 +1,158 @@
-.body {
-  background-color:bisque;
-  margin: 3% 2% 0% 2%;
-  display: flex;
-  justify-content: center;
+body{
+  background-color: rgba(0, 0, 0, 1);
+  color: #fff;
 }
-.body {
-  background-color:bisque;
-  margin: 3% 2% 0% 2%;
-  display: flex;
-  justify-content: center;
+.bg-color-cover {
+  width: 100%;
+  height: 100%;
+  z-index: -4;
+  position: absolute;
+  overflow: hidden;
 }
-
-.left-body, .right-body {
-  width: 50%;
-}
-.left-body {
-  background-color: darkcyan;
-  margin-right: 5%;
-}
-
-.right-body {
-  background-color: darkgray;
+.bg-cover-img {
+  width: 100%;
+  height: 100%;
+  filter: blur(45px)
 }
 
 .topBar-container {
-  margin-left: 2%;
-  margin-right: 2%;
-  background-color: burlywood;
+  z-index: 5;
   display: flex;
+  color: #fff;
+  margin-left: 15%;
+  margin-right: 15%;
 }
-
 .topBar-container-header {
   display: flex;
-  background-color: darkgrey;
 }
-
 .topBar-container-header-title {
-  font-size: 30px;
-  font-weight: 500;
+  font-size: 35px;
 }
-
 .topBar-container-header-subtitle {
-  padding-top: 10%;
-  font-weight: 400;
+  padding-top: 12%;
 }
-
+.topBar-container-header-subtitle a {
+  color:rgb(246, 247, 248); 
+}
+.topBar-container-header-subtitle a:hover {
+  color:rgb(37, 71, 184); 
+}
 .searchBar-container {
-  background-color: aliceblue;
-  margin-left: 60%;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.searchBar-container-input {
+  color: #fff;
+  width:300px;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid rgba(247, 242, 242, 0.288);
+  padding: 5px;
+  padding-left: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: url('./views/assets/search-icon.png');
+  background-position: 275px 5px; 
+  background-size: 10%;
+  background-repeat:no-repeat;
+  font-size: 13px;
+}
+.searchBar-container-input:hover {
+  border: 2px solid rgba(247, 242, 242, 0.288);
+  background-size: 11%;
 }
 
-.searchResults-container {
-  padding-top: 2%;  
+.body {
+  margin: 3% 4% 0% 4%;
+  display: flex;
+  justify-content: center;
 }
 
-.searchResults-container-result,
-.searchResults-container-result-chosen {
-  margin-bottom: 2%;
-  font-size: 25px;
-  padding-left: 2%;
+.left-body {
+  margin-right: 5%;
+  margin-left: 2%;
+  width: 610px;
+  height: 630px;
 }
-
-.searchResults-container-result:hover {
-  background-color: darkgray;
+.left-body-searchResults-container {
+  border-radius: 2%;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+.left-body-searchResults-container-result,
+.left-body-searchResults-container-result-chosen {
+  padding: 1% 2% 3% 2%;
+  font-size: 24px;
+}
+.left-body-searchResults-container-result:hover {
+  background-color: rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
-
-.searchResults-container-result-chosen {
-  background-color: darkgray;
+.left-body-searchResults-container-result-chosen { 
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-bottom-color: rgba(247, 242, 242, 0.1);
+  cursor:default;
 }
 
-.songInfo-song-title-container {
-  display: flex;
+.right-body {
+  width: 500px;
+  height: 660px;
 }
-
-.songInfo-artists-container {
-  display: flex;
+.right-body-songInfo-container {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.right-body-songInfo-image-container {
+  width: 300px;
+  height: 300px;
+  margin: 0% 20% 0% 20%;
+  text-align: center;
+}
+.right-body-songInfo-image {
+  transition: 0.5s;
+}
+.right-body-songInfo-image img {
+  position: relative;
+  z-index: 5;
+}
+.right-body-songInfo-image:hover {
+  animation: 5s;
+  transition: 0.5s;
+  margin: 0px 0px 0px -50%;
+}
+.right-body-songInfo-image:hover ~.right-body-songInfo-vinyl img{
+  animation: 5s;
+  transition: 0.5s;
+  margin: -100% 0% 12% 28%;
+}
+.right-body-songInfo-vinyl img{
+  transition: 0.5s;
+  z-index: 0;
+  width: 95%;
+  height: 95%;
+  margin: -100% 0% 12% 0%;
+}
+.right-body-songInfo-info-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 2%;
+  margin-top: 5%;
+  padding: 1px 20px 1px 20px;
+  font-size: 21px;
+  text-align: left;
+}
+.right-body-songInfo-info-title{
+  margin-top: -8%;
+  margin-bottom: -4%;
+  display:flex;
+}
+.right-body-songInfo-info-container a{
+  color:rgb(246, 247, 248); 
+}
+.right-body-songInfo-info-container a:hover{
+  color:rgb(37, 71, 184); 
 }
