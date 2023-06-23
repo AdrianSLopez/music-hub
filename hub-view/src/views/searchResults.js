@@ -16,8 +16,10 @@ export default function SearchResults(props) {
   })
 
   return(
-    <div className="left-body-searchResults-container">
-      {songResults}
+    <div className="left-body"> 
+      <div className="left-body-searchResults-container">
+        {songResults}
+      </div>
     </div>
   )
 }

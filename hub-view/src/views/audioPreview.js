@@ -1,6 +1,6 @@
 import React from "react"
 
-const AudioPreview = (props) => {
+export default function AudioPreview(props) {
   if(props.songPreview !== null){
     return (
         <div>
@@ -13,5 +13,3 @@ const AudioPreview = (props) => {
     )
   }
 }
-  
-export default AudioPreview;

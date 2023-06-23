@@ -1,6 +1,6 @@
 import React from "react"
   
-const Logo = () => {
+export default function Logo() {
   return (
     <div className="topBar-container-header">
         <p className="topBar-container-header-title">Song search</p>
@@ -8,5 +8,3 @@ const Logo = () => {
     </div>
   );
 }
-  
-export default Logo

@@ -1,9 +1,10 @@
 import "./App.css";
 import React, {useState, useEffect} from "react"
-import Logo from "./views/logo";
-import SearchBar from "./views/searchBar";
 import SearchResults from "./views/searchResults";
 import SongInfo from "./views/songInfo";
+import TopBar from "./views/topBar";
+import Background from "./views/background";
+import Body from "./views/body";
 
 export default function App() {
   const [userSearchTerm, setUserSearchTerm] = useState('Displaying top global songs')
@@ -53,21 +54,11 @@ export default function App() {
 
   return (
     <div>
-      <div className="bg-color-cover">
-        {songInfo.albumImages!==undefined? <img src={songInfo.albumImages[0].url} className="bg-cover-img" alt="background-color"/>: <div></div>}
-      </div>
-      <div className="topBar-container">
-        <Logo />
-        <SearchBar sendUserSearchTerm={sendUserSearchTerm} sendUrl={sendUrl} userSearchTerm={userSearchTerm}/>
-      </div>
-      <div className="body">
-        <div className="left-body"> 
-          {songResults.length === 0? <SearchResults />: <SearchResults results={songResults} sendChosenSongId={sendChosenSongId}  chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl}/>}
-        </div>
-        <div className="right-body">
-          {songInfo.length === 0? <SongInfo />: <SongInfo songInfo={songInfo}/>}
-        </div>
-      </div>
+      <Background albumImages={songInfo.albumImages}/>
+
+      <TopBar sendUserSearchTerm={sendUserSearchTerm} sendUrl={sendUrl} userSearchTerm={userSearchTerm}/>
+
+      <Body songResults={songResults} songInfo={songInfo} sendChosenSongId={sendChosenSongId} chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl}/>
     </div>
     
   );
