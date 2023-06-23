@@ -1,7 +1,5 @@
 import "./App.css";
 import React, {useState, useEffect} from "react"
-import SearchResults from "./views/searchResults";
-import SongInfo from "./views/songInfo";
 import TopBar from "./views/topBar";
 import Background from "./views/background";
 import Body from "./views/body";

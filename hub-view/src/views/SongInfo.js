@@ -12,7 +12,7 @@ const SongInfo = (props) => {
 
   return (
     <div className="right-body">
-      <div className="right-body-songInfo-container">
+      <div className="songInfo-container">
           <SongImage albumUrl={props.songInfo.albumUrl} albumImages={props.songInfo.albumImages}/>
 
           <AudioPreview songPreview={props.songInfo.preview}/>
