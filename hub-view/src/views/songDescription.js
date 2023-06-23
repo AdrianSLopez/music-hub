@@ -3,9 +3,9 @@ import React from "react"
 
 export default function SongDescription(props) {
   return (
-    <div className="right-body-songInfo-info-container">
+    <div className="songDescription-container">
         <p><a href={props.songInfo.songUrl}>{props.songInfo.title}</a></p>
-        <div className="right-body-songInfo-info-title">
+        <div className="songDescription-title">
         <p>by</p>
         {props.songInfo.artists.map((artist, i) => {
             return  <p key={artist.id}>&nbsp;<a  href={artist.url}>{artist.name}</a>{i !== props.songInfo.artists.length-1? ",":""}</p>

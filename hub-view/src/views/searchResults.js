@@ -12,12 +12,12 @@ export default function SearchResults(props) {
   }
 
   const songResults = props.results.map( (song) => {
-    return <div key={song.id} data-index-songid={song.id} onClick={onSongClick} className={props.chosenSongId === song.id? "left-body-searchResults-container-result-chosen": "left-body-searchResults-container-result"}>{song.title}</div>
+    return <div key={song.id} data-index-songid={song.id} onClick={onSongClick} className={props.chosenSongId === song.id? "searchResults-result-chosen": "searchResults-result"}>{song.title}</div>
   })
 
   return(
     <div className="left-body"> 
-      <div className="left-body-searchResults-container">
+      <div className="searchResults-container">
         {songResults}
       </div>
     </div>
