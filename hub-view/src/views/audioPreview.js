@@ -4,7 +4,7 @@ export default function AudioPreview(props) {
   if(props.songPreview !== null){
     return (
         <div>
-            <audio className="audio-element" src={props.songPreview} controls/>
+            <audio src={props.songPreview} controls/>
         </div>
     )
   }else {
