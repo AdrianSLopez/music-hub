@@ -142,13 +142,33 @@ a:hover{
 .songDescription-container {
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 2%;
-  margin-top: 5%;
-  padding: 1px 20px 1px 20px;
-  font-size: 21px;
-  text-align: left;
+  margin-top: 4%;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 10px 20px 10px 20px;
+  text-align: center;
 }
-.songDescription-title{
-  margin-top: -8%;
-  margin-bottom: -4%;
+.songDescription-title {
+  font-size: 25px;
+  margin-top: 1%;
+}
+.songDescription-artists{
+  margin-top: -13%;
+  margin-left: -3px;
   display:flex;
+  justify-content: center;
+}
+.songDescription-artists p a{
+  color: rgb(255, 255, 255);
+}
+.songDescription-info {
+  text-align: left;
+  background-color: rgba(119, 118, 118, 0.2);
+  border-radius: 2%;
+  width: auto;
+  padding: 1px 5px 1px 20px;
+}
+.songDescription-info p{
+  line-height: 1.8;
+  font-size: 15px;
 }
