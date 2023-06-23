@@ -9,7 +9,7 @@ export default function AudioPreview(props) {
     )
   }else {
     return(
-        <div><i>Preview unavailable</i></div>
+        <div className="audioPreview-unavailable"><i>Preview unavailable</i></div>
     )
   }
 }
