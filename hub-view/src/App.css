@@ -26,8 +26,8 @@ a:hover{
   z-index: 5;
   display: flex;
   color: #fff;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .logo-container {
   display: flex;
