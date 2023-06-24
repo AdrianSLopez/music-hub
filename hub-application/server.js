@@ -12,7 +12,7 @@ app.use('/search', search);
 const topGlobalSongs = require('./routes/topGlobalSongs.js');
 app.use('/topGlobalSongs', topGlobalSongs)
 
-const publicRecommendations = require('./routes/addRecommendation.js');
+const publicRecommendations = require('./routes/publicRecommendations.js');
 app.use('/publicRecommendations', publicRecommendations)
 
 app.listen(port, async () => {
