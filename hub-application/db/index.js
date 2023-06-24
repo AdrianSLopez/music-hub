@@ -20,30 +20,20 @@ const mongo = () => {
         }
     }
 
-    async function save(collectionName, data) {
+    async function save(data) {
         try {
-            const collection = db.collection(collectionName);
+            const collection = db.collection("public-recommendations");
             await collection.insertOne(data);
         } catch (error) {
             console.log(error);
         }
     }
 
-    /**
-     * @description                      performs a query on a mongo collection by deckId
-     * @param {String} collectionName    name of a collection in mongo
-     * @param {Object} deckIdentifier    deckId to query
-     * @return {Object or Array}         the card object by deck id or all results
-     */
-    async function find(collectionName, searchTerm) {
+    async function getRecommendations() {
         try {
-            const collection = db.collection(collectionName);
+            const collection = db.collection("public-recommendations");
 
-            if (searchTerm) {
-                return await collection.find({ searchTerm }).next();
-            } else {
-                return await collection.find({}).toArray();
-            }
+            return await collection.find({}).toArray();
         } catch (error) {
             return null
         }
@@ -66,9 +56,9 @@ const mongo = () => {
 
     return {
         connect,
+        update,
         save,
-        find,
-        update
+        getRecommendations
     };
 };
 

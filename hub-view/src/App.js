@@ -5,10 +5,12 @@ import Background from "./views/background";
 import Body from "./views/body";
 
 export default function App() {
-  const [userSearchTerm, setUserSearchTerm] = useState('Displaying top global songs')
+  const [userSearchTerm, setUserSearchTerm] = useState('Top global songs')
   const [songResults, setSongResults] = useState([])
   const [chosenSongId, setChosenSongId] = useState(0)
   const [songInfo, setSongInfo] = useState([])
+  const [refreshPublicRec, setrefreshPublicRec] = useState(true)
+  const [publicRecommendations, setPublicRecommendations] = useState([])
   const [url, setUrl] = useState('/topGlobalSongs')
 
   const sendChosenSongId = (song) => {
@@ -21,6 +23,10 @@ export default function App() {
 
   const sendUrl = (newUrl) => {
     setUrl(newUrl)
+  }
+
+  const updatePublicRec = (refresh) => {
+    setrefreshPublicRec(refresh)
   }
 
   useEffect(() => {
@@ -48,7 +54,23 @@ export default function App() {
           setSongInfo(data.display[0])
         })
     }
-  }, [url, userSearchTerm, chosenSongId]);
+
+    if(refreshPublicRec){
+      fetch('/publicRecommendations/recent')
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          console.log(data[0]._id)
+          setPublicRecommendations(data)
+        })
+        .catch(error => {
+          console.log(error)
+        })
+      
+        updatePublicRec(false)
+    }
+  }, [url, userSearchTerm, chosenSongId,refreshPublicRec]);
 
   return (
     <div>
@@ -56,7 +78,7 @@ export default function App() {
 
       <TopBar sendUserSearchTerm={sendUserSearchTerm} sendUrl={sendUrl} userSearchTerm={userSearchTerm}/>
 
-      <Body songResults={songResults} songInfo={songInfo} sendChosenSongId={sendChosenSongId} chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl}/>
+      <Body songResults={songResults} songInfo={songInfo} publicRecommendations={publicRecommendations} sendChosenSongId={sendChosenSongId} chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl} updatePublicRec={updatePublicRec}/>
     </div>
     
   );

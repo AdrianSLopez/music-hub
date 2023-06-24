@@ -9,11 +9,11 @@ api.generateToken()
 const search = require('./routes/search.js');
 app.use('/search', search);
 
-const history = require('./routes/history.js');
-app.use('/history', history);
-
 const topGlobalSongs = require('./routes/topGlobalSongs.js');
 app.use('/topGlobalSongs', topGlobalSongs)
+
+const publicRecommendations = require('./routes/addRecommendation.js');
+app.use('/publicRecommendations', publicRecommendations)
 
 app.listen(port, async () => {
     console.log(`Server is listening on port ${port}`);

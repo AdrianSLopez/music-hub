@@ -1,19 +1,5 @@
 const router = require('express').Router();
 const api = require('spotify-api');
-const database = require('../db');
-
-router.use((req, res, next) => {
-    const {  query } = req;
-    const { song } = req.query;
-
-    if(song != undefined) {
-        query.metadata = {
-            lastSearched: new Date()
-        };
-    }
-
-    next();
-});
 
 const _filterTracks = (tracks) => {
     return tracks.map((track) => {
@@ -34,10 +20,6 @@ router.get('/', async (req, res) => {
         const filteredTracks = _filterTracks(tracks.items);
 
         res.json(filteredTracks);
-
-        // save to database
-        // const data = { searchTerm: song, searchCount: limit, lastSearched: metadata.lastSearched};
-        // (await database.find('search-history', song) == null)? database.save('search-history',  data ) : database.update('search-history', data );
     } catch (error) {
         res.status(500).json(error.toString());
     }
@@ -74,15 +56,6 @@ router.get('/:id/details', async (req, res) => {
         const selection = { id, display }
         
         res.json({ searchTerm, ...selection});
-        // const dbSearch = await database.find('search-history', searchTerm)
-
-        // if(dbSearch.selections == undefined) {
-        //     database.update('search-history', {searchTerm, selections: [selection]})
-        // }else {
-        //     updatedSelections = dbSearch.selections
-        //     updatedSelections.push(selection)
-        //     database.update('search-history', {searchTerm, selections: updatedSelections})
-        // }
     } catch (error) {
         res.status(500).json(error.toString());        
     }
