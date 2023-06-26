@@ -101,6 +101,8 @@ a:hover{
   height: 530px;
   overflow: auto;
   direction: rtl;
+  scrollbar-color: rgba(119, 118, 118, 0.2) transparent;
+  scrollbar-width: thin;
 }
 .recommendations-item-container {
   display: flex;
@@ -218,6 +220,8 @@ a:hover{
   overflow-x: hidden;
   direction: rtl;
   text-align: left;
+  scrollbar-color: rgba(119, 118, 118, 0.2) transparent;
+  scrollbar-width: thin;
 }
 .searchResults-result,
 .searchResults-result-chosen {
