@@ -10,7 +10,12 @@ export default function Recommendations(props) {
         const term = e.target.getAttribute("data-index-term");
         props.sendChosenSongId(songId)
         props.sendUserSearchTerm(term)
-        props.sendUrl(`/search/?song=${term}`)
+
+        if(term.toLowerCase().split(' ').join('') === 'topglobalsongs') {
+            props.sendUrl('/topGlobalSongs')
+        }else {
+            props.sendUrl(`/search/?song=${term}`)            
+        }
     }
 
     const content = props.publicRecommendations.map((rec, i) => {
