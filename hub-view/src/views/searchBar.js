@@ -11,7 +11,13 @@ export default function SearchBar(props) {
     if(userInput === '') return
 
     props.sendUserSearchTerm(userInput)
-    props.sendUrl(`/search/?song=${userInput}`)
+    props.sendChosenSongId(0)
+    
+    if(userInput.toLowerCase().split(' ').join('') === 'topglobalsongs') {
+      props.sendUrl('/topGlobalSongs')
+    }else {
+      props.sendUrl(`/search/?song=${userInput}`)      
+    }
   }
 
   return (
