@@ -23,6 +23,8 @@ const mongo = () => {
     async function save(data) {
         try {
             const collection = db.collection("public-recommendations");
+            await collection.findOneAndDelete({}, {sort:{_id:1}})
+
             await collection.insertOne(data);
         } catch (error) {
             console.log(error);
@@ -32,7 +34,6 @@ const mongo = () => {
     async function getRecommendations() {
         try {
             const collection = db.collection("public-recommendations");
-            await collection.findOneAndDelete({}, {sort:{_id:1}})
 
             return await collection.find({}).sort({_id: -1}).toArray();
         } catch (error) {
