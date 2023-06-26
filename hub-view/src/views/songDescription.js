@@ -1,4 +1,5 @@
 import React from "react"
+import Recommend from "./recommend";
 
 
 export default function SongDescription(props) {
@@ -21,6 +22,7 @@ export default function SongDescription(props) {
           </p>
         </div>
         
+        <Recommend chosenSongId={props.chosenSongId} songInfo={props.songInfo} userSearchTerm={props.userSearchTerm} updatePublicRec={props.updatePublicRec}/>        
     </div>
   );
 }

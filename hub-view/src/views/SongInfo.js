@@ -2,7 +2,6 @@ import React from "react"
 import AudioPreview from "./audioPreview";
 import SongImage from "./songImage";
 import SongDescription from "./songDescription";
-import Recommend from "./recommend";
 
 const SongInfo = (props) => {
   if(props.songInfo === undefined) return(
@@ -18,8 +17,7 @@ const SongInfo = (props) => {
 
           <AudioPreview songPreview={props.songInfo.preview}/>
           
-          <Recommend chosenSongId={props.chosenSongId} songInfo={props.songInfo} userSearchTerm={props.userSearchTerm} updatePublicRec={props.updatePublicRec}/>
-          <SongDescription songInfo={props.songInfo}/>
+          <SongDescription chosenSongId={props.chosenSongId} songInfo={props.songInfo} userSearchTerm={props.userSearchTerm} updatePublicRec={props.updatePublicRec}/>
       </div>
     </div>
   );
