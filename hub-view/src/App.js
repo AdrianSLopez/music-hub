@@ -61,8 +61,9 @@ export default function App() {
           return response.json();
         })
         .then(data => {
-          console.log(data[0]._id)
-          setPublicRecommendations(data)
+          if(data.length !== 0) {
+            setPublicRecommendations(data)
+          }
         })
         .catch(error => {
           console.log(error)

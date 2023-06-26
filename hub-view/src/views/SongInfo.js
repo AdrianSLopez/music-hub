@@ -16,6 +16,7 @@ const SongInfo = (props) => {
       body: JSON.stringify({
         _id: props.chosenSongId,
         userSearchTerm: props.userSearchTerm,
+        title: props.songInfo.title,
         albumImages: props.songInfo.albumImages,
         userName: "tony tony chopper"
       }),
@@ -31,7 +32,7 @@ const SongInfo = (props) => {
   }
 
   return (
-    <div className="right-body">
+    <div className="songInfo">
       <div className="songInfo-container">
           <SongImage albumUrl={props.songInfo.albumUrl} albumImages={props.songInfo.albumImages}/>
 
