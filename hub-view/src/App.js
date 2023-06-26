@@ -38,8 +38,8 @@ export default function App() {
         .then(data => {
           setUserSearchTerm(userSearchTerm)
           setSongResults(data)
-          setChosenSongId(data[0].id)
-          setUrl(`/search/${data[0].id}/details?searchTerm=${userSearchTerm}`)
+          setChosenSongId(chosenSongId===0? data[0].id: chosenSongId)
+          setUrl(`/search/${chosenSongId===0? data[0].id: chosenSongId}/details?searchTerm=${userSearchTerm}`)
           return
         })
         .catch(error => {
@@ -79,7 +79,7 @@ export default function App() {
 
       <TopBar sendUserSearchTerm={sendUserSearchTerm} sendUrl={sendUrl} userSearchTerm={userSearchTerm}/>
 
-      <Body songResults={songResults} songInfo={songInfo} publicRecommendations={publicRecommendations} sendChosenSongId={sendChosenSongId} chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl} updatePublicRec={updatePublicRec}/>
+      <Body sendUserSearchTerm={sendUserSearchTerm} songResults={songResults} songInfo={songInfo} publicRecommendations={publicRecommendations} sendChosenSongId={sendChosenSongId} chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl} updatePublicRec={updatePublicRec}/>
     </div>
     
   );
