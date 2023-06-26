@@ -32,8 +32,9 @@ const mongo = () => {
     async function getRecommendations() {
         try {
             const collection = db.collection("public-recommendations");
+            await collection.findOneAndDelete({}, {sort:{_id:1}})
 
-            return await collection.find({}).toArray();
+            return await collection.find({}).sort({_id: -1}).toArray();
         } catch (error) {
             return null
         }
