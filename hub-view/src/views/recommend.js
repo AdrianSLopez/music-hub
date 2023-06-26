@@ -19,7 +19,7 @@ export default function Recommend(props) {
       fetch('/publicRecommendations/add', {
         method: "POST",
         body: JSON.stringify({
-          _id: props.chosenSongId,
+          songId: props.chosenSongId,
           userSearchTerm: props.userSearchTerm,
           title: props.songInfo.title,
           albumImages: props.songInfo.albumImages,
