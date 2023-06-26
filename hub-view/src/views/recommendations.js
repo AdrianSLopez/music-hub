@@ -11,7 +11,7 @@ export default function Recommendations(props) {
 
     const content = props.publicRecommendations.map((rec, i) => {
         return (
-            <div className="recommendations-item-container">
+            <div className="recommendations-item-container" key={rec._id}>
                 <img className={i===0? "recommendations-item-img-first":"recommendations-item-img"} data-index-song={i} src={rec.albumImages[0].url} alt="album"/>
                 <div className={i===0? "recommendations-item-description-first":"recommendations-item-description"}>Recommended by <br /> {rec.userName}</div>
             </div>
