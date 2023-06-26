@@ -3,12 +3,6 @@ import React from "react"
 export default function Recommendations(props) {
     if(props.publicRecommendations === undefined) return 
 
-    // const onRecClick = (e) => {
-    //     e.preventDefault()
-    //     const index = e.target.getAttribute("data-index-song")
-    //     console.log("recommendation clicked on: [" + props.publicRecommendations[index].title + "]" )
-    // }
-
     const content = props.publicRecommendations.map((rec, i) => {
         return (
             <div className="recommendations-item-container" key={rec._id}>
