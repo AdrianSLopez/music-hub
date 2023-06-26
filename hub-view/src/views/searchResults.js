@@ -17,6 +17,7 @@ export default function SearchResults(props) {
 
   return(
     <div className="searchResults"> 
+    <div className="searchResults-subtitle">Results: </div>
       <div className="searchResults-container">
         {songResults}
       </div>
