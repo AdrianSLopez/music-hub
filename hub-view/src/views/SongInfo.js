@@ -2,6 +2,7 @@ import React from "react"
 import AudioPreview from "./audioPreview";
 import SongImage from "./songImage";
 import SongDescription from "./songDescription";
+import Recommend from "./recommend";
 
 const SongInfo = (props) => {
   if(props.songInfo === undefined) return(
@@ -10,38 +11,14 @@ const SongInfo = (props) => {
     </div>
   )
 
-  const saveSong = () => {
-    fetch('/publicRecommendations/add', {
-      method: "POST",
-      body: JSON.stringify({
-        _id: props.chosenSongId,
-        userSearchTerm: props.userSearchTerm,
-        title: props.songInfo.title,
-        albumImages: props.songInfo.albumImages,
-        userName: "tony tony chopper"
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8"
-      }
-    })
-    .catch(error => {
-      console.log(error)
-    })
-
-    props.updatePublicRec(true)
-  }
-
   return (
     <div className="songInfo">
       <div className="songInfo-container">
           <SongImage albumUrl={props.songInfo.albumUrl} albumImages={props.songInfo.albumImages}/>
 
           <AudioPreview songPreview={props.songInfo.preview}/>
-
-          <button onClick={saveSong}>
-            share
-          </button>
-
+          
+          <Recommend chosenSongId={props.chosenSongId} songInfo={props.songInfo} userSearchTerm={props.userSearchTerm} updatePublicRec={props.updatePublicRec}/>
           <SongDescription songInfo={props.songInfo}/>
       </div>
     </div>
