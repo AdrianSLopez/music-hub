@@ -68,7 +68,6 @@ a:hover{
   display: flex;
 }
 
-
 .recommendations-section {
   width: 360px;
   margin-right: 1%;
@@ -82,7 +81,7 @@ a:hover{
   text-align: center;
 }
 .recommendations {
-  height: 550px;
+  height: 530px;
   overflow: auto;
   direction: rtl;
   padding-top: 40px;
@@ -140,7 +139,6 @@ a:hover{
   animation: 5s;
   margin: -20px 10px 90px 10px;
 }
-
 
 .searchResults {
   margin-left: 0%;
