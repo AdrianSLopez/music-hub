@@ -34,7 +34,7 @@
     .body {
         margin: 0% 1% 0% 1%; 
         overflow-y: hidden;
-        /* background-color: darkcyan; */
+        background-color: darkcyan;
     }
 
     .recommendations-section {
@@ -105,5 +105,15 @@
     .searchResults-result,
     .searchResults-result-chosen {
         font-size: 19px;
+    }
+
+    .songInfo {
+        width: 580px;
+        height: 573px;
+        margin-top: 1%;
+    }
+    .songImage-container, .songImage-image img {
+        width: 250px;
+        height: 250px;
     }
 }
