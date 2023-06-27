@@ -1,0 +1,39 @@
+@media  (max-width: 1560px) and (min-width: 1251px) {
+ 
+    .bg-color-cover {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+    }
+    .logo-container {
+        display: flex;
+    }
+    .logo-title {
+        font-size: 28px;
+        transition: 0.2s;
+    }
+    .logo-subtitle {
+        font-size: 13px;
+        transition: 0.2s;
+    }
+    .searchBar-input {
+        width: 250px;
+        height: 20px;
+        background-position: 235px 2px; 
+        font-size: 10px;
+        transition: 0.2s;
+    }
+    .searchBar-input:hover, .searchBar-input:focus {
+        background-size: 12%;
+        background-color: rgba(0, 0, 0, 0.2);
+        background-position: 232px 0px; 
+    }
+
+    /* .songInfo {
+        width: 600px;
+        height: 550px;
+        background-color: aliceblue;
+    } */
+}
