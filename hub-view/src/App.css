@@ -75,6 +75,7 @@ a:hover{
 .searchBar-input:hover, .searchBar-input:focus {
   background-size: 12%;
   background-position: 273px 1px; 
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .body {
@@ -383,6 +384,7 @@ a:hover{
 }
 .recommend-input:focus {
   border: 2px solid rgba(247, 242, 242, 0.288);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .rcmnd-btn i {
   padding-top: 4px;
