@@ -268,6 +268,7 @@ a:hover{
 .songImage-container {
   width: 300px;
   height: 300px;
+  transition: 0s;
 }
 .songImage-image {
   transition: 0.5s;
@@ -342,16 +343,16 @@ a:hover{
   border: 2px solid rgba(247, 242, 242, 0.1);
   border-radius: 5px;
   margin-top: 3%;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px 15px 20px;
   text-align: center;
-  width: 360px;
+  width: 400px;
 }
 .songDescription-title {
   font-size: 25px;
   margin-top: 1%;
 }
 .songDescription-artists{
-  margin-top: -13%;
+  margin-top: -11%;
   margin-left: -3px;
   display:flex;
   justify-content: center;
