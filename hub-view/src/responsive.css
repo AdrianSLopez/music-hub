@@ -1,6 +1,6 @@
-@media  (max-width: 1750px) and (min-width: 1300px) {
+@media screen and (max-width: 1750px) and (min-width: 1401px) {
     *{
-        transition: 0.2s 
+        transition: 0.3s 
     }
     .bg-color-cover {
         width: 100%;
@@ -11,6 +11,7 @@
     }
     .logo-container {
         display: flex;
+        background-color: aliceblue;
     }
     .logo-title {
         font-size: 28px;
@@ -86,6 +87,7 @@
         margin-right: 10%;
         width: 610px;
         height: 100%;
+        transition: 0s;
     }
     .searchResults-subtitle {
         font-size: 21px;
@@ -94,12 +96,7 @@
     .searchResults-container {
         width: 100%;
         height: 530px;
-        overflow-y: auto;
-        overflow-x: hidden;
-        direction: rtl;
-        text-align: left;
-        scrollbar-color: rgba(119, 118, 118, 0.2) transparent;
-        scrollbar-width: thin;
+        transition: 0s;
     }
     .searchResults-result,
     .searchResults-result-chosen {
@@ -111,6 +108,9 @@
         height: 573px;
         margin-top: 1%;
     }
+    .songImage-container {
+        transition: 0s;
+    }
     .songImage-container, .songImage-image img {
         width: 250px;
         height: 250px;
@@ -121,6 +121,9 @@
         font-size: 21px;
     }
 
+    .songDescription-container {
+        width: 320px;
+    }
     .songDescription-title {
         font-size: 22px;
     }
@@ -143,5 +146,169 @@
     }
     .rcmnd-btn {
         font-size: 18px;
+    }
+}
+
+@media  screen and (max-width: 1400px) and (min-width: 1201px) {
+    *{
+        transition: 0.3s 
+    }
+    .logo-container {
+        background-color: darkcyan;
+    }
+
+    .logo-title {
+        font-size: 27px;
+    }
+    .logo-subtitle {
+        font-size: 12px;
+        padding-top: 13%;
+    }
+    .searchBar-input {
+        width: 240px;
+        height: 18px;
+        background-position: 225px 2px; 
+        font-size: 10px;
+        transition: 0.2s;
+    }
+    .searchBar-input:hover, .searchBar-input:focus {
+        background-size: 12%;
+        background-color: rgba(0, 0, 0, 0.2);
+        background-position: 223px 0px; 
+    }
+
+    .recommendations-section {
+        width: 290px;
+        margin-right: 1px;                                         
+    }
+    .recommendations-title {
+        width: 123px; 
+        font-size: 13px                                                                                                                                                    ;
+    }
+    .recommendations {
+        height: 400px;
+        overflow-x: hidden;
+    }
+    .recommendations-item-img, .recommendations-item-img-first {
+        margin-left: 10px;
+        transition: 0.5s;
+    }
+    .recommendations-item-img-first::after, .recommendations-item-img::after{
+        width: 99px;
+        height: 99px;
+        margin-top: -114px;
+        margin-left: -14px;
+    }
+    .recommendations-item-img-first {
+        margin-top: 1px;
+        margin-bottom: 33px;
+    }
+    .recommendations-item-img img, .recommendations-item-img-first img{
+        width: 105px;
+        height: 105px;
+    }
+    .recommendations-item-img:hover{
+        margin-left: 10px;
+    }
+    .recommendations-item-img:hover ~ .recommendations-item-description {
+        width: 130px;
+        font-size: 11px;
+        margin: -60px 10px 85px 10px;
+    }
+      .recommendations-item-img-first:hover ~ .recommendations-item-description-first {
+        width: 130px;
+        font-size: 11px;
+        margin: 0px 10px 100px 10px;
+    }
+
+    .searchResults {
+        margin-top: 0%;
+        margin-left: 0%;
+        margin-right: 4%;
+        width: 650px;
+        height: 100%;
+        transition: 0s;
+    }
+    .searchResults-subtitle {
+        font-size: 19px;
+        width: 80px;
+    }
+    .searchResults-container {
+        width: 100%;
+        height: 430px;
+        transition: 0s;
+    }
+    .searchResults-result,
+    .searchResults-result-chosen {
+        font-size: 17px;
+    }
+
+    .songInfo {
+        width: 550px;
+        height: 430px;
+        margin-top: 1%;
+    }
+    .songImage-container {
+        transition: 0s;
+    }
+    .songImage-container, .songImage-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .audio-controls-container {
+        width: 200px;
+        font-size: 19px;
+    }
+
+    .songDescription-container {
+        width: 300px;
+    }
+    .songDescription-title {
+        font-size: 21px;
+    }
+    .songDescription-artists{
+        margin-top: -11%;
+        font-size: 13px;
+    }
+    .songDescription-info p{
+        line-height: 1.5;
+        font-size: 12px;
+    }
+    
+    .recommend-label {
+        font-size: 13px;
+    }
+    .recommend-input {
+        width: 135px;
+        height: 14px;
+        font-size: 11px;
+    }
+    .rcmnd-btn {
+        font-size: 17wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwpx;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1025px) {
+    .logo-container {
+        background-color: aqua;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .logo-container {
+        background-color: green;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    .logo-container {
+        background-color: yellow;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 320px) {
+    .logo-container {
+        background-color: cadetblue;
     }
 }

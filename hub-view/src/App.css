@@ -1,5 +1,5 @@
 *{
-  transition: 0.2s 
+  transition: 0.3s 
 }
 body{
   background-color: rgba(0, 0, 0, 1);
@@ -206,6 +206,7 @@ a:hover{
   margin-left: auto;
   width: 610px;
   height: 605px;
+  transition: 0s;
 }
 .searchResults-subtitle {
   padding: 5px 0px 5px 10px;
@@ -231,6 +232,7 @@ a:hover{
   text-align: left;
   scrollbar-color: rgba(119, 118, 118, 0.2) transparent;
   scrollbar-width: thin;
+  transition: 0s;
 }
 .searchResults-result,
 .searchResults-result-chosen {
