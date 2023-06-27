@@ -116,6 +116,11 @@
         height: 250px;
     }
 
+    .audioPreview-unavailable {
+        margin-top: 1%;
+        margin-bottom: 2%;
+        font-size: 14px;
+    }
     .audio-controls-container {
         width: 250px;
         font-size: 21px;
@@ -265,6 +270,11 @@
         height: 200px;
     }
 
+    .audioPreview-unavailable {
+        margin-top: 1%;
+        margin-bottom: 2%;
+        font-size: 13px;
+    }
     .audio-controls-container {
         width: 200px;
         font-size: 18px;
@@ -313,8 +323,164 @@
 }
 
 @media screen and (max-width: 1200px) and (min-width: 1025px) {
+    *{
+        transition: 0.3s 
+    }
     .logo-container {
-        background-color: aqua;
+        background-color: cyan;
+    }
+
+    .logo-title {
+        font-size: 24px;
+    }
+    .logo-subtitle {
+        font-size: 11px;
+        padding-top: 13%;
+    }
+    .searchBar-input {
+        width: 210px;
+        height: 16px;
+        background-position: 198px 2px; 
+        font-size: 9px;
+        transition: 0.2s;
+    }
+    .searchBar-input:hover, .searchBar-input:focus {
+        background-size: 12%;
+        background-color: rgba(0, 0, 0, 0.2);
+        background-position: 196px 0px; 
+    }
+
+    .recommendations-section {
+        width: 290px;
+        margin-right: 1px;                                         
+    }
+    .recommendations-title {
+        width: 109px; 
+        font-size: 12px                                                                                                                                                    ;
+    }
+    .recommendations {
+        height: 321px;
+        overflow-x: hidden;
+    }
+    .recommendations-item-img, .recommendations-item-img-first {
+        margin-left: 10px;
+        transition: 0.5s;
+    }
+    .recommendations-item-img-first::after, .recommendations-item-img::after{
+        width: 85px;
+        height: 85px;
+        margin-top: -105px;
+        margin-left: -12px;
+    }
+    .recommendations-item-img-first {
+        margin-top: 1px;
+        margin-bottom: 33px;
+    }
+    .recommendations-item-img img, .recommendations-item-img-first img{
+        width: 95px;
+        height: 95px;
+    }
+    .recommendations-item-img:hover{
+        margin-left: 10px;
+    }
+    .recommendations-item-img:hover ~ .recommendations-item-description {
+        width: 110px;
+        font-size: 10px;
+        margin: -60px 10px 75px 10px;
+    }
+      .recommendations-item-img-first:hover ~ .recommendations-item-description-first {
+        width: 110px;
+        font-size: 10px;
+        margin: 0px 10px 90px 10px;
+    }
+
+    .searchResults {
+        margin-top: 0%;
+        margin-left: -10%;
+        margin-right: 4%;
+        width: 650px;
+        height: 100%;
+        transition: 0s;
+    }
+    .searchResults-subtitle {
+        font-size: 17px;
+        width: 80px;
+    }
+    .searchResults-container {
+        width: 100%;
+        height: 350px;
+        transition: 0s;
+    }
+    .searchResults-result,
+    .searchResults-result-chosen {
+        font-size: 15px;
+    }
+
+    .songInfo {
+        width: 550px;
+        height: 395px;
+        margin-top: 1%;
+    }
+    .songImage-container {
+        transition: 0s;
+    }
+    .songImage-container, .songImage-image img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .audioPreview-unavailable {
+        margin-top: 1%;
+        margin-bottom: 2%;
+        font-size: 11px;
+    }
+    .audio-controls-container {
+        width: 170px;
+        font-size: 15px;
+    }
+    .audio-play-container {
+        margin-left: 30px;
+    }
+    .audio-volume-container {
+        margin-right: 8px;
+    }
+    .audio-vol-icon-container {
+        margin-right: 3px;
+    }
+    .audio-volume-slide {
+        background-color: #fff;
+        width: 60px;
+        margin-top: 1px;
+    }
+
+    .songDescription-container {
+        width: 230px;
+    }
+    .songDescription-title {
+        font-size: 19px;
+    }
+    .songDescription-artists{
+        margin-top: -14%;
+        font-size: 11px;
+    }
+    .songDescription-info p{
+        line-height: 1.5;
+        font-size: 9px;
+    }
+
+    .recommend-container {
+        margin-top: 9px;
+    }    
+    .recommend-label {
+        font-size: 11px;
+    }
+    .recommend-input {
+        width: 100px;
+        height: 11px;
+        font-size: 9px;
+    }
+    .rcmnd-btn {
+        font-size: 14px;
     }
 }
 
