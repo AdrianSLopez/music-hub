@@ -42,12 +42,12 @@
         margin-right: 1px;                                         
     }
     .recommendations-title {
-        width: 130px;                                                                                                                                                                                 ;
+        width: 130px; 
+        font-size: 15px                                                                                                                                                    ;
     }
     .recommendations {
         height: 500px;
         overflow-x: hidden;
-        /* background-color: black; */
     }
     .recommendations-item-img, .recommendations-item-img-first {
         margin-left: 10px;
@@ -81,9 +81,29 @@
         margin: 0px 10px 100px 10px;
     }
 
-    /* .songInfo {
-        width: 600px;
-        height: 550px;
-        background-color: aliceblue;
-    } */
+    .searchResults {
+        margin-top: 1%;
+        margin-left: 0%;
+        margin-right: 10%;
+        width: 610px;
+        height: 100%;
+    }
+    .searchResults-subtitle {
+        font-size: 21px;
+        width: 90px;
+    }
+    .searchResults-container {
+        width: 100%;
+        height: 530px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        direction: rtl;
+        text-align: left;
+        scrollbar-color: rgba(119, 118, 118, 0.2) transparent;
+        scrollbar-width: thin;
+    }
+    .searchResults-result,
+    .searchResults-result-chosen {
+        font-size: 19px;
+    }
 }
