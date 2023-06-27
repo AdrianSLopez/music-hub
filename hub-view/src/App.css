@@ -60,7 +60,7 @@ a:hover{
   width:300px;
   height: 30px;
   border: none;
-  border-bottom: 2px solid rgba(247, 242, 242, 0.288);
+  border: 2px solid rgba(247, 242, 242, 0.288);
   padding: 5px;
   padding-left: 10px;
   background-color: rgba(0, 0, 0, 0.1);
@@ -72,8 +72,8 @@ a:hover{
   border-radius: 5px;
 }
 .searchBar-input:hover, .searchBar-input:focus {
-  border: 2px solid rgba(247, 242, 242, 0.288);
-  background-size: 11%;
+  background-size: 12%;
+  background-position: 273px 1px; 
 }
 
 .body {
@@ -211,7 +211,7 @@ a:hover{
 }
 .searchResults-container {
   border-radius: 5px;
-  border-top-left-radius: 0%;
+  border-top-left-radius: 0px;
   background-color: rgba(0, 0, 0, 0.2);
   border: 2px solid rgba(247, 242, 242, 0.1);
   width: 100%;
@@ -263,6 +263,8 @@ a:hover{
   position: relative;
   z-index: 5;
   border-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 .songImage-image:hover {
   animation: 5s;
@@ -284,6 +286,42 @@ a:hover{
 .audioPreview-unavailable {
   margin-top: 2%;
   margin-bottom: 3%;
+}
+.audio-controls-container {
+  display: flex;
+  justify-content: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 25px;
+  padding: 5px 0px 5px 0px;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+.audio-play-container {
+  margin-left: 60px;
+}
+.audio-play-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+.audio-volume-container {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 35px;
+}
+.audio-vol-icon-container {
+  margin-right: 10px;
+}
+.audio-volume-slide {
+  background-color: #fff;
+  width: 80px;
+  margin-top: 5px;
 }
 
 .songDescription-container {
@@ -335,14 +373,14 @@ a:hover{
   width: 140px;
   height: 15px;
   border: none;
-  border-bottom: 2px solid rgba(247, 242, 242, 0.288);
+  border: 2px solid rgba(247, 242, 242, 0.288);
   border-radius: 5px;
   padding: 5px;
   padding-left: 4px;
   font-size: 13px;
   background-color: rgba(119, 118, 118, 0.2);
 }
-.recommend-input:hover, .recommend-input:focus {
+.recommend-input:focus {
   border: 2px solid rgba(247, 242, 242, 0.288);
 }
 .rcmnd-btn i {
