@@ -351,9 +351,6 @@ a:hover{
   display:flex;
   justify-content: center;
 }
-.songDescription-artists p a{
-  color: rgb(255, 255, 255);
-}
 .songDescription-info {
   text-align: left;
   background-color: rgba(119, 118, 118, 0.2);
