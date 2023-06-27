@@ -1,5 +1,7 @@
-@media  (max-width: 1560px) and (min-width: 1251px) {
- 
+@media  (max-width: 1600px) and (min-width: 1300px) {
+    *{
+        transition: 0.2s 
+    }
     .bg-color-cover {
         width: 100%;
         margin: 0;
@@ -12,11 +14,9 @@
     }
     .logo-title {
         font-size: 28px;
-        transition: 0.2s;
     }
     .logo-subtitle {
         font-size: 13px;
-        transition: 0.2s;
     }
     .searchBar-input {
         width: 250px;
@@ -29,6 +29,56 @@
         background-size: 12%;
         background-color: rgba(0, 0, 0, 0.2);
         background-position: 232px 0px; 
+    }
+
+    .body {
+        margin: 0% 1% 0% 1%; 
+        overflow-y: hidden;
+        /* background-color: darkcyan; */
+    }
+
+    .recommendations-section {
+        width: 320px;
+        margin-right: 1px;                                         
+    }
+    .recommendations-title {
+        width: 130px;                                                                                                                                                                                 ;
+    }
+    .recommendations {
+        height: 500px;
+        overflow-x: hidden;
+        /* background-color: black; */
+    }
+    .recommendations-item-img, .recommendations-item-img-first {
+        margin-left: 10px;
+        transition: 0.5s;
+    }
+    .recommendations-item-img-first::after, .recommendations-item-img::after{
+        width: 105px;
+        height: 111px;
+        margin-top: -127px;
+        margin-left: -15px;
+    }
+    .recommendations-item-img-first {
+        margin-top: 1px;
+        margin-bottom: 33px;
+    }
+    .recommendations-item-img img, .recommendations-item-img-first img{
+        width: 115px;
+        height: 115px;
+    }
+    .recommendations-item-img:hover{
+        margin-left: 10px;
+    }
+    .recommendations-item-img:hover ~ .recommendations-item-description {
+        width: 130px;
+        font-size: 12px;
+        margin: -70px 10px 95px 10px;
+    }
+      .recommendations-item-img-first:hover ~ .recommendations-item-description-first {
+        width: 130px;
+        font-size: 12px;
+        margin: 0px 10px 100px 10px;
     }
 
     /* .songInfo {
