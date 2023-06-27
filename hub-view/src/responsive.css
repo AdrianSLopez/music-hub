@@ -34,7 +34,6 @@
     .body {
         margin: 0% 1% 0% 1%; 
         overflow-y: hidden;
-        background-color: darkcyan;
     }
 
     .recommendations-section {
@@ -115,5 +114,34 @@
     .songImage-container, .songImage-image img {
         width: 250px;
         height: 250px;
+    }
+
+    .audio-controls-container {
+        width: 250px;
+        font-size: 21px;
+    }
+
+    .songDescription-title {
+        font-size: 22px;
+    }
+    .songDescription-artists{
+        margin-top: -12%;
+        font-size: 15px;
+    }
+    .songDescription-info p{
+        line-height: 1.6;
+        font-size: 13px;
+    }
+    
+    .recommend-label {
+        font-size: 14px;
+    }
+    .recommend-input {
+        width: 135px;
+        height: 14px;
+        font-size: 12px;
+    }
+    .rcmnd-btn {
+        font-size: 18px;
     }
 }
