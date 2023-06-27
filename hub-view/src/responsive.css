@@ -32,7 +32,7 @@
     }
 
     .body {
-        margin: 0% 1% 0% 1%; 
+        margin: 1% 1% 0% 1%; 
         overflow-y: hidden;
     }
 
@@ -81,7 +81,7 @@
     }
 
     .searchResults {
-        margin-top: 1%;
+        margin-top: 0%;
         margin-left: 0%;
         margin-right: 10%;
         width: 610px;
