@@ -9,10 +9,9 @@
         top: 0;
         left: 0;
     }
-    .logo-container {
-        display: flex;
+    /* .logo-container {
         background-color: aliceblue;
-    }
+    } */
     .logo-title {
         font-size: 28px;
     }
@@ -168,9 +167,9 @@
     *{
         transition: 0.3s 
     }
-    .logo-container {
+    /* .logo-container {
         background-color: darkcyan;
-    }
+    } */
 
     .logo-title {
         font-size: 27px;
@@ -334,9 +333,9 @@
     *{
         transition: 0.3s 
     }
-    .logo-container {
+    /* .logo-container {
         background-color: cyan;
-    }
+    } */
 
     .logo-title {
         font-size: 24px;
@@ -496,9 +495,9 @@
 }
 
 @media screen and (max-width: 1024px) and (min-width: 851px) {
-    .logo-container {
+    /* .logo-container {
         background-color: green;
-    }
+    } */
     *{
         transition: 0.3s 
     }
@@ -675,9 +674,9 @@
 }
 
 @media screen and (max-width: 850px) and (min-width: 769px) {
-    .logo-container {
+    /* .logo-container {
         background-color: greenyellow;
-    }
+    } */
     *{
         transition: 0.3s 
     }
