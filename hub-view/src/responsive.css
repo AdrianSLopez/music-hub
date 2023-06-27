@@ -46,7 +46,7 @@
         font-size: 15px                                                                                                                                                    ;
     }
     .recommendations {
-        height: 500px;
+        height: 490px;
         overflow-x: hidden;
     }
     .recommendations-item-img, .recommendations-item-img-first {
@@ -104,8 +104,8 @@
     }
 
     .songInfo {
-        width: 580px;
-        height: 573px;
+        width: 550px;
+        height: 550px;
         margin-top: 1%;
     }
     .songImage-container {
@@ -136,10 +136,11 @@
     }
 
     .songDescription-container {
-        width: 320px;
+        width: 330px;
     }
     .songDescription-title {
         font-size: 22px;
+        margin-top: 0px;
     }
     .songDescription-artists{
         margin-top: -12%;
@@ -296,29 +297,36 @@
 
     .songDescription-container {
         width: 300px;
+        padding: 10px 15px 15px 15px;
     }
     .songDescription-title {
-        font-size: 21px;
+        font-size: 19px;
+        margin-top: 0px;
     }
     .songDescription-artists{
         margin-top: -11%;
-        font-size: 13px;
-    }
-    .songDescription-info p{
-        line-height: 1.5;
         font-size: 12px;
     }
+    .songDescription-info {
+        width: auto;
+        padding: 0px 4px 0px 20px;
+    }
+    .songDescription-info p{
+        line-height: 1.4;
+        font-size: 11px;
+    }
+    
     
     .recommend-label {
-        font-size: 13px;
+        font-size: 12px;
     }
     .recommend-input {
         width: 135px;
-        height: 14px;
-        font-size: 11px;
+        height: 12px;
+        font-size: 10px;
     }
     .rcmnd-btn {
-        font-size: 17px;
+        font-size: 16px;
     }
 }
 
@@ -454,33 +462,36 @@
     }
 
     .songDescription-container {
-        width: 230px;
+        width: 250px;
     }
     .songDescription-title {
-        font-size: 19px;
+        font-size: 17px;
     }
     .songDescription-artists{
-        margin-top: -14%;
+        margin-top: -12%;
         font-size: 11px;
     }
+    .songDescription-info {
+        padding: 0px 4px 0px 20px;
+      }
     .songDescription-info p{
         line-height: 1.5;
-        font-size: 9px;
+        font-size: 8px;
     }
 
     .recommend-container {
-        margin-top: 9px;
+        margin-top: 7px;
     }    
     .recommend-label {
-        font-size: 11px;
+        font-size: 10px;
     }
     .recommend-input {
         width: 100px;
-        height: 11px;
-        font-size: 9px;
+        height: 9px;
+        font-size: 8px;
     }
     .rcmnd-btn {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 
