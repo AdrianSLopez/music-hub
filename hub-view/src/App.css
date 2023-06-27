@@ -46,6 +46,7 @@ a:hover{
 }
 .logo-title {
   font-size: 35px;
+  cursor: pointer;
 }
 .logo-subtitle {
   padding-top: 12%;
