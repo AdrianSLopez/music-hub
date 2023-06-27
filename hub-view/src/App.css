@@ -60,7 +60,7 @@ a:hover{
   width:300px;
   height: 30px;
   border: none;
-  border-bottom: 2px solid rgba(247, 242, 242, 0.288);
+  border: 2px solid rgba(247, 242, 242, 0.288);
   padding: 5px;
   padding-left: 10px;
   background-color: rgba(0, 0, 0, 0.1);
@@ -72,8 +72,8 @@ a:hover{
   border-radius: 5px;
 }
 .searchBar-input:hover, .searchBar-input:focus {
-  border: 2px solid rgba(247, 242, 242, 0.288);
-  background-size: 11%;
+  background-size: 12%;
+  background-position: 273px 1px; 
 }
 
 .body {
@@ -373,14 +373,14 @@ a:hover{
   width: 140px;
   height: 15px;
   border: none;
-  border-bottom: 2px solid rgba(247, 242, 242, 0.288);
+  border: 2px solid rgba(247, 242, 242, 0.288);
   border-radius: 5px;
   padding: 5px;
   padding-left: 4px;
   font-size: 13px;
   background-color: rgba(119, 118, 118, 0.2);
 }
-.recommend-input:hover, .recommend-input:focus {
+.recommend-input:focus {
   border: 2px solid rgba(247, 242, 242, 0.288);
 }
 .rcmnd-btn i {
