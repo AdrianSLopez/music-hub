@@ -328,6 +328,7 @@ a:hover{
 }
 .audio-vol-icon-container {
   margin-right: 10px;
+  cursor: pointer;
 }
 .audio-volume-slide {
   background-color: #fff;

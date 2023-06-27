@@ -120,6 +120,15 @@
         width: 250px;
         font-size: 21px;
     }
+    .audio-play-container {
+        margin-left: 50px;
+    }
+    .audio-volume-container {
+        margin-right: 15px;
+    }
+    .audio-vol-icon-container {
+        margin-right: 5px;
+    }
 
     .songDescription-container {
         width: 320px;
@@ -258,7 +267,21 @@
 
     .audio-controls-container {
         width: 200px;
-        font-size: 19px;
+        font-size: 18px;
+    }
+    .audio-play-container {
+        margin-left: 40px;
+    }
+    .audio-volume-container {
+        margin-right: 10px;
+    }
+    .audio-vol-icon-container {
+        margin-right: 4px;
+    }
+    .audio-volume-slide {
+        background-color: #fff;
+        width: 75px;
+        margin-top: 4px;
     }
 
     .songDescription-container {
@@ -285,7 +308,7 @@
         font-size: 11px;
     }
     .rcmnd-btn {
-        font-size: 17wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwpx;
+        font-size: 17px;
     }
 }
 
