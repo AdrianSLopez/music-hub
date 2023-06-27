@@ -46,6 +46,7 @@ a:hover{
 }
 .logo-title {
   font-size: 35px;
+  cursor: pointer;
 }
 .logo-subtitle {
   padding-top: 12%;
@@ -388,8 +389,12 @@ a:hover{
   padding-bottom: 4px;
 }
 .rcmnd-btn {
-  background-color: rgba(119, 118, 118, 0.7);
+  /* background-color: rgba(119, 118, 118, 0.7); */
+  background-color: transparent;
+  border: none;
   border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
 }
 .rcmnd-btn:hover, .rcmnd-btn:focus{
   color: red;
