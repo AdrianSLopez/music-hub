@@ -34,10 +34,10 @@ const generateToken = async () => {
 }
 
 // get list of tracks related to user search input
-const getTracks = async (name, limit) => {
+const getTracks = async (name, offset, limit) => {
     const options = {
         method: 'get',
-        url: `${config.spotifyBaseURL}/search?q=${name}&type=track&market=US&limit=${limit}`,
+        url: `${config.spotifyBaseURL}/search?q=${name}&type=track&market=US&offset=${offset}&limit=${limit}`,
         headers
     }
     
