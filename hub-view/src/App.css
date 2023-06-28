@@ -321,6 +321,9 @@ a:hover{
   cursor: pointer;
   color: white;
 }
+.audio-play-btn:hover {
+  color: rgba(177, 175, 175, 0.8);
+}
 .audio-volume-container {
   display: flex;
   justify-content: center;
@@ -330,6 +333,9 @@ a:hover{
 .audio-vol-icon-container {
   margin-right: 10px;
   cursor: pointer;
+}
+.audio-vol-icon-container:hover {
+  color: rgba(177, 175, 175, 0.8);
 }
 .audio-volume-slide {
   background-color: #fff;
@@ -352,10 +358,13 @@ a:hover{
   margin-top: 1%;
 }
 .songDescription-artists{
-  margin-top: -11%;
-  margin-left: -3px;
+  margin-top: -8%;
+  margin-left: 0px;
   display:flex;
   justify-content: center;
+  overflow-x: auto;
+  flex-wrap: wrap;
+  line-height: 0;
 }
 .songDescription-info {
   text-align: left;

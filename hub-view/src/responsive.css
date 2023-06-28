@@ -104,7 +104,7 @@
 
     .songInfo {
         width: 550px;
-        height: 550px;
+        height: 580px;
         margin-top: 1%;
     }
     .songImage-container {
@@ -142,7 +142,7 @@
         margin-top: 0px;
     }
     .songDescription-artists{
-        margin-top: -12%;
+        margin-top: -8%;
         font-size: 15px;
     }
     .songDescription-info p{
@@ -296,14 +296,14 @@
 
     .songDescription-container {
         width: 300px;
-        padding: 10px 15px 15px 15px;
+        padding: 10px 10px 10px 10px;
     }
     .songDescription-title {
         font-size: 19px;
         margin-top: 0px;
     }
     .songDescription-artists{
-        margin-top: -11%;
+        margin-top: -8%;
         font-size: 12px;
     }
     .songDescription-info {
@@ -314,8 +314,10 @@
         line-height: 1.4;
         font-size: 11px;
     }
-    
-    
+    .recommend-container {
+        text-align: center;
+        margin-top: 10px;
+    }
     .recommend-label {
         font-size: 12px;
     }
@@ -426,7 +428,7 @@
     .songInfo {
         width: 550px;
         height: 395px;
-        margin-top: 1%;
+        margin-top: 0%;
     }
     .songImage-container {
         transition: 0s;
@@ -467,7 +469,7 @@
         font-size: 17px;
     }
     .songDescription-artists{
-        margin-top: -12%;
+        margin-top: -10%;
         font-size: 11px;
     }
     .songDescription-info {
@@ -646,7 +648,7 @@
         font-size: 14px;
     }
     .songDescription-artists{
-        margin-top: -10%;
+        margin-top: -8%;
         font-size: 9px;
     }
     .songDescription-info {
@@ -770,6 +772,7 @@
         width: 540px;
         height: 300px;
         margin-top: 1%;
+        /* background-color: #fff; */
     }
     .songImage-container {
         transition: 0s;
