@@ -37,10 +37,11 @@ export default function App() {
             return response.json()
         })
         .then(data => {
+          let tracks =  (url === '/topGlobalSongs')? data: data.tracks;
           setUserSearchTerm(userSearchTerm)
-          setSongResults(data)
-          setChosenSongId(chosenSongId===0? data[0].id: chosenSongId)
-          setUrl(`/search/${chosenSongId===0? data[0].id: chosenSongId}/details?searchTerm=${userSearchTerm}`)
+          setSongResults(tracks);
+          setChosenSongId(chosenSongId===0? tracks[0].id: chosenSongId)
+          setUrl(`/search/${chosenSongId===0? tracks[0].id: chosenSongId}/details?searchTerm=${userSearchTerm}`)
           return
         })
         .catch(error => {
