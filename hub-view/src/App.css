@@ -1,3 +1,6 @@
+*{
+  transition: 0.3s 
+}
 body{
   background-color: rgba(0, 0, 0, 1);
   color: #fff;
@@ -38,8 +41,9 @@ a:hover{
   z-index: 5;
   display: flex;
   color: #fff;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  transition: 0.5s;
 }
 .logo-container {
   display: flex;
@@ -47,9 +51,11 @@ a:hover{
 .logo-title {
   font-size: 35px;
   cursor: pointer;
+  transition: 0.2s;
 }
 .logo-subtitle {
   padding-top: 12%;
+  transition: 0.2s;
 }
 .searchBar-container {
   display: flex;
@@ -60,7 +66,6 @@ a:hover{
   color: #fff;
   width:300px;
   height: 30px;
-  border: none;
   border: 2px solid rgba(247, 242, 242, 0.288);
   padding: 5px;
   padding-left: 10px;
@@ -71,14 +76,16 @@ a:hover{
   background-repeat:no-repeat;
   font-size: 13px;
   border-radius: 5px;
+  transition: 0.2s;
 }
 .searchBar-input:hover, .searchBar-input:focus {
   background-size: 12%;
-  background-position: 273px 1px; 
+  background-position: 273px 1px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .body {
-  margin: 3% 4% 0% 1%; 
+  margin: 1% 1% 0% 1%; 
   display: flex;
 }
 
@@ -88,7 +95,7 @@ a:hover{
   margin-top: 1%;                                                
 }
 .recommendations-title {
-  width: 170px;
+  width: 162px;
   padding: 5px 7px 5px 7px;
   margin-left: 0px;
   margin-right: 170px;
@@ -96,7 +103,8 @@ a:hover{
   text-align: center;
   background-color: rgba(0, 0, 0, 0.2);
   border-top-right-radius: 5px;
-  border-top-left-radius: 5px                                                                                                                                                                                                ;
+  border-top-left-radius: 5px;
+  font-size: 16px;                                                                                                                                                                                           ;
 }
 .recommendations {
   height: 530px;
@@ -193,11 +201,12 @@ a:hover{
 }
 
 .searchResults {
-  margin-top: -2%;
-  margin-left: 0%;
-  margin-right: 10%;
+  margin-top: 0%;
+  margin-right: auto;
+  margin-left: auto;
   width: 610px;
   height: 605px;
+  transition: 0s;
 }
 .searchResults-subtitle {
   padding: 5px 0px 5px 10px;
@@ -223,6 +232,7 @@ a:hover{
   text-align: left;
   scrollbar-color: rgba(119, 118, 118, 0.2) transparent;
   scrollbar-width: thin;
+  transition: 0s;
 }
 .searchResults-result,
 .searchResults-result-chosen {
@@ -242,20 +252,23 @@ a:hover{
 }
 
 .songInfo {
-  width: 500px;
+  width: 520px;
   height: 630px;
-  margin-right: 9%;
+  margin-left: auto;
+  margin-right: 5%;
+  margin-top: 1%;
 }
 .songInfo-container {
   width: 100%;
   height: 100%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .songImage-container {
   width: 300px;
   height: 300px;
-  margin: 0% 20% 0% 20%;
-  text-align: center;
+  transition: 0s;
 }
 .songImage-image {
   transition: 0.5s;
@@ -270,12 +283,12 @@ a:hover{
 .songImage-image:hover {
   animation: 5s;
   transition: 0.5s;
-  margin: 0px 0px 0px -50%;
+  margin: 0px 0px 0px -22%;
 }
 .songImage-image:hover ~.songImage-image-vinyl img{
   animation: 5s;
   transition: 0.5s;
-  margin: -100% 0% 12% 28%;
+  margin: -100% 0% 12% 30%;
 }
 .songImage-image-vinyl img{
   transition: 0.5s;
@@ -291,8 +304,6 @@ a:hover{
 .audio-controls-container {
   display: flex;
   justify-content: center;
-  margin-left: 20%;
-  margin-right: 20%;
   width: 300px;
   background-color: rgba(0, 0, 0, 0.2);
   font-size: 25px;
@@ -318,11 +329,13 @@ a:hover{
 }
 .audio-vol-icon-container {
   margin-right: 10px;
+  cursor: pointer;
 }
 .audio-volume-slide {
   background-color: #fff;
   width: 80px;
   margin-top: 5px;
+  cursor: pointer;
 }
 
 .songDescription-container {
@@ -330,23 +343,19 @@ a:hover{
   border: 2px solid rgba(247, 242, 242, 0.1);
   border-radius: 5px;
   margin-top: 3%;
-  margin-left: 12%;
-  margin-right: 12%;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px 15px 20px;
   text-align: center;
+  width: 400px;
 }
 .songDescription-title {
   font-size: 25px;
   margin-top: 1%;
 }
 .songDescription-artists{
-  margin-top: -13%;
+  margin-top: -11%;
   margin-left: -3px;
   display:flex;
   justify-content: center;
-}
-.songDescription-artists p a{
-  color: rgb(255, 255, 255);
 }
 .songDescription-info {
   text-align: left;
@@ -381,15 +390,15 @@ a:hover{
   font-size: 13px;
   background-color: rgba(119, 118, 118, 0.2);
 }
-.recommend-input:focus {
+.recommend-input:hover, .recommend-input:focus {
   border: 2px solid rgba(247, 242, 242, 0.288);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .rcmnd-btn i {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 .rcmnd-btn {
-  /* background-color: rgba(119, 118, 118, 0.7); */
   background-color: transparent;
   border: none;
   border-radius: 5px;

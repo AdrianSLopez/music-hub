@@ -1,0 +1,1415 @@
+@media screen and (max-width: 1750px) and (min-width: 1401px) {
+    *{
+        transition: 0.3s 
+    }
+    .bg-color-cover {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+    }
+    /* .logo-container {
+        background-color: aliceblue;
+    } */
+    .logo-title {
+        font-size: 28px;
+    }
+    .logo-subtitle {
+        font-size: 13px;
+    }
+    .searchBar-input {
+        width: 250px;
+        height: 20px;
+        background-position: 235px 2px; 
+        font-size: 10px;
+        transition: 0.2s;
+    }
+    .searchBar-input:hover, .searchBar-input:focus {
+        background-size: 12%;
+        background-color: rgba(0, 0, 0, 0.2);
+        background-position: 232px 0px; 
+    }
+
+    .body {
+        margin: 1% 1% 0% 1%; 
+        overflow-y: hidden;
+    }
+
+    .recommendations-section {
+        width: 320px;
+        margin-right: 1px;                                         
+    }
+    .recommendations-title {
+        width: 130px; 
+        font-size: 15px                                                                                                                                                    ;
+    }
+    .recommendations {
+        height: 490px;
+        overflow-x: hidden;
+    }
+    .recommendations-item-img, .recommendations-item-img-first {
+        margin-left: 10px;
+        transition: 0.5s;
+    }
+    .recommendations-item-img-first::after, .recommendations-item-img::after{
+        width: 105px;
+        height: 111px;
+        margin-top: -127px;
+        margin-left: -15px;
+    }
+    .recommendations-item-img-first {
+        margin-top: 1px;
+        margin-bottom: 33px;
+    }
+    .recommendations-item-img img, .recommendations-item-img-first img{
+        width: 115px;
+        height: 115px;
+    }
+    .recommendations-item-img:hover{
+        margin-left: 10px;
+    }
+    .recommendations-item-img:hover ~ .recommendations-item-description {
+        width: 130px;
+        font-size: 12px;
+        margin: -70px 10px 95px 10px;
+    }
+      .recommendations-item-img-first:hover ~ .recommendations-item-description-first {
+        width: 130px;
+        font-size: 12px;
+        margin: 0px 10px 100px 10px;
+    }
+
+    .searchResults {
+        margin-top: 0%;
+        margin-left: 0%;
+        margin-right: 10%;
+        width: 610px;
+        height: 100%;
+        transition: 0s;
+    }
+    .searchResults-subtitle {
+        font-size: 21px;
+        width: 90px;
+    }
+    .searchResults-container {
+        width: 100%;
+        height: 530px;
+        transition: 0s;
+    }
+    .searchResults-result,
+    .searchResults-result-chosen {
+        font-size: 19px;
+    }
+
+    .songInfo {
+        width: 550px;
+        height: 550px;
+        margin-top: 1%;
+    }
+    .songImage-container {
+        transition: 0s;
+    }
+    .songImage-container, .songImage-image img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .audioPreview-unavailable {
+        margin-top: 1%;
+        margin-bottom: 2%;
+        font-size: 14px;
+    }
+    .audio-controls-container {
+        width: 250px;
+        font-size: 21px;
+    }
+    .audio-play-container {
+        margin-left: 50px;
+    }
+    .audio-volume-container {
+        margin-right: 15px;
+    }
+    .audio-vol-icon-container {
+        margin-right: 5px;
+    }
+
+    .songDescription-container {
+        width: 330px;
+    }
+    .songDescription-title {
+        font-size: 22px;
+        margin-top: 0px;
+    }
+    .songDescription-artists{
+        margin-top: -12%;
+        font-size: 15px;
+    }
+    .songDescription-info p{
+        line-height: 1.6;
+        font-size: 13px;
+    }
+    
+    .recommend-label {
+        font-size: 14px;
+    }
+    .recommend-input {
+        width: 135px;
+        height: 14px;
+        font-size: 12px;
+    }
+    .rcmnd-btn {
+        font-size: 18px;
+    }
+}
+
+@media  screen and (max-width: 1400px) and (min-width: 1201px) {
+    *{
+        transition: 0.3s 
+    }
+    /* .logo-container {
+        background-color: darkcyan;
+    } */
+
+    .logo-title {
+        font-size: 27px;
+    }
+    .logo-subtitle {
+        font-size: 12px;
+        padding-top: 13%;
+    }
+    .searchBar-input {
+        width: 240px;
+        height: 18px;
+        background-position: 225px 2px; 
+        font-size: 10px;
+        transition: 0.2s;
+    }
+    .searchBar-input:hover, .searchBar-input:focus {
+        background-size: 12%;
+        background-color: rgba(0, 0, 0, 0.2);
+        background-position: 223px 0px; 
+    }
+
+    .recommendations-section {
+        width: 290px;
+        margin-right: 1px;                                         
+    }
+    .recommendations-title {
+        width: 123px; 
+        font-size: 13px                                                                                                                                                    ;
+    }
+    .recommendations {
+        height: 400px;
+        overflow-x: hidden;
+    }
+    .recommendations-item-img, .recommendations-item-img-first {
+        margin-left: 10px;
+        transition: 0.5s;
+    }
+    .recommendations-item-img-first::after, .recommendations-item-img::after{
+        width: 99px;
+        height: 99px;
+        margin-top: -114px;
+        margin-left: -14px;
+    }
+    .recommendations-item-img-first {
+        margin-top: 1px;
+        margin-bottom: 33px;
+    }
+    .recommendations-item-img img, .recommendations-item-img-first img{
+        width: 105px;
+        height: 105px;
+    }
+    .recommendations-item-img:hover{
+        margin-left: 10px;
+    }
+    .recommendations-item-img:hover ~ .recommendations-item-description {
+        width: 130px;
+        font-size: 11px;
+        margin: -60px 10px 85px 10px;
+    }
+      .recommendations-item-img-first:hover ~ .recommendations-item-description-first {
+        width: 130px;
+        font-size: 11px;
+        margin: 0px 10px 100px 10px;
+    }
+
+    .searchResults {
+        margin-top: 0%;
+        margin-left: 0%;
+        margin-right: 4%;
+        width: 650px;
+        height: 100%;
+        transition: 0s;
+    }
+    .searchResults-subtitle {
+        font-size: 19px;
+        width: 80px;
+    }
+    .searchResults-container {
+        width: 100%;
+        height: 430px;
+        transition: 0s;
+    }
+    .searchResults-result,
+    .searchResults-result-chosen {
+        font-size: 17px;
+    }
+
+    .songInfo {
+        width: 550px;
+        height: 430px;
+        margin-top: 1%;
+    }
+    .songImage-container {
+        transition: 0s;
+    }
+    .songImage-container, .songImage-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .audioPreview-unavailable {
+        margin-top: 1%;
+        margin-bottom: 2%;
+        font-size: 13px;
+    }
+    .audio-controls-container {
+        width: 200px;
+        font-size: 18px;
+    }
+    .audio-play-container {
+        margin-left: 40px;
+    }
+    .audio-volume-container {
+        margin-right: 10px;
+    }
+    .audio-vol-icon-container {
+        margin-right: 4px;
+    }
+    .audio-volume-slide {
+        background-color: #fff;
+        width: 75px;
+        margin-top: 4px;
+    }
+
+    .songDescription-container {
+        width: 300px;
+        padding: 10px 15px 15px 15px;
+    }
+    .songDescription-title {
+        font-size: 19px;
+        margin-top: 0px;
+    }
+    .songDescription-artists{
+        margin-top: -11%;
+        font-size: 12px;
+    }
+    .songDescription-info {
+        width: auto;
+        padding: 0px 4px 0px 20px;
+    }
+    .songDescription-info p{
+        line-height: 1.4;
+        font-size: 11px;
+    }
+    
+    
+    .recommend-label {
+        font-size: 12px;
+    }
+    .recommend-input {
+        width: 135px;
+        height: 12px;
+        font-size: 10px;
+    }
+    .rcmnd-btn {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1025px) {
+    *{
+        transition: 0.3s 
+    }
+    /* .logo-container {
+        background-color: cyan;
+    } */
+
+    .logo-title {
+        font-size: 24px;
+    }
+    .logo-subtitle {
+        font-size: 11px;
+        padding-top: 13%;
+    }
+    .searchBar-input {
+        width: 210px;
+        height: 16px;
+        background-position: 198px 2px; 
+        font-size: 9px;
+        transition: 0.2s;
+    }
+    .searchBar-input:hover, .searchBar-input:focus {
+        background-size: 12%;
+        background-color: rgba(0, 0, 0, 0.2);
+        background-position: 196px 0px; 
+    }
+
+    .recommendations-section {
+        width: 290px;
+        margin-right: 1px;                                         
+    }
+    .recommendations-title {
+        width: 109px; 
+        font-size: 12px                                                                                                                                                    ;
+    }
+    .recommendations {
+        height: 321px;
+        overflow-x: hidden;
+    }
+    .recommendations-item-img, .recommendations-item-img-first {
+        margin-left: 10px;
+        transition: 0.5s;
+    }
+    .recommendations-item-img-first::after, .recommendations-item-img::after{
+        width: 85px;
+        height: 85px;
+        margin-top: -105px;
+        margin-left: -12px;
+    }
+    .recommendations-item-img-first {
+        margin-top: 1px;
+        margin-bottom: 33px;
+    }
+    .recommendations-item-img img, .recommendations-item-img-first img{
+        width: 95px;
+        height: 95px;
+    }
+    .recommendations-item-img:hover{
+        margin-left: 10px;
+    }
+    .recommendations-item-img:hover ~ .recommendations-item-description {
+        width: 110px;
+        font-size: 10px;
+        margin: -60px 10px 75px 10px;
+    }
+      .recommendations-item-img-first:hover ~ .recommendations-item-description-first {
+        width: 110px;
+        font-size: 10px;
+        margin: 0px 10px 90px 10px;
+    }
+
+    .searchResults {
+        margin-top: 0%;
+        margin-left: -10%;
+        margin-right: 4%;
+        width: 650px;
+        height: 100%;
+        transition: 0s;
+    }
+    .searchResults-subtitle {
+        font-size: 17px;
+        width: 80px;
+    }
+    .searchResults-container {
+        width: 100%;
+        height: 350px;
+        transition: 0s;
+    }
+    .searchResults-result,
+    .searchResults-result-chosen {
+        font-size: 15px;
+    }
+
+    .songInfo {
+        width: 550px;
+        height: 395px;
+        margin-top: 1%;
+    }
+    .songImage-container {
+        transition: 0s;
+    }
+    .songImage-container, .songImage-image img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .audioPreview-unavailable {
+        margin-top: 1%;
+        margin-bottom: 2%;
+        font-size: 11px;
+    }
+    .audio-controls-container {
+        width: 170px;
+        font-size: 15px;
+    }
+    .audio-play-container {
+        margin-left: 30px;
+    }
+    .audio-volume-container {
+        margin-right: 8px;
+    }
+    .audio-vol-icon-container {
+        margin-right: 3px;
+    }
+    .audio-volume-slide {
+        background-color: #fff;
+        width: 60px;
+        margin-top: 1px;
+    }
+
+    .songDescription-container {
+        width: 250px;
+    }
+    .songDescription-title {
+        font-size: 17px;
+    }
+    .songDescription-artists{
+        margin-top: -12%;
+        font-size: 11px;
+    }
+    .songDescription-info {
+        padding: 0px 4px 0px 20px;
+      }
+    .songDescription-info p{
+        line-height: 1.5;
+        font-size: 8px;
+    }
+
+    .recommend-container {
+        margin-top: 7px;
+    }    
+    .recommend-label {
+        font-size: 10px;
+    }
+    .recommend-input {
+        width: 100px;
+        height: 9px;
+        font-size: 8px;
+    }
+    .rcmnd-btn {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 851px) {
+    /* .logo-container {
+        background-color: green;
+    } */
+    *{
+        transition: 0.3s 
+    }
+    .logo-title {
+        font-size: 20px;
+    }
+    .logo-subtitle {
+        font-size: 10px;
+        padding-top: 11%;
+    }
+    .searchBar-input {
+        width: 180px;
+        height: 14px;
+        background-position: 168px 2px; 
+        font-size: 8px;
+        transition: 0.2s;
+    }
+    .searchBar-input:hover, .searchBar-input:focus {
+        background-size: 12%;
+        background-color: rgba(0, 0, 0, 0.2);
+        background-position: 166px 0px; 
+    }
+
+    .recommendations-section {
+        width: 215px;
+        margin-right: 1px;                                    
+    }
+    .recommendations-title {
+        width: 99px; 
+        font-size: 10px                                                                                                                                                    ;
+    }
+    .recommendations {
+        height: 270px;
+        overflow-x: hidden;
+    }
+    .recommendations-item-img, .recommendations-item-img-first {
+        margin-left: 10px;
+        transition: 0.5s;
+    }
+    .recommendations-item-img-first::after, .recommendations-item-img::after{
+        width: 75px;
+        height: 75px;
+        margin-top: -90px;
+        margin-left: -13px;
+    }
+    .recommendations-item-img-first {
+        margin-top: 1px;
+        margin-bottom: 31px;
+    }
+    .recommendations-item-img img, .recommendations-item-img-first img{
+        width: 80px;
+        height: 80px;
+    }
+    .recommendations-item-img:hover{
+        margin-left: 10px;
+    }
+    .recommendations-item-img:hover ~ .recommendations-item-description {
+        width: 90px;
+        font-size: 8px;
+        margin: -70px 10px 75px 10px;
+    }
+      .recommendations-item-img-first:hover ~ .recommendations-item-description-first {
+        width: 90px;
+        font-size: 8px;
+        margin: 0px 10px 80px 10px;
+    }
+
+    .searchResults {
+        margin-top: 0%;
+        margin-left: 0%;
+        margin-right: 4%;
+        width: 650px;
+        height: 100%;
+        transition: 0s;
+    }
+    .searchResults-subtitle {
+        font-size: 14px;
+        width: 70px;
+    }
+    .searchResults-container {
+        width: 100%;
+        height: 280px;
+        transition: 0s;
+    }
+    .searchResults-result,
+    .searchResults-result-chosen {
+        font-size: 12px;
+    }
+
+    .songInfo {
+        width: 550px;
+        height: 305px;
+        margin-top: 1%;
+    }
+    .songImage-container {
+        transition: 0s;
+    }
+    .songImage-container, .songImage-image img {
+        width: 130px;
+        height: 130px;
+    }
+    .songImage-image:hover ~.songImage-image-vinyl img{
+        animation: 5s;
+        transition: 0.5s;
+        margin: -140px 0px 30px 47px;
+    }
+    .songImage-image-vinyl img{
+        transition: 0.5s;
+        z-index: 0;
+        width: 85%;
+        height: 85%;
+        margin: -140px 0px 30px  0px;
+    }
+
+    .audioPreview-unavailable {
+        margin-top: 1%;
+        margin-bottom: 2%;
+        font-size: 9px;
+    }
+    .audio-controls-container {
+        width: 130px;
+        font-size: 12px;
+        padding: 3px 0px 3px 0px;
+    }
+    .audio-play-container {
+        margin-left: 20px;
+    }
+    .audio-volume-container {
+        margin-right: 3px;
+    }
+    .audio-vol-icon-container {
+        margin-right: 3px;
+    }
+    .audio-volume-slide {
+        background-color: #fff;
+        width: 50px;
+        margin-top: -1px;
+    }
+
+    .songDescription-container {
+        width: 230px;
+        padding: 5px 12px 5px 12px;
+    }
+    .songDescription-title {
+        margin-top: 0px;
+        font-size: 14px;
+    }
+    .songDescription-artists{
+        margin-top: -10%;
+        font-size: 9px;
+    }
+    .songDescription-info {
+        margin-top: -2px;
+    }
+    .songDescription-info p{
+        line-height: 1.4;
+        font-size: 8px;
+    }
+
+    .recommend-container {
+        margin-top: 2px;
+    }    
+    .recommend-label {
+        font-size: 9px;
+    }
+    .recommend-input {
+        width: 90px;
+        height: 8px;
+        font-size: 7px;
+    }
+    .rcmnd-btn {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 850px) and (min-width: 769px) {
+    /* .logo-container {
+        background-color: greenyellow;
+    } */
+    *{
+        transition: 0.3s 
+    }
+    .logo-title {
+        font-size: 18px;
+    }
+    .logo-subtitle {
+        font-size: 9px;
+        padding-top: 11%;
+    }
+    .searchBar-input {
+        width: 170px;
+        height: 13px;
+        background-position: 162px 2px; 
+        font-size: 7px;
+        transition: 0.2s;
+    }
+    .searchBar-input:hover, .searchBar-input:focus {
+        background-size: 12%;
+        background-color: rgba(0, 0, 0, 0.2);
+        background-position: 160px 0px; 
+    }
+
+    .recommendations-section {
+        width: 210px;
+        margin-right: 1px;                                    
+    }
+    .recommendations-title {
+        width: 95px; 
+        font-size: 9px                                                                                                                                                    ;
+    }
+    .recommendations {
+        height: 250px;
+        overflow-x: hidden;
+    }
+    .recommendations-item-img, .recommendations-item-img-first {
+        margin-left: 10px;
+        transition: 0.5s;
+    }
+    .recommendations-item-img-first::after, .recommendations-item-img::after{
+        width: 74px;
+        height: 75px;
+        margin-top: -90px;
+        margin-left: -15px;
+    }
+    .recommendations-item-img-first {
+        margin-top: 1px;
+        margin-bottom: 31px;
+    }
+    .recommendations-item-img img, .recommendations-item-img-first img{
+        width: 80px;
+        height: 80px;
+    }
+    .recommendations-item-img:hover{
+        margin-left: 10px;
+    }
+    .recommendations-item-img:hover ~ .recommendations-item-description {
+        width: 75px;
+        font-size: 7px;
+        margin: -70px 10px 80px 10px;
+    }
+      .recommendations-item-img-first:hover ~ .recommendations-item-description-first {
+        width: 75px;
+        font-size: 7px;
+        margin: 0px 10px 85px 10px;
+    }
+
+    .searchResults {
+        margin-top: 0%;
+        margin-left: -10px;
+        margin-right: 2%;
+        width: 650px;
+        height: 100%;
+        transition: 0s;
+    }
+    .searchResults-subtitle {
+        font-size: 13px;
+        width: 60px;
+    }
+    .searchResults-container {
+        width: 100%;
+        height: 270px;
+        transition: 0s;
+    }
+    .searchResults-result,
+    .searchResults-result-chosen {
+        font-size: 11px;
+    }
+
+    .songInfo {
+        width: 540px;
+        height: 300px;
+        margin-top: 1%;
+    }
+    .songImage-container {
+        transition: 0s;
+    }
+    .songImage-container, .songImage-image img {
+        width: 120px;
+        height: 120px;
+    }
+    .songImage-image:hover ~.songImage-image-vinyl img{
+        animation: 5s;
+        transition: 0.5s;
+        margin: -140px 0px 30px 47px;
+    }
+    .songImage-image-vinyl img{
+        transition: 0.5s;
+        z-index: 0;
+        width: 85%;
+        height: 85%;
+        margin: -140px 0px 30px  0px;
+    }
+
+    .audioPreview-unavailable {
+        margin-top: 1%;
+        margin-bottom: 2%;
+        font-size: 9px;
+    }
+    .audio-controls-container {
+        width: 120px;
+        font-size: 10px;
+        padding: 4px 0px 2px 0px;
+    }
+    .audio-play-container {
+        margin-left: 20px;
+    }
+    .audio-volume-container {
+        margin-right: 3px;
+    }
+    .audio-vol-icon-container {
+        margin-right: 3px;
+    }
+    .audio-volume-slide {
+        background-color: #fff;
+        width: 50px;
+        margin-top: -2px;
+    }
+
+    .songDescription-container {
+        width: 235px;
+        padding: 5px 12px 5px 12px;
+    }
+    .songDescription-title {
+        margin-top: 0px;
+        font-size: 13px;
+    }
+    .songDescription-artists{
+        margin-top: -9%;
+        font-size: 9px;
+    }
+    .songDescription-info {
+        margin-top: -2px;
+    }
+    .songDescription-info p{
+        line-height: 1.5;
+        font-size: 7px;
+    }
+
+    .recommend-container {
+        margin-top: 2px;
+    }    
+    .recommend-label {
+        font-size: 8px;
+    }
+    .recommend-input {
+        width: 85px;
+        height: 7px;
+        font-size: 6px;
+    }
+    .rcmnd-btn {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 605px) {
+    a{
+        color:rgb(246, 247, 248); 
+        text-decoration: underline;
+    }
+    a:hover {
+        pointer-events: none;
+    }
+
+    .topBar-container {
+        transition: 0.5s;
+        padding-top: 2em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    .logo-container {
+        flex-direction: column;
+        padding: 1em;
+    }
+    .logo-title {
+        font-size: 2.3em;
+        margin-bottom: -0.4em;
+    }
+    .logo-subtitle {
+        font-size: 1.1em;
+        padding-top: 0em;
+    }
+    .searchBar-input {
+        width: 19em;
+        height: 2em;
+        background-position: 17.5em 0.4em; 
+        font-size: 0.8em;
+        transition: 0.2s;
+    }
+    .searchBar-input:hover, .searchBar-input:focus {
+        background-size: 12%;
+        background-color: rgba(0, 0, 0, 0.2);
+        background-position: 17.3em 0.4em; 
+        pointer-events: none;
+    }
+    .recommendations-section {
+        display: none;
+    }
+    .body {
+        display: flex;
+        margin: 0;
+        margin-top: 10%;
+    }
+    .searchResults {
+        margin: 1em;
+        padding: 0;
+        height: 35em;
+        width: 50%;
+        margin-right: auto;
+    }
+    .searchResults-subtitle {
+        padding: 0.2em 0em 0.2em 0.2em;
+        font-size: 1.5em;
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 4em;
+        border-top-left-radius: 0.2em;
+        border-top-right-radius: 0.2em;
+        border: 0.1em solid rgba(247, 242, 242, 0.1);
+        border-bottom: none;
+    }
+    .searchResults-container {
+        border-radius: 0.2em;
+        border-top-left-radius: 0em;
+        border: 0.1em solid rgba(247, 242, 242, 0.1);
+    }
+    .searchResults-result,
+    .searchResults-result-chosen {
+        font-size: 1.49em;
+    }
+    .searchResults-result-chosen{ 
+        border-width: 0.15em;
+    }
+    .songInfo {
+        margin: 1em;
+        padding: 0;
+        width: 50%;
+        height: 35em;
+        background-color: #fff;
+    }
+    .songImage-container, .songImage-image img {
+        width: 14em;
+        height: 14em;
+        transition: 0s;
+    }
+    .songImage-image img {
+        border-radius: 0.2em;
+        border-bottom-left-radius: 0em;
+        border-bottom-right-radius: 0em;
+    }
+    .songImage-image:hover {
+        animation: 5s;
+        transition: 0.5s;
+        margin: 0px 0px 0px -22%;
+    }
+    .audioPreview-unavailable {
+        font-size: 1em;
+        margin-bottom: 2em;
+    }
+    .audio-controls-container {
+        width: 14em;
+        font-size: 1em;
+        padding: 0.4em 0em 0.2em 0em;
+        margin-bottom: 2em;
+    }
+    .audio-play-container {
+        margin-left: 3em;
+    }
+    .audio-volume-container {
+        margin-right: 0.2em;
+    }
+    .audio-vol-icon-container {
+        margin-right: 0.4em;
+    }
+    .audio-volume-slide {
+        width: 5em;
+        margin-top: 0em;
+    }
+    
+    .songDescription-container {
+        border: 0.1em solid rgba(247, 242, 242, 0.1);
+        border-radius: 0.2em;
+        padding: 0em;
+        width: 20em;
+    }
+    .songDescription-title {
+        font-size: 2em;
+        margin-top: 0em;
+    }
+    .songDescription-artists{
+        font-size: 1.1em;
+        margin-top: -12%;
+    }
+    .songDescription-info {
+        border: 0.1em solid rgba(247, 242, 242, 0.1);
+        border-radius: 0.2em;
+        padding: 0;
+        padding-left: 1em;
+        margin: 1em;
+        margin-top: -0.1em;
+    }
+    .songDescription-info p{
+        line-height: 1.5;
+        font-size: 0.9em;
+    }
+    .recommend-container {
+        margin: 0.1em;
+        margin-bottom: 0.5em;
+        display: none;
+    }
+    .recommend-input {
+        margin-right: 0;
+        width: 10em;
+        height: 15px;
+        border: 0.2em solid rgba(247, 242, 242, 0.288);
+        border-radius: 0.2em;
+        padding: 0.3em;
+        font-size: 0.8em;
+    }
+    .recommend-input:hover, .recommend-input:focus {
+        border: 0.2em solid rgba(247, 242, 242, 0.288);
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    .rcmnd-btn i {
+        padding-top: 0em;
+        padding-bottom: 0em;
+    }
+    .rcmnd-btn {
+        border-radius: 0em;
+        color: #fff;
+        font-size: 1.3em;
+    }
+    .rcmnd-btn:hover, .rcmnd-btn:focus{
+        color: red;
+        cursor: pointer;
+        outline: none;
+    }
+}
+
+@media screen and (max-width: 604px) and (min-width: 495px) {
+    a{
+        color:rgb(246, 247, 248); 
+        text-decoration: underline;
+    }
+    a:hover {
+        pointer-events: none;
+    }
+
+    .topBar-container {
+        transition: 0.5s;
+        padding-top: 2em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    .logo-container {
+        flex-direction: column;
+        padding: 1em;
+    }
+    .logo-title {
+        font-size: 1.8em;
+        margin-bottom: -0.4em;
+    }
+    .logo-subtitle {
+        font-size: 0.90em;
+        padding-top: 0em;
+    }
+    .searchBar-input {
+        width: 17em;
+        height: 2em;
+        background-position: 16em 0.4em; 
+        font-size: 0.75em;
+        transition: 0.2s;
+    }
+    .searchBar-input:hover, .searchBar-input:focus {
+        background-size: 12%;
+        background-color: rgba(0, 0, 0, 0.2);
+        background-position: 15.8em 0.4em; 
+        pointer-events: none;
+    }
+    .recommendations-section {
+        display: none;
+    }
+    .body {
+        display: flex;
+        margin: 0;
+        margin-top: 10%;
+    }
+    .searchResults {
+        margin: 1em;
+        padding: 0;
+        height: 28em;
+        width: 40%;
+        margin-right: auto;
+    }
+    .searchResults-subtitle {
+        padding: 0.2em 0em 0.2em 0.2em;
+        font-size: 1.4em;
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 4em;
+        border-top-left-radius: 0.2em;
+        border-top-right-radius: 0.2em;
+        border: 0.1em solid rgba(247, 242, 242, 0.1);
+        border-bottom: none;
+    }
+    .searchResults-container {
+        border-radius: 0.2em;
+        border-top-left-radius: 0em;
+        border: 0.1em solid rgba(247, 242, 242, 0.1);
+    }
+    .searchResults-result,
+    .searchResults-result-chosen {
+        font-size: 1.2em;
+        padding: 2% 0% 3% 2%;
+    }
+    .searchResults-result-chosen{ 
+        border-width: 0.15em;
+    }
+    .songInfo {
+        margin: 1em;
+        padding: 0;
+        width: 50%;
+        height: 30em;
+    }
+    .songImage-container, .songImage-image img {
+        width: 13em;
+        height: 13em;
+        transition: 0s;
+    }
+    .songImage-image img {
+        border-radius: 0.2em;
+        border-bottom-left-radius: 0em;
+        border-bottom-right-radius: 0em;
+    }
+    .songImage-image:hover {
+        animation: 5s;
+        transition: 0.5s;
+        margin: 0px 0px 0px -22%;
+    }
+    .audioPreview-unavailable {
+        font-size: 0.9em;
+        margin-bottom: 2em;
+    }
+    .audio-controls-container {
+        width: 13em;
+        font-size: 1em;
+        padding: 0.4em 0em 0.2em 0em;
+        margin-bottom: 2em;
+    }
+    .audio-play-container {
+        margin-left: 3em;
+    }
+    .audio-volume-container {
+        margin-right: 0.2em;
+    }
+    .audio-vol-icon-container {
+        margin-right: 0.4em;
+    }
+    .audio-volume-slide {
+        width: 5em;
+        margin-top: 0em;
+    }
+    
+    .songDescription-container {
+        border: 0.1em solid rgba(247, 242, 242, 0.1);
+        border-radius: 0.2em;
+        padding: 0em;
+        width: 17em;
+    }
+    .songDescription-title {
+        font-size: 1.2em;
+        margin-top: 1em;
+    }
+    .songDescription-artists{
+        font-size: 0.9em;
+        margin-top: -10%;
+    }
+    .songDescription-info {
+        border: 0.1em solid rgba(247, 242, 242, 0.1);
+        border-radius: 0.2em;
+        padding: 0;
+        padding-left: 1em;
+        margin: 1em;
+        margin-top: -0.1em;
+    }
+    .songDescription-info p{
+        line-height: 1.6;
+        font-size: 0.75em;
+    }
+    .recommend-container {
+        margin: 0.1em;
+        margin-bottom: 0.5em;
+        display: none;
+    }
+    .recommend-input {
+        margin-right: 0;
+        width: 10em;
+        height: 15px;
+        border: 0.2em solid rgba(247, 242, 242, 0.288);
+        border-radius: 0.2em;
+        padding: 0.3em;
+        font-size: 0.8em;
+    }
+    .recommend-input:hover, .recommend-input:focus {
+        border: 0.2em solid rgba(247, 242, 242, 0.288);
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    .rcmnd-btn i {
+        padding-top: 0em;
+        padding-bottom: 0em;
+    }
+    .rcmnd-btn {
+        border-radius: 0em;
+        color: #fff;
+        font-size: 1.3em;
+    }
+    .rcmnd-btn:hover, .rcmnd-btn:focus{
+        color: red;
+        cursor: pointer;
+        outline: none;
+    }
+   
+}
+
+@media screen and (max-width: 494px) and (min-width: 320px) {
+    a{
+        color:rgb(246, 247, 248); 
+        text-decoration: underline;
+    }
+    a:hover {
+        pointer-events: none;
+    }
+
+    .topBar-container {
+        transition: 0.5s;
+        padding-top: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo-container {
+        flex-direction: column;
+        padding: 1em;
+    }
+    .logo-title {
+        font-size: 2.2em;
+        margin-bottom: -0.4em;
+    }
+    .logo-subtitle {
+        font-size: 1em;
+        padding-top: 0em;
+    }
+    .searchBar-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .searchBar-input {
+        width: 18em;
+        height: 2.4em;
+        background-position: 16em 0.4em; 
+        font-size: 0.9em;
+        transition: 0.2s;
+    }
+    .searchBar-input:hover, .searchBar-input:focus {
+        background-size: 12%;
+        background-color: rgba(0, 0, 0, 0.2);
+        background-position: 15.8em 0.4em; 
+        pointer-events: none;
+    }
+    .recommendations-section {
+        display: none;
+    }
+    .body {
+        display: flex;
+        margin: 0;
+        margin-top: 20%;
+    }
+    .searchResults {
+        margin: 0.3em;
+        padding: 0;
+        height: 25em;
+        width: 50%;
+        margin-right: auto;
+    }
+    .searchResults-subtitle {
+        padding: 0.2em 0em 0.2em 0.2em;
+        font-size: 1em;
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 4em;
+        border-top-left-radius: 0.2em;
+        border-top-right-radius: 0.2em;
+        border: 0.1em solid rgba(247, 242, 242, 0.1);
+        border-bottom: none;
+    }
+    .searchResults-container {
+        border-radius: 0.2em;
+        border-top-left-radius: 0em;
+        border: 0.1em solid rgba(247, 242, 242, 0.1);
+    }
+    .searchResults-result,
+    .searchResults-result-chosen {
+        padding: 5% 0% 5% 2%;
+        font-size: 0.9em;
+    }
+    .searchResults-result-chosen{ 
+        border-width: 0.15em;
+    }
+    .songInfo {
+        margin: 0.2em;
+        margin-top: 2.1em;
+        padding: 0;
+        width: 49%;
+        height: 100%;
+    }
+    .songImage-container, .songImage-image img {
+        width: 9em;
+        height: 9em;
+        transition: 0s;
+    }
+    .songImage-image img {
+        border-radius: 0.2em;
+        border-bottom-left-radius: 0em;
+        border-bottom-right-radius: 0em;
+    }
+    .songImage-image-vinyl img{
+        animation: 5s;
+        transition: 0.5s;
+        margin: -9em 0px 2em 0em;
+    }
+    .songImage-image:hover {
+        animation: 5s;
+        transition: 0.5s;
+        margin: 0px 0px 0px -22%;
+    }
+    .audioPreview-unavailable {
+        font-size: 0.8em;
+        margin-bottom: 2em;
+    }
+    .audio-controls-container {
+        width: 9em;
+        font-size: 1em;
+        padding: 0.4em 0em 0.2em 0em;
+        margin-bottom: 1em;
+    }
+    .audio-play-container {
+        margin-left: 1.5em;
+    }
+    .audio-volume-container {
+        margin-right: 0.2em;
+    }
+    .audio-vol-icon-container {
+        margin-right: 0.2em;
+    }
+    .audio-volume-slide {
+        width: 4em;
+        margin-top: 0em;
+    }
+    
+    .songDescription-container {
+        border: 0.1em solid rgba(247, 242, 242, 0.1);
+        border-radius: 0.2em;
+        padding: 0em;
+        width: 100%;
+    }
+    .songDescription-title {
+        font-size: 1em;
+        margin-top: 0.3em;
+    }
+    .songDescription-artists{
+        font-size: 0.68em;
+        margin-top: -13%;
+    }
+    .songDescription-info {
+        border: 0.1em solid rgba(247, 242, 242, 0.1);
+        border-radius: 0.2em;
+        padding: 0;
+        padding-left: 0.4em;
+        margin: 1em;
+        margin-top: -0.1em;
+    }
+    .songDescription-info p{
+        line-height: 2;
+        font-size: 0.64em;
+    }
+    .recommend-container {
+        margin: 0.1em;
+        margin-bottom: 0.5em;
+        display: none;
+    }
+    .recommend-input {
+        margin-right: 0;
+        width: 10em;
+        height: 15px;
+        border: 0.2em solid rgba(247, 242, 242, 0.288);
+        border-radius: 0.2em;
+        padding: 0.3em;
+        font-size: 0.8em;
+    }
+    .recommend-input:hover, .recommend-input:focus {
+        border: 0.2em solid rgba(247, 242, 242, 0.288);
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    .rcmnd-btn i {
+        padding-top: 0em;
+        padding-bottom: 0em;
+    }
+    .rcmnd-btn {
+        border-radius: 0em;
+        color: #fff;
+        font-size: 1.3em;
+    }
+    .rcmnd-btn:hover, .rcmnd-btn:focus{
+        color: red;
+        cursor: pointer;
+        outline: none;
+    }
+}

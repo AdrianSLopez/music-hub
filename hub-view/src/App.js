@@ -1,4 +1,5 @@
 import "./App.css";
+import "./responsive.css"
 import React, {useState, useEffect} from "react"
 import TopBar from "./views/topBar";
 import Background from "./views/background";
@@ -74,7 +75,7 @@ export default function App() {
   }, [url, userSearchTerm, chosenSongId,refreshPublicRec]);
 
   return (
-    <div>
+    <div className="app-container">
       <Background albumImages={songInfo.albumImages}/>
 
       <TopBar sendUserSearchTerm={sendUserSearchTerm} sendUrl={sendUrl} userSearchTerm={userSearchTerm} sendChosenSongId={sendChosenSongId}/>
