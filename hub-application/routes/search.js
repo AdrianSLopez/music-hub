@@ -13,13 +13,19 @@ const _filterTracks = (tracks) => {
     });
 };
 
+const _getOffset = (url) => {
+    if(url === null) return null;
+
+    return url.split('&')[3].split('=')[1]
+}
+
 router.get('/', async (req, res) => {
     try {
-        const { song, limit=10, metadata } = req.query;
-        const tracks = await api.getTracks(song, limit);
+        const { song, limit=10, offset=0, metadata } = req.query;
+        const tracks = await api.getTracks(song, offset, limit);
         const filteredTracks = _filterTracks(tracks.items);
 
-        res.json(filteredTracks);
+        res.json({tracks: filteredTracks, current:_getOffset(tracks.href), next:_getOffset(tracks.next), prev: _getOffset(tracks.previous)});
     } catch (error) {
         res.status(500).json(error.toString());
     }
