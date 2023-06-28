@@ -13,6 +13,8 @@ export default function App() {
   const [refreshPublicRec, setrefreshPublicRec] = useState(true)
   const [publicRecommendations, setPublicRecommendations] = useState([])
   const [url, setUrl] = useState('/topGlobalSongs')
+  const [next, setNext] = useState(10)
+  const [prev, setPrev] = useState(null)
 
   const sendChosenSongId = (song) => {
     setChosenSongId(song)
@@ -32,12 +34,19 @@ export default function App() {
 
   useEffect(() => {
     if(!url.includes('details')){
+      //fetch data from topGlobalSongs or user searchterm
       fetch(url)
         .then(response => {
             return response.json()
         })
         .then(data => {
           let tracks =  (url === '/topGlobalSongs')? data: data.tracks;
+
+          if(url !== '/topGlobalSongs'){
+            setNext(data.next)
+            setPrev(data.prev)
+          }
+
           setUserSearchTerm(userSearchTerm)
           setSongResults(tracks);
           setChosenSongId(chosenSongId===0? tracks[0].id: chosenSongId)
@@ -48,6 +57,7 @@ export default function App() {
           console.log(error)
         })
     }else {
+      //fetch data from specific song id
       fetch(url)
         .then(response => {
           return response.json()
@@ -57,6 +67,7 @@ export default function App() {
         })
     }
 
+    //fetch public recommendations
     if(refreshPublicRec){
       fetch('/publicRecommendations/recent')
         .then(response => {
@@ -81,7 +92,7 @@ export default function App() {
 
       <TopBar sendUserSearchTerm={sendUserSearchTerm} sendUrl={sendUrl} userSearchTerm={userSearchTerm} sendChosenSongId={sendChosenSongId}/>
 
-      <Body sendUserSearchTerm={sendUserSearchTerm} songResults={songResults} songInfo={songInfo} publicRecommendations={publicRecommendations} sendChosenSongId={sendChosenSongId} chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl} updatePublicRec={updatePublicRec}/>
+      <Body sendUserSearchTerm={sendUserSearchTerm} songResults={songResults} songInfo={songInfo} publicRecommendations={publicRecommendations} sendChosenSongId={sendChosenSongId} chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl} updatePublicRec={updatePublicRec} next={next} prev={prev}/>
     </div>
     
   );

@@ -1,4 +1,5 @@
 import React from "react"
+import TraverseResults from "./traverseResults"
 
 export default function SearchResults(props) {
   if(props.results === undefined) return (<div>loading...</div>)
@@ -17,7 +18,11 @@ export default function SearchResults(props) {
 
   return(
     <div className="searchResults"> 
-    <div className="searchResults-subtitle">Results: </div>
+      <div className="searchResults-topBar">
+        <p> Results ({props.prev === null? 1: Number(props.prev)+11}-{props.next}) : </p>
+        <TraverseResults userSearchTerm={props.userSearchTerm} sendUrl={props.sendUrl} next={props.next} prev={props.prev} sendChosenSongId={props.sendChosenSongId}/>
+      </div>
+
       <div className="searchResults-container">
         {songResults}
       </div>
