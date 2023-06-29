@@ -23,7 +23,8 @@ export default function Recommend(props) {
           userSearchTerm: props.userSearchTerm,
           title: props.songInfo.title,
           albumImages: props.songInfo.albumImages,
-          userName: displayName
+          userName: displayName,
+          offset: props.current
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8"
