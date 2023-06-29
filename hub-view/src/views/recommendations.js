@@ -13,7 +13,7 @@ export default function Recommendations(props) {
         props.sendUserSearchTerm(term)
 
         if(term.toLowerCase().split(' ').join('') === 'topglobalsongs') {
-            props.sendUrl('/topGlobalSongs')
+            props.sendUrl(`/topGlobalSongs?offset=${offSet}`)
         }else {
             props.sendUrl(`/search/?song=${term}&offset=${offSet}`)            
         }

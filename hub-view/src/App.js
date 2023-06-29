@@ -36,7 +36,6 @@ export default function App() {
   useEffect(() => {
     if(!url.includes('details')){
       //fetch data from topGlobalSongs or user searchterm
-      console.log(url)
       fetch(url)
         .then(response => {
             return response.json()
@@ -44,7 +43,7 @@ export default function App() {
         .then(data => {
           const tracks = data.tracks;
 
-          (url.includes('topGlobalSongs'))? setCurrent(data.next === null? 40: data.prev+10): setCurrent(data.current)
+          (url.includes('topGlobalSongs'))? setCurrent(data.next === null? Number(data.prev)+10:Number(data.next)-10 ): setCurrent(data.current)
 
           setNext(data.next)
           setPrev(data.previous)
