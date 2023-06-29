@@ -1,5 +1,5 @@
 import React from "react"
-import TraverseButton from "../traverseButton"
+import TraverseButton from "./traverseButton"
 
 export default function TraverseResults(props) {
   return(
