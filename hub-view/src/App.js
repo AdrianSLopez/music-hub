@@ -12,10 +12,10 @@ export default function App() {
   const [songInfo, setSongInfo] = useState([])
   const [refreshPublicRec, setrefreshPublicRec] = useState(true)
   const [publicRecommendations, setPublicRecommendations] = useState([])
-  const [url, setUrl] = useState('/topGlobalSongs')
+  const [url, setUrl] = useState('/topGlobalSongs?offset=0')
   const [current, setCurrent] = useState(0)
   const [next, setNext] = useState(10)
-  const [prev, setPrev] = useState(null)
+  const [prev, setPrev] = useState(0)
 
   const sendChosenSongId = (song) => {
     setChosenSongId(song)
@@ -36,19 +36,18 @@ export default function App() {
   useEffect(() => {
     if(!url.includes('details')){
       //fetch data from topGlobalSongs or user searchterm
+      console.log(url)
       fetch(url)
         .then(response => {
             return response.json()
         })
         .then(data => {
-          let tracks =  (url === '/topGlobalSongs')? data: data.tracks;
+          const tracks = data.tracks;
 
-          if(url !== '/topGlobalSongs'){
-            setCurrent(data.current)
-            setNext(data.next)
-            setPrev(data.prev)
-          }
+          (url.includes('topGlobalSongs'))? setCurrent(data.next === null? 40: data.prev+10): setCurrent(data.current)
 
+          setNext(data.next)
+          setPrev(data.previous)
           setUserSearchTerm(userSearchTerm)
           setSongResults(tracks);
           setChosenSongId(chosenSongId===0? tracks[0].id: chosenSongId)
@@ -86,7 +85,7 @@ export default function App() {
       
         updatePublicRec(false)
     }
-  }, [url, userSearchTerm, chosenSongId,refreshPublicRec]);
+  }, [url, userSearchTerm, chosenSongId, refreshPublicRec]);
 
   return (
     <div className="app-container">
