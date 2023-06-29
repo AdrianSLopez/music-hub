@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
         const tracks = await api.getTracks(song, offset, limit);
         const filteredTracks = _filterTracks(tracks.items);
 
-        res.json({tracks: filteredTracks, current:_getOffset(tracks.href), next:_getOffset(tracks.next), prev: _getOffset(tracks.previous)});
+        res.json({tracks: filteredTracks, current:_getOffset(tracks.href), next:_getOffset(tracks.next), previous: _getOffset(tracks.previous)});
     } catch (error) {
         res.status(500).json(error.toString());
     }
