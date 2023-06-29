@@ -22,7 +22,7 @@ export default function SongDescription(props) {
           </p>
         </div>
         
-        <Recommend chosenSongId={props.chosenSongId} songInfo={props.songInfo} userSearchTerm={props.userSearchTerm} updatePublicRec={props.updatePublicRec}/>        
+        <Recommend chosenSongId={props.chosenSongId} songInfo={props.songInfo} userSearchTerm={props.userSearchTerm} updatePublicRec={props.updatePublicRec} current={props.current}/>        
     </div>
   );
 }

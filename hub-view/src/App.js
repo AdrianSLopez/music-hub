@@ -13,6 +13,7 @@ export default function App() {
   const [refreshPublicRec, setrefreshPublicRec] = useState(true)
   const [publicRecommendations, setPublicRecommendations] = useState([])
   const [url, setUrl] = useState('/topGlobalSongs')
+  const [current, setCurrent] = useState(0)
   const [next, setNext] = useState(10)
   const [prev, setPrev] = useState(null)
 
@@ -43,6 +44,7 @@ export default function App() {
           let tracks =  (url === '/topGlobalSongs')? data: data.tracks;
 
           if(url !== '/topGlobalSongs'){
+            setCurrent(data.current)
             setNext(data.next)
             setPrev(data.prev)
           }
@@ -92,7 +94,7 @@ export default function App() {
 
       <TopBar sendUserSearchTerm={sendUserSearchTerm} sendUrl={sendUrl} userSearchTerm={userSearchTerm} sendChosenSongId={sendChosenSongId}/>
 
-      <Body sendUserSearchTerm={sendUserSearchTerm} songResults={songResults} songInfo={songInfo} publicRecommendations={publicRecommendations} sendChosenSongId={sendChosenSongId} chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl} updatePublicRec={updatePublicRec} next={next} prev={prev}/>
+      <Body sendUserSearchTerm={sendUserSearchTerm} songResults={songResults} songInfo={songInfo} publicRecommendations={publicRecommendations} sendChosenSongId={sendChosenSongId} chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl} updatePublicRec={updatePublicRec} next={next} prev={prev} current={current}/>
     </div>
     
   );
