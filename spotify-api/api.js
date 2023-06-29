@@ -67,18 +67,20 @@ const getTrackInfo = async (id) => {
 };
 
 
-const getTopGlobalSongs = async () => {
+const getTopGlobalSongs = async (offset=0) => {
     const options = {
         method: 'get',
-        url: `${config.spotifyBaseURL}/playlists/37i9dQZEVXbNG2KDcFcKOF/tracks?offset=0&limit=11`,
+        url: `${config.spotifyBaseURL}/playlists/37i9dQZEVXbNG2KDcFcKOF/tracks?offset=${offset}&limit=10`,
         headers
     }
 
     try {
         const songs = await axios.request(options);
-        return songs.data.items.map((item) => {
+        const tracks =  songs.data.items.map((item) => {
             return item.track
         });
+
+        return {next:songs.data.next, previous:songs.data.previous, tracks}
     } catch (error) {
         console.log("ERRORS IN SINGLE TRACK METHOD")
         console.error(error)
