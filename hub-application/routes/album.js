@@ -3,9 +3,14 @@ const api = require('spotify-api');
 
 const _filterTracks = (tracks) => {
     return tracks.map((track) => {
+        const artists = track.artists.map((artist) => {
+            return artist.name;
+        }).join(", ");
+
         return {
             id: track.id,
-            title: track.name
+            title: `${track.name} by ${artists}`
+
         };
     });
 }
