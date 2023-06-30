@@ -60,7 +60,7 @@ router.get('/:id/details', async (req, res) => {
         const { searchTerm } = req.query
         const trackInfo = await api.getTrackInfo(id)
         const display = _filterSongInfo(trackInfo);
-        const selection = { id, display }
+        const selection = { id, info:display }
         
         res.json({ searchTerm, ...selection});
     } catch (error) {
