@@ -99,10 +99,27 @@ const getAlbumTracks = async (id, limit=10, offset=0) => {
         console.error(error)
     }
 }
+
+const getArtistTopTracks = async (id) => {
+    const options = {
+        method: 'get',
+        url: `${config.spotifyBaseURL}/artists/${id}/top-tracks?market=US`,
+        headers
+    }
+
+    try {
+        const songs = await axios.request(options);
+        
+        return songs.data
+    } catch (error) {
+        console.error(error)
+    }
+}
 module.exports = {
     generateToken,
     getTracks,
     getTrackInfo,
     getTopGlobalSongs,
-    getAlbumTracks
+    getAlbumTracks,
+    getArtistTopTracks
 };
