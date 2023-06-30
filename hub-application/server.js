@@ -18,6 +18,9 @@ app.use('/publicRecommendations', publicRecommendations)
 const albumTracks = require('./routes/album.js')
 app.use('/album', albumTracks)
 
+const artistTopTracks = require('./routes/artistsTopTracks')
+app.use('/artistTopTracks', artistTopTracks)
+
 app.listen(port, async () => {
     console.log(`Server is listening on port ${port}`);
     await mongo.connect();
