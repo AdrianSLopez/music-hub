@@ -42,6 +42,7 @@ const _filterSongInfo = (track) => {
             title: trackInfo.name, 
             artists, 
             songUrl: trackInfo.external_urls.spotify,
+            albumId: trackInfo.album.id,
             albumName: trackInfo.album.name, 
             albumUrl: trackInfo.album.external_urls.spotify, 
             albumImages: trackInfo.album.images, 
