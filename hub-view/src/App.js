@@ -63,7 +63,7 @@ export default function App() {
           return response.json()
         })
         .then(data => {
-          setSongInfo(data.display[0])
+          setSongInfo(data.info[0])
         })
     }
 

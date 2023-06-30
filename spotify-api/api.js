@@ -27,7 +27,6 @@ const generateToken = async () => {
         json.spotifyToken = token.data
         fs.writeFileSync('config.json', JSON.stringify(json))
     } catch (error) {
-        console.log("ERROR IN GENERATING TOKEN");
         console.error(error);
     }
 
@@ -61,7 +60,6 @@ const getTrackInfo = async (id) => {
         const trackInfo = await axios.request(options);
         return [trackInfo.data];
     } catch (error) {
-        console.log("ERRORS IN SINGLE TRACK METHOD")
         console.error(error)
     }
 };
@@ -82,14 +80,46 @@ const getTopGlobalSongs = async (offset=0) => {
 
         return {next:songs.data.next, previous:songs.data.previous, tracks}
     } catch (error) {
-        console.log("ERRORS IN SINGLE TRACK METHOD")
         console.error(error)
     }
 }
 
+const getAlbumTracks = async (id, limit=10, offset=0) => {
+    const options = {
+        method: 'get',
+        url: `${config.spotifyBaseURL}/albums/${id}/tracks?limit=${limit}&offset=${offset}`,
+        headers
+    }
+
+    try {
+        const songs = await axios.request(options);
+        
+        return songs.data
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+const getArtistTopTracks = async (id) => {
+    const options = {
+        method: 'get',
+        url: `${config.spotifyBaseURL}/artists/${id}/top-tracks?market=US`,
+        headers
+    }
+
+    try {
+        const songs = await axios.request(options);
+        
+        return songs.data
+    } catch (error) {
+        console.error(error)
+    }
+}
 module.exports = {
     generateToken,
     getTracks,
     getTrackInfo,
-    getTopGlobalSongs
+    getTopGlobalSongs,
+    getAlbumTracks,
+    getArtistTopTracks
 };

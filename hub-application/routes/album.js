@@ -21,13 +21,15 @@ const _getOffset = (url) => {
     return url.split('?')[1].split('&')[0].split('=')[1];
 }
 
-router.get('/', async (req, res) => {
+router.get('/:id/tracks', async (req, res) => {
     try {
-        const { offset=0 } = req.query;
-        const topGlobalSongs = await api.getTopGlobalSongs(offset);
-        const filtered = _filterTracks(topGlobalSongs.tracks)
+        const { id } = req.params
+        const { limit=10, offset=0 } = req.query
+        const tracks = await api.getAlbumTracks(id, limit, offset);
+        const filtered = _filterTracks(tracks.items)
+        
+        res.json({tracks: filtered, current:_getOffset(tracks.href), next:_getOffset(tracks.next), previous: _getOffset(tracks.previous)})
 
-        res.json({next: _getOffset(topGlobalSongs.next), previous: _getOffset(topGlobalSongs.previous),  tracks: filtered})
     } catch(error) {
         res.status(500).json(error.toString());
     }
