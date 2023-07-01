@@ -9,33 +9,32 @@ export default function App() {
   const [userSearchTerm, setUserSearchTerm] = useState('Top global songs')
   const [songResults, setSongResults] = useState([])
   const [chosenSongId, setChosenSongId] = useState(0)
+  const [chosenAlbumId, setChosenAlbumId] = useState([])
+  const [chosenArtistId, setChosenArtistId] = useState([])
   const [songInfo, setSongInfo] = useState([])
   const [refreshPublicRec, setrefreshPublicRec] = useState(true)
   const [publicRecommendations, setPublicRecommendations] = useState([])
-  const [url, setUrl] = useState('/topGlobalSongs?offset=0')
+  const [endpointUsed, setEndpointUsed] = useState('topGlobalSongs')
+  const [url, setUrl] = useState('/topGlobalSongs/?offset=0')
   const [current, setCurrent] = useState(0)
   const [next, setNext] = useState(10)
   const [prev, setPrev] = useState(0)
 
-  const sendChosenSongId = (song) => {
-    setChosenSongId(song)
-  }
-
-  const sendUserSearchTerm = (term) => {
-    setUserSearchTerm(term)
-  }
-
-  const sendUrl = (newUrl) => {
-    setUrl(newUrl)
-  }
+  const sendChosenSongId = (song) => setChosenSongId(song)
+  const sendUserSearchTerm = (term) => setUserSearchTerm(term)
+  const sendUrl = (newUrl) => setUrl(newUrl)
+  const sendChosenAlbumId = (albumId) => setChosenAlbumId(albumId)
+  const sendEndpointUsed = (endpoint) => setEndpointUsed(endpoint)
+  const sendChosenArtistId = (artistId) => setChosenArtistId(artistId)
 
   const updatePublicRec = (refresh) => {
     setrefreshPublicRec(refresh)
   }
 
   useEffect(() => {
-    if(!url.includes('details')){
-      //fetch data from topGlobalSongs or user searchterm
+    if(!url.includes('details')){ 
+      setEndpointUsed(url.split('/')[1])
+
       fetch(url)
         .then(response => {
             return response.json()
@@ -47,7 +46,6 @@ export default function App() {
 
           setNext(data.next)
           setPrev(data.previous)
-          setUserSearchTerm(userSearchTerm)
           setSongResults(tracks);
           setChosenSongId(chosenSongId===0? tracks[0].id: chosenSongId)
           setUrl(`/search/${chosenSongId===0? tracks[0].id: chosenSongId}/details?searchTerm=${userSearchTerm}`)
@@ -92,7 +90,7 @@ export default function App() {
 
       <TopBar sendUserSearchTerm={sendUserSearchTerm} sendUrl={sendUrl} userSearchTerm={userSearchTerm} sendChosenSongId={sendChosenSongId}/>
 
-      <Body sendUserSearchTerm={sendUserSearchTerm} songResults={songResults} songInfo={songInfo} publicRecommendations={publicRecommendations} sendChosenSongId={sendChosenSongId} chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl} updatePublicRec={updatePublicRec} next={next} prev={prev} current={current}/>
+      <Body sendUserSearchTerm={sendUserSearchTerm} sendEndpointUsed={sendEndpointUsed} sendChosenAlbumId={sendChosenAlbumId} songResults={songResults} songInfo={songInfo} publicRecommendations={publicRecommendations} sendChosenSongId={sendChosenSongId} chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl} updatePublicRec={updatePublicRec} next={next} prev={prev} current={current} endpointUsed={endpointUsed} chosenAlbumId={chosenAlbumId} sendChosenArtistId={sendChosenArtistId} chosenArtistId={chosenArtistId}/>
     </div>
     
   );
