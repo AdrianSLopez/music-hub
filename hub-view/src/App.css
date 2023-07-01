@@ -362,16 +362,26 @@ a:hover{
   width: 400px;
 }
 .songDescription-title {
-  font-size: 25px;
+  font-size: 1.5em;
   margin-top: 1%;
 }
 .songDescription-artists{
-  margin: -8% 0% 0% 0%;
+  margin: -6% 0% 3% 0%;
   display:flex;
   justify-content: center;
   overflow-x: auto;
   flex-wrap: wrap;
   line-height: 0;
+}
+.songDescription-artist, .songDescription-album-name {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1em;
+  cursor: pointer;
+}
+.songDescription-artist:hover, .songDescription-album-name:hover {
+  text-decoration: underline;
 }
 .songDescription-info {
   text-align: left;
@@ -383,7 +393,7 @@ a:hover{
 }
 .songDescription-info p{
   line-height: 1.8;
-  font-size: 15px;
+  font-size: 0.95em;
 }
 .songDrescription-info-subtitle {
   text-align: left;
