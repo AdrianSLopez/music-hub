@@ -31,7 +31,7 @@ export default function SongDescription(props) {
         <p className="songDescription-title"><a href={props.songInfo.songUrl}>{props.songInfo.title}</a></p>
         <div className="songDescription-artists">
           {props.songInfo.artists.map((artist, i) => {
-              return <button key={artist.id} data-artist-id={artist.id} data-artist-index={i} onClick={artistClick}>{artist.name}{i !== props.songInfo.artists.length-1? `, `:""}</button>
+              return <button key={artist.id} data-artist-id={artist.id} data-artist-index={i} onClick={artistClick} className="songDescription-artist">{artist.name}{i !== props.songInfo.artists.length-1? `, `:""}</button>
           })}
         </div>
 
