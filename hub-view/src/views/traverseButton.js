@@ -16,6 +16,9 @@ export default function TraverseButton(props) {
           case "album":
             nextUrl = `/album/${props.chosenAlbumId}/tracks?limit=10&offset=${props.offset}`
             break;
+          default:
+            nextUrl = '/topGlobalSongs/?offset=0'
+            break
         }
         
         props.sendUrl(nextUrl)
