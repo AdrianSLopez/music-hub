@@ -1,7 +1,4 @@
 @media screen and (max-width: 1750px) and (min-width: 1401px) {
-    *{
-        transition: 0.3s 
-    }
     .bg-color-cover {
         width: 100%;
         margin: 0;
@@ -9,9 +6,9 @@
         top: 0;
         left: 0;
     }
-    /* .logo-container {
-        background-color: aliceblue;
-    } */
+    .logo-container {
+        background-color: darkcyan;
+    }
     .logo-title {
         font-size: 28px;
     }
@@ -41,11 +38,10 @@
         margin-right: 1px;                                         
     }
     .recommendations-title {
-        width: 130px; 
-        font-size: 15px                                                                                                                                                    ;
+        font-size: 0.9em;                                                                                                                                                    ;
     }
     .recommendations {
-        height: 490px;
+        height: 460px;
         overflow-x: hidden;
     }
     .recommendations-item-img, .recommendations-item-img-first {
@@ -74,38 +70,37 @@
         font-size: 12px;
         margin: -70px 10px 95px 10px;
     }
-      .recommendations-item-img-first:hover ~ .recommendations-item-description-first {
+    .recommendations-item-img-first:hover ~ .recommendations-item-description-first {
         width: 130px;
         font-size: 12px;
         margin: 0px 10px 100px 10px;
     }
 
     .searchResults {
-        margin-top: 0%;
-        margin-left: 0%;
-        margin-right: 10%;
-        width: 610px;
         height: 100%;
         transition: 0s;
     }
-    .searchResults-subtitle {
-        font-size: 21px;
-        width: 90px;
+    .searchResults-topBar p{
+        padding: 5px 0px 2px 10px;
+        font-size: 1.3em;
+    }
+    .searchResults-traverse-container{
+        margin: 1px -3px 0 auto;
+        font-size: 1.1em;
+        padding: 5px 8px 5px 10px;
     }
     .searchResults-container {
-        width: 100%;
-        height: 530px;
-        transition: 0s;
+        height: 510px;
     }
     .searchResults-result,
     .searchResults-result-chosen {
-        font-size: 19px;
+        font-size: 1em;
     }
 
     .songInfo {
-        width: 550px;
-        height: 580px;
-        margin-top: 1%;
+        width: 580px;
+        height: 100%;
+        margin-right: 2%;
     }
     .songImage-container {
         transition: 0s;
@@ -117,12 +112,12 @@
 
     .audioPreview-unavailable {
         margin-top: 1%;
-        margin-bottom: 2%;
-        font-size: 14px;
+        margin-bottom: 0%;
+        font-size: 0.85em;
     }
     .audio-controls-container {
         width: 250px;
-        font-size: 21px;
+        font-size: 1.2em;
     }
     .audio-play-container {
         margin-left: 50px;
@@ -135,31 +130,37 @@
     }
 
     .songDescription-container {
-        width: 330px;
+        /* width: 440px; */
     }
     .songDescription-title {
-        font-size: 22px;
-        margin-top: 0px;
+        font-size: 1.3em;
+        margin-top: 0%;
     }
     .songDescription-artists{
-        margin-top: -8%;
-        font-size: 15px;
+        margin-top: -5%;
     }
-    .songDescription-info p{
-        line-height: 1.6;
-        font-size: 13px;
+    .songDescription-artist {
+        font-size: 0.8em;
     }
     
+    .songDescription-info p{
+        line-height: 1.4;
+        font-size: 0.8em;
+    }
+
+    .recommend-container {
+        margin-top: 10px;
+    }
     .recommend-label {
-        font-size: 14px;
+        font-size: 0.9em;
     }
     .recommend-input {
         width: 135px;
         height: 14px;
-        font-size: 12px;
+        font-size: 0.75em;
     }
     .rcmnd-btn {
-        font-size: 18px;
+        font-size: 1.1em;
     }
 }
 
