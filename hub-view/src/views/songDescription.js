@@ -45,7 +45,7 @@ export default function SongDescription(props) {
           </p>
         </div>
         
-        <Recommend chosenSongId={props.chosenSongId} songInfo={props.songInfo} userSearchTerm={props.userSearchTerm} updatePublicRec={props.updatePublicRec} current={props.current} endpointUsed={props.endpointUsed} chosenAlbumId={props.chosenAlbumId}/>        
+        <Recommend chosenSongId={props.chosenSongId} songInfo={props.songInfo} userSearchTerm={props.userSearchTerm} updatePublicRec={props.updatePublicRec} current={props.current} endpointUsed={props.endpointUsed} chosenAlbumId={props.chosenAlbumId} chosenArtistId={props.chosenArtistId}/>        
     </div>
   );
 }
