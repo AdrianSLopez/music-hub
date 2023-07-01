@@ -2,11 +2,23 @@ import React from "react"
 
 export default function TraverseButton(props) {
     const sendNewUrl = () => {
-        if(props.offset ==null) return
+        if(props.offset == null) return
 
-        let url = (props.userInput.toLowerCase().split(' ').join('') === 'topglobalsongs')? `/topGlobalSongs?offset=${props.offset}`:`/search/?song=${props.userInput}&offset=${props.offset}`
+        let nextUrl = '/'
+
+        switch(props.endpointUsed) {
+          case "topGlobalSongs":
+            nextUrl = `/topGlobalSongs/?offset=${props.offset}`
+            break;
+          case "search":
+            nextUrl = `/search/?song=${props.userInput}&offset=${props.offset}`
+            break;
+          case "album":
+            nextUrl = `/album/${props.chosenAlbumId}/tracks?limit=10&offset=${props.offset}`
+            break;
+        }
         
-        props.sendUrl(url)
+        props.sendUrl(nextUrl)
         props.sendChosenSongId(0)
     }
 
