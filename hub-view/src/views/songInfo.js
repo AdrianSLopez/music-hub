@@ -17,7 +17,7 @@ const SongInfo = (props) => {
 
           <AudioPreview songPreview={props.songInfo.preview}/>
           
-          <SongDescription chosenSongId={props.chosenSongId} songInfo={props.songInfo} userSearchTerm={props.userSearchTerm} updatePublicRec={props.updatePublicRec} current={props.current}/>
+          <SongDescription chosenSongId={props.chosenSongId} songInfo={props.songInfo} userSearchTerm={props.userSearchTerm} updatePublicRec={props.updatePublicRec} current={props.current} sendUrl={props.sendUrl} sendUserSearchTerm={props.sendUserSearchTerm} sendChosenSongId={props.sendChosenSongId} sendChosenAlbumId={props.sendChosenAlbumId}/>
       </div>
     </div>
   );

@@ -3,6 +3,17 @@ import Recommend from "./recommend";
 
 
 export default function SongDescription(props) {
+  const albumClick = (e) => {
+    e.preventDefault()
+
+    const albumId = e.target.getAttribute("data-album-id")
+
+    props.sendUrl(`/album/${albumId}/tracks?limit=10&offset=0`)
+    props.sendUserSearchTerm(props.songInfo.albumName)
+    props.sendChosenSongId(0)
+    props.sendChosenAlbumId(albumId)
+  }
+
   return (
     <div className="songDescription-container">
         <p className="songDescription-title"><a href={props.songInfo.songUrl}>{props.songInfo.title}</a></p>
@@ -14,7 +25,7 @@ export default function SongDescription(props) {
 
         <div className="songDescription-info">
           <p>
-            Track {props.songInfo.trackNumber} on <a href={props.songInfo.albumUrl}>{props.songInfo.albumName}</a>
+            Track {props.songInfo.trackNumber} on <button onClick={albumClick} data-album-id={props.songInfo.albumId} className="songDescription-album-name">{props.songInfo.albumName}</button>
             <br />
             Released on {props.songInfo.albumReleaseDate}
             <br />
