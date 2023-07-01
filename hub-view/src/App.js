@@ -90,7 +90,7 @@ export default function App() {
 
       <TopBar sendUserSearchTerm={sendUserSearchTerm} sendUrl={sendUrl} userSearchTerm={userSearchTerm} sendChosenSongId={sendChosenSongId}/>
 
-      <Body sendUserSearchTerm={sendUserSearchTerm} sendEndpointUsed={sendEndpointUsed} sendChosenAlbumId={sendChosenAlbumId} songResults={songResults} songInfo={songInfo} publicRecommendations={publicRecommendations} sendChosenSongId={sendChosenSongId} chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl} updatePublicRec={updatePublicRec} next={next} prev={prev} current={current} endpointUsed={endpointUsed} chosenAlbumId={chosenAlbumId} sendChosenArtistId={sendChosenArtistId}/>
+      <Body sendUserSearchTerm={sendUserSearchTerm} sendEndpointUsed={sendEndpointUsed} sendChosenAlbumId={sendChosenAlbumId} songResults={songResults} songInfo={songInfo} publicRecommendations={publicRecommendations} sendChosenSongId={sendChosenSongId} chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl} updatePublicRec={updatePublicRec} next={next} prev={prev} current={current} endpointUsed={endpointUsed} chosenAlbumId={chosenAlbumId} sendChosenArtistId={sendChosenArtistId} chosenArtistId={chosenArtistId}/>
     </div>
     
   );
