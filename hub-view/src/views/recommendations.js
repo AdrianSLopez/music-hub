@@ -10,7 +10,7 @@ export default function Recommendations(props) {
         const albumId = e.target.getAttribute("data-albumid")
         const term = e.target.getAttribute("data-term");
         const offSet = e.target.getAttribute("data-offset")
-        const endpointUsed = e.target.getAttribute("data-endpointUsed")
+        const endpointUsed = e.target.getAttribute("data-endpointused")
 
 
         props.sendChosenSongId(songId)
@@ -41,7 +41,7 @@ export default function Recommendations(props) {
     const content = props.publicRecommendations.map((rec, i) => {
         return (
             <div className="recommendations-item-container" key={rec._id}>
-                <div onClick={onRecClick} data-songid={rec.songId} data-term={rec.userSearchTerm} data-albumid={rec.albumId} data-endpointUsed={rec.endpointUsed} data-offset={rec.offset} className={i===0? "recommendations-item-img-first":"recommendations-item-img"}><img  data-index-song={i} src={rec.albumImages[0].url} alt="album"/></div>
+                <div onClick={onRecClick} data-songid={rec.songId} data-term={rec.userSearchTerm} data-albumid={rec.albumId} data-endpointused={rec.endpointUsed} data-offset={rec.offset} className={i===0? "recommendations-item-img-first":"recommendations-item-img"}><img  data-index-song={i} src={rec.albumImages[0].url} alt="album"/></div>
                 <div className={i===0? "recommendations-item-description-first":"recommendations-item-description"}>Recommended by <br /> {rec.userName}</div>
             </div>
             
