@@ -3,6 +3,18 @@ import Recommend from "./recommend";
 
 
 export default function SongDescription(props) {
+  const artistClick = (e) => {
+    e.preventDefault() 
+
+    const artistId = e.target.getAttribute("data-artist-id")
+    const artistIndex = e.target.getAttribute("data-artist-index")
+    
+    props.sendUrl(`/artistTopTracks/${artistId}`)
+    props.sendUserSearchTerm(props.songInfo.artists[artistIndex].name +"'s Top 10 tracks")
+    props.sendChosenSongId(0)
+    props.sendChosenArtistId(artistId)
+  }
+
   const albumClick = (e) => {
     e.preventDefault()
 
@@ -19,7 +31,7 @@ export default function SongDescription(props) {
         <p className="songDescription-title"><a href={props.songInfo.songUrl}>{props.songInfo.title}</a></p>
         <div className="songDescription-artists">
           {props.songInfo.artists.map((artist, i) => {
-              return  <p key={artist.id}>&nbsp;<a  href={artist.url}>{artist.name}</a>{i !== props.songInfo.artists.length-1? `, `:""}</p>
+              return <button key={artist.id} data-artist-id={artist.id} data-artist-index={i} onClick={artistClick}>{artist.name}{i !== props.songInfo.artists.length-1? `, `:""}</button>
           })}
         </div>
 

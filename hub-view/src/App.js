@@ -10,6 +10,7 @@ export default function App() {
   const [songResults, setSongResults] = useState([])
   const [chosenSongId, setChosenSongId] = useState(0)
   const [chosenAlbumId, setChosenAlbumId] = useState([])
+  const [chosenArtistId, setChosenArtistId] = useState([])
   const [songInfo, setSongInfo] = useState([])
   const [refreshPublicRec, setrefreshPublicRec] = useState(true)
   const [publicRecommendations, setPublicRecommendations] = useState([])
@@ -24,7 +25,7 @@ export default function App() {
   const sendUrl = (newUrl) => setUrl(newUrl)
   const sendChosenAlbumId = (albumId) => setChosenAlbumId(albumId)
   const sendEndpointUsed = (endpoint) => setEndpointUsed(endpoint)
-
+  const sendChosenArtistId = (artistId) => setChosenArtistId(artistId)
 
   const updatePublicRec = (refresh) => {
     setrefreshPublicRec(refresh)
@@ -89,7 +90,7 @@ export default function App() {
 
       <TopBar sendUserSearchTerm={sendUserSearchTerm} sendUrl={sendUrl} userSearchTerm={userSearchTerm} sendChosenSongId={sendChosenSongId}/>
 
-      <Body sendUserSearchTerm={sendUserSearchTerm} sendEndpointUsed={sendEndpointUsed} sendChosenAlbumId={sendChosenAlbumId} songResults={songResults} songInfo={songInfo} publicRecommendations={publicRecommendations} sendChosenSongId={sendChosenSongId} chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl} updatePublicRec={updatePublicRec} next={next} prev={prev} current={current} endpointUsed={endpointUsed} chosenAlbumId={chosenAlbumId}/>
+      <Body sendUserSearchTerm={sendUserSearchTerm} sendEndpointUsed={sendEndpointUsed} sendChosenAlbumId={sendChosenAlbumId} songResults={songResults} songInfo={songInfo} publicRecommendations={publicRecommendations} sendChosenSongId={sendChosenSongId} chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl} updatePublicRec={updatePublicRec} next={next} prev={prev} current={current} endpointUsed={endpointUsed} chosenAlbumId={chosenAlbumId} sendChosenArtistId={sendChosenArtistId}/>
     </div>
     
   );
