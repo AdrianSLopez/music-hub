@@ -990,6 +990,7 @@
     .searchResults-result,
     .searchResults-result-chosen {
         font-size: 1.12em;
+        padding: 5% 0% 5% 2%;
     }
     .searchResults-result-chosen{ 
         border-width: 0.15em;
