@@ -21,12 +21,13 @@ export default function SearchResults(props) {
       <div className="searchResults-topBar">
         {/* if null get the # of tracks returned */}
         <p> Results ({props.prev === null? 1: Number(props.prev)+11}-{(props.next == null)? Number(props.prev)+20: props.next}) : </p>
-        <TraverseResults userSearchTerm={props.userSearchTerm} sendUrl={props.sendUrl} next={props.next} prev={props.prev} sendChosenSongId={props.sendChosenSongId} endpointUsed={props.endpointUsed} chosenAlbumId={props.chosenAlbumId}/>
+        <TraverseResults  className="searchResults-traverse-container" userSearchTerm={props.userSearchTerm} sendUrl={props.sendUrl} next={props.next} prev={props.prev} sendChosenSongId={props.sendChosenSongId} endpointUsed={props.endpointUsed} chosenAlbumId={props.chosenAlbumId}/>
       </div>
 
       <div className="searchResults-container">
         {songResults}
       </div>
+      <div className="searchResults-bottomBar"><TraverseResults className="searchResults-traverse-container-bottom" userSearchTerm={props.userSearchTerm} sendUrl={props.sendUrl} next={props.next} prev={props.prev} sendChosenSongId={props.sendChosenSongId} endpointUsed={props.endpointUsed} chosenAlbumId={props.chosenAlbumId}/></div>
     </div>
   )
 }
