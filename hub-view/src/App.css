@@ -235,6 +235,9 @@ a:hover{
   margin: 0 10px 0;
   cursor: pointer;
 }
+.searchResults-traverse-container-bottom {
+  display: none;
+}
 .searchResults-traverse-container button:hover, .searchResults-traverse-container button:focus{
   color: gray;
 }
@@ -255,7 +258,7 @@ a:hover{
 }
 .searchResults-result,
 .searchResults-result-chosen {
-  padding: 2% 2% 3% 2%;
+  padding: 3% 2% 3% 2%;
   font-size: 1.3em;
 }
 .searchResults-result:hover, .searchResults-result-chosen{

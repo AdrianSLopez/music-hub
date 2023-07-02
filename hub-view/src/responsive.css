@@ -877,43 +877,57 @@
 }
 
 @media screen and (max-width: 768px) and (min-width: 605px) {
-    a{
+    /* .logo-container {
+        background-color: greenyellow;
+    } */
+    a, .songDescription-artists, .songDescription-album-name{
         color:rgb(246, 247, 248); 
         text-decoration: underline;
     }
     a:hover {
         pointer-events: none;
+        cursor: pointer;
     }
 
     .topBar-container {
         transition: 0.5s;
-        padding-top: 2em;
+        padding-top: 0em;
         margin-left: 1em;
         margin-right: 1em;
+        width: 90%;
     }
     .logo-container {
         flex-direction: column;
         padding: 1em;
     }
     .logo-title {
-        font-size: 2.3em;
-        margin-bottom: -0.4em;
+        font-size: 2.7em;
+        margin-bottom: -0.5em;
     }
     .logo-subtitle {
-        font-size: 1.1em;
+        font-size: 1.2em;
         padding-top: 0em;
     }
+    .searchBar-container {
+        width: 50%;
+        margin-top: 2%;
+        margin-right: 0%;
+        align-self: center;
+        justify-content: right;
+    }
     .searchBar-input {
-        width: 19em;
         height: 2em;
         background-position: 17.5em 0.4em; 
-        font-size: 0.8em;
+        background-size: 16%;
+        font-size: 0.85em;
         transition: 0.2s;
+        background-position: 97% 80%; 
+        width: auto;
     }
     .searchBar-input:hover, .searchBar-input:focus {
-        background-size: 12%;
+        background-size: 18%;
         background-color: rgba(0, 0, 0, 0.2);
-        background-position: 17.3em 0.4em; 
+        background-position: 97% 80%; 
         pointer-events: none;
     }
     .recommendations-section {
@@ -922,33 +936,60 @@
     .body {
         display: flex;
         margin: 0;
-        margin-top: 10%;
+        margin-top: 5%;
     }
     .searchResults {
         margin: 1em;
         padding: 0;
-        height: 35em;
+        height: 33em;
         width: 50%;
         margin-right: auto;
+        margin-left: 0.25em;
     }
-    .searchResults-subtitle {
-        padding: 0.2em 0em 0.2em 0.2em;
-        font-size: 1.5em;
-        background-color: rgba(0, 0, 0, 0.2);
-        width: 4em;
-        border-top-left-radius: 0.2em;
-        border-top-right-radius: 0.2em;
-        border: 0.1em solid rgba(247, 242, 242, 0.1);
+    .searchResults-topBar p{
+        margin: 0;
+        padding: 5px 1px 5px 5px;
+        text-align: left;
+        font-size: 1.1em;
+        width: 50%;
+        border: 1px solid rgba(247, 242, 242, 0.1);
         border-bottom: none;
+    }
+    .searchResults-traverse-container{
+        display: none;
+    }
+    .searchResults-bottomBar {
+        display: flex;
+        justify-content: right;
+    }
+    .searchResults-traverse-container-bottom {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(247, 242, 242, 0.1);
+        text-align: center;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top: none;
+        padding: 5px 0px 5px 0px;
+        margin-right: -2px;
+    }
+    .searchResults-traverse-container-bottom button{
+        background-color: transparent;
+        border: none;
+        font-size: 1em;
+        margin: 0 10px 0;
+        cursor: pointer;
     }
     .searchResults-container {
         border-radius: 0.2em;
         border-top-left-radius: 0em;
         border: 0.1em solid rgba(247, 242, 242, 0.1);
+        height: 90%;
+        border-bottom-right-radius: 0px;
     }
     .searchResults-result,
     .searchResults-result-chosen {
-        font-size: 1.49em;
+        font-size: 1.12em;
     }
     .searchResults-result-chosen{ 
         border-width: 0.15em;
@@ -957,8 +998,7 @@
         margin: 1em;
         padding: 0;
         width: 50%;
-        height: 35em;
-        background-color: #fff;
+        height: 32em;
     }
     .songImage-container, .songImage-image img {
         width: 14em;
@@ -977,7 +1017,7 @@
     }
     .audioPreview-unavailable {
         font-size: 1em;
-        margin-bottom: 2em;
+        margin-bottom: 0.2em;
     }
     .audio-controls-container {
         width: 14em;
@@ -1002,16 +1042,16 @@
     .songDescription-container {
         border: 0.1em solid rgba(247, 242, 242, 0.1);
         border-radius: 0.2em;
-        padding: 0em;
+        padding: 0.1em;
         width: 20em;
     }
     .songDescription-title {
-        font-size: 2em;
+        font-size: 1.2em;
         margin-top: 0em;
     }
     .songDescription-artists{
-        font-size: 1.1em;
-        margin-top: -12%;
+        font-size: 1em;
+        margin-top: -6%;
     }
     .songDescription-info {
         border: 0.1em solid rgba(247, 242, 242, 0.1);
