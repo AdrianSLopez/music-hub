@@ -1100,7 +1100,10 @@
 }
 
 @media screen and (max-width: 604px) and (min-width: 495px) {
-    a{
+    /* .logo-container {
+        background-color: darkgrey;
+    } */
+    a, .songDescription-artists, .songDescription-album-name{
         color:rgb(246, 247, 248); 
         text-decoration: underline;
     }
@@ -1119,22 +1122,30 @@
         padding: 1em;
     }
     .logo-title {
-        font-size: 1.8em;
+        font-size: 1.9em;
         margin-bottom: -0.4em;
     }
     .logo-subtitle {
-        font-size: 0.90em;
+        font-size: 0.95em;
         padding-top: 0em;
     }
+    .searchBar-container {
+        width: auto;
+        margin-top: 2%;
+        margin-right: 0%;
+        align-self: center;
+        justify-content: center;
+    }
     .searchBar-input {
-        width: 17em;
-        height: 2em;
+        width: 18em;
+        height: 2.4em;
+        background-size: 13%;
         background-position: 16em 0.4em; 
-        font-size: 0.75em;
+        font-size: 0.78em;
         transition: 0.2s;
     }
     .searchBar-input:hover, .searchBar-input:focus {
-        background-size: 12%;
+        background-size: 15%;
         background-color: rgba(0, 0, 0, 0.2);
         background-position: 15.8em 0.4em; 
         pointer-events: none;
@@ -1145,34 +1156,61 @@
     .body {
         display: flex;
         margin: 0;
-        margin-top: 10%;
+        margin-top: 5%;
     }
     .searchResults {
         margin: 1em;
         padding: 0;
-        height: 28em;
-        width: 40%;
+        height: 36em;
+        width: 50%;
         margin-right: auto;
+        margin-left: 0.25em;
     }
-    .searchResults-subtitle {
-        padding: 0.2em 0em 0.2em 0.2em;
-        font-size: 1.4em;
-        background-color: rgba(0, 0, 0, 0.2);
-        width: 4em;
-        border-top-left-radius: 0.2em;
-        border-top-right-radius: 0.2em;
-        border: 0.1em solid rgba(247, 242, 242, 0.1);
+    .searchResults-topBar p{
+        margin: 0;
+        padding: 5px 1px 5px 5px;
+        text-align: left;
+        font-size: 1.25em;
+        width: 75%;
+        border: 1px solid rgba(247, 242, 242, 0.1);
         border-bottom: none;
+    }
+    .searchResults-traverse-container{
+        display: none;
+    }
+    .searchResults-bottomBar {
+        display: flex;
+        justify-content: right;
+    }
+    .searchResults-traverse-container-bottom {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(247, 242, 242, 0.1);
+        text-align: center;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top: none;
+        padding: 5px 0px 5px 0px;
+        margin-right: -2px;
+    }
+    .searchResults-traverse-container-bottom button{
+        background-color: transparent;
+        border: none;
+        font-size: 1em;
+        margin: 0 10px 0;
+        cursor: pointer;
     }
     .searchResults-container {
         border-radius: 0.2em;
         border-top-left-radius: 0em;
         border: 0.1em solid rgba(247, 242, 242, 0.1);
+        border-bottom-right-radius: 0px;
+        height: 90%;
     }
     .searchResults-result,
     .searchResults-result-chosen {
-        font-size: 1.2em;
-        padding: 2% 0% 3% 2%;
+        font-size: 1em;
+        padding: 6% 0% 6% 2%;
     }
     .searchResults-result-chosen{ 
         border-width: 0.15em;
@@ -1182,6 +1220,7 @@
         padding: 0;
         width: 50%;
         height: 30em;
+        margin-top: 3.5em;
     }
     .songImage-container, .songImage-image img {
         width: 13em;
@@ -1199,7 +1238,7 @@
         margin: 0px 0px 0px -22%;
     }
     .audioPreview-unavailable {
-        font-size: 0.9em;
+        font-size: 1em;
         margin-bottom: 2em;
     }
     .audio-controls-container {
@@ -1230,11 +1269,11 @@
     }
     .songDescription-title {
         font-size: 1.2em;
-        margin-top: 1em;
+        margin-top: 0.3em;
     }
     .songDescription-artists{
-        font-size: 0.9em;
-        margin-top: -10%;
+        font-size: 0.85em;
+        margin-top: -6%;
     }
     .songDescription-info {
         border: 0.1em solid rgba(247, 242, 242, 0.1);
@@ -1245,42 +1284,12 @@
         margin-top: -0.1em;
     }
     .songDescription-info p{
-        line-height: 1.6;
-        font-size: 0.75em;
+        line-height: 1.5;
+        font-size: 0.74em;
     }
     .recommend-container {
-        margin: 0.1em;
-        margin-bottom: 0.5em;
         display: none;
-    }
-    .recommend-input {
-        margin-right: 0;
-        width: 10em;
-        height: 15px;
-        border: 0.2em solid rgba(247, 242, 242, 0.288);
-        border-radius: 0.2em;
-        padding: 0.3em;
-        font-size: 0.8em;
-    }
-    .recommend-input:hover, .recommend-input:focus {
-        border: 0.2em solid rgba(247, 242, 242, 0.288);
-        background-color: rgba(0, 0, 0, 0.2);
-    }
-    .rcmnd-btn i {
-        padding-top: 0em;
-        padding-bottom: 0em;
-    }
-    .rcmnd-btn {
-        border-radius: 0em;
-        color: #fff;
-        font-size: 1.3em;
-    }
-    .rcmnd-btn:hover, .rcmnd-btn:focus{
-        color: red;
-        cursor: pointer;
-        outline: none;
-    }
-   
+    } 
 }
 
 @media screen and (max-width: 494px) and (min-width: 320px) {
