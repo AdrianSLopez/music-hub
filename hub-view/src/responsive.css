@@ -131,6 +131,7 @@
     .audio-vol-icon-container {
         margin-right: 5px;
     }
+    
     .songDescription-container {
         padding: 10px 15px 15px 15px;
     }
@@ -144,7 +145,6 @@
     .songDescription-artist {
         font-size: 0.8em;
     }
-    
     .songDescription-info p{
         line-height: 1.4;
         font-size: 0.8em;
@@ -171,14 +171,14 @@
         transition: 0.3s 
     }
     /* .logo-container {
-        background-color: darkcyan;
+        background-color: darkslategray;
     } */
 
     .logo-title {
-        font-size: 27px;
+        font-size: 1.7em;
     }
     .logo-subtitle {
-        font-size: 12px;
+        font-size: 0.8em;
         padding-top: 13%;
     }
     .searchBar-input {
@@ -199,11 +199,11 @@
         margin-right: 1px;                                         
     }
     .recommendations-title {
-        width: 123px; 
-        font-size: 13px                                                                                                                                                    ;
+        width: 50%;
+        font-size: 0.8em;                                                                                                                                                    ;
     }
     .recommendations {
-        height: 400px;
+        height: 390px;
         overflow-x: hidden;
     }
     .recommendations-item-img, .recommendations-item-img-first {
@@ -239,31 +239,35 @@
     }
 
     .searchResults {
-        margin-top: 0%;
-        margin-left: 0%;
-        margin-right: 4%;
-        width: 650px;
+        margin-left: -1%;
+        margin-right: 3%;
+        width: 550px;
         height: 100%;
         transition: 0s;
     }
-    .searchResults-subtitle {
-        font-size: 19px;
-        width: 80px;
+    .searchResults-topBar p{
+        padding: 5px 0px 2px 10px;
+        font-size: 1.1em;
+        width: 27%;
+    }
+    .searchResults-traverse-container{
+        margin: 0.5px -3px 0 auto;
+        font-size: 0.9em;
     }
     .searchResults-container {
         width: 100%;
-        height: 430px;
+        height: 425px;
         transition: 0s;
     }
     .searchResults-result,
     .searchResults-result-chosen {
-        font-size: 17px;
+        font-size: 0.9em;
     }
 
     .songInfo {
-        width: 550px;
-        height: 430px;
-        margin-top: 1%;
+        width: 35%;
+        height: 100%;
+        margin-right: 5%;
     }
     .songImage-container {
         transition: 0s;
@@ -275,15 +279,15 @@
 
     .audioPreview-unavailable {
         margin-top: 1%;
-        margin-bottom: 2%;
-        font-size: 13px;
+        margin-bottom: 0%;
+        font-size: 0.8em;
     }
     .audio-controls-container {
         width: 200px;
-        font-size: 18px;
+        font-size: 1.1em;
     }
     .audio-play-container {
-        margin-left: 40px;
+        margin-left: 37px;
     }
     .audio-volume-container {
         margin-right: 10px;
@@ -294,20 +298,21 @@
     .audio-volume-slide {
         background-color: #fff;
         width: 75px;
-        margin-top: 4px;
+        margin-top: 3px;
     }
 
     .songDescription-container {
-        width: 300px;
-        padding: 10px 10px 10px 10px;
+        padding: 10px 7px 10px 7px;
     }
     .songDescription-title {
-        font-size: 19px;
+        font-size: 1em;
         margin-top: 0px;
     }
     .songDescription-artists{
-        margin-top: -8%;
-        font-size: 12px;
+        margin-top: -3.5%;
+    }
+    .songDescription-artist {
+        font-size: 0.7em;
     }
     .songDescription-info {
         width: auto;
@@ -315,22 +320,22 @@
     }
     .songDescription-info p{
         line-height: 1.4;
-        font-size: 11px;
+        font-size: 0.63em;
     }
+
     .recommend-container {
-        text-align: center;
-        margin-top: 10px;
+        margin-top: 8px;
     }
     .recommend-label {
-        font-size: 12px;
+        font-size: 0.8em;
     }
     .recommend-input {
         width: 135px;
         height: 12px;
-        font-size: 10px;
+        font-size: 0.6em;
     }
     .rcmnd-btn {
-        font-size: 16px;
+        font-size: 1em;
     }
 }
 
