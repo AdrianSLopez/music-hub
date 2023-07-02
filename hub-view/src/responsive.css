@@ -996,7 +996,7 @@
         border-width: 0.15em;
     }
     .songInfo {
-        margin: 1em;
+        margin: 3em 1em 1em;
         padding: 0;
         width: 50%;
         height: 32em;
@@ -1048,7 +1048,7 @@
     }
     .songDescription-title {
         font-size: 1.2em;
-        margin-top: 0em;
+        margin-top: 0.3em;
     }
     .songDescription-artists{
         font-size: 1em;
@@ -1059,44 +1059,14 @@
         border-radius: 0.2em;
         padding: 0;
         padding-left: 1em;
-        margin: 1em;
-        margin-top: -0.1em;
+        margin: 0.7em 0.3em 0.5em;
     }
     .songDescription-info p{
         line-height: 1.5;
         font-size: 0.9em;
     }
     .recommend-container {
-        margin: 0.1em;
-        margin-bottom: 0.5em;
         display: none;
-    }
-    .recommend-input {
-        margin-right: 0;
-        width: 10em;
-        height: 15px;
-        border: 0.2em solid rgba(247, 242, 242, 0.288);
-        border-radius: 0.2em;
-        padding: 0.3em;
-        font-size: 0.8em;
-    }
-    .recommend-input:hover, .recommend-input:focus {
-        border: 0.2em solid rgba(247, 242, 242, 0.288);
-        background-color: rgba(0, 0, 0, 0.2);
-    }
-    .rcmnd-btn i {
-        padding-top: 0em;
-        padding-bottom: 0em;
-    }
-    .rcmnd-btn {
-        border-radius: 0em;
-        color: #fff;
-        font-size: 1.3em;
-    }
-    .rcmnd-btn:hover, .rcmnd-btn:focus{
-        color: red;
-        cursor: pointer;
-        outline: none;
     }
 }
 
@@ -1281,8 +1251,7 @@
         border-radius: 0.2em;
         padding: 0;
         padding-left: 1em;
-        margin: 1em;
-        margin-top: -0.1em;
+        margin: 0.7em 0.3em 0.5em;
     }
     .songDescription-info p{
         line-height: 1.5;
