@@ -204,9 +204,10 @@ a:hover{
 
 .searchResults {
   margin: 0 auto 0;
-  width: 610px;
+  width: 660px;
   height: 100%;
   transition: 0s;
+  margin-left: -1%;
 }
 .searchResults-topBar {
   display: flex;
@@ -234,6 +235,9 @@ a:hover{
   margin: 0 10px 0;
   cursor: pointer;
 }
+.searchResults-traverse-container-bottom {
+  display: none;
+}
 .searchResults-traverse-container button:hover, .searchResults-traverse-container button:focus{
   color: gray;
 }
@@ -250,10 +254,11 @@ a:hover{
   scrollbar-color: rgba(119, 118, 118, 0.2) transparent;
   scrollbar-width: thin;
   transition: 0s;
+  margin-right: 1%;
 }
 .searchResults-result,
 .searchResults-result-chosen {
-  padding: 2% 2% 3% 2%;
+  padding: 3% 2% 3% 2%;
   font-size: 1.3em;
 }
 .searchResults-result:hover, .searchResults-result-chosen{
@@ -266,9 +271,9 @@ a:hover{
 }
 
 .songInfo {
-  width: 520px;
-  height: 630px;
-  margin: 1% 5% 0% auto;
+  width: 30%;
+  height: 100%;
+  margin: 1% 5% 0% 1px;
 }
 .songInfo-container {
   width: 100%;
@@ -310,14 +315,14 @@ a:hover{
 }
 
 .audioPreview-unavailable {
-  margin: 2% 0% 3% 0%;
+  margin: 2% 0% 0% 0%;
 }
 .audio-controls-container {
   display: flex;
   justify-content: center;
   border-top: none;
   width: 298px;
-  font-size: 25px;
+  font-size: 1.4 em;
   padding: 5px 0px 5px 0px;
   border-radius: 5px;
   border-top-left-radius: 0px;
@@ -356,17 +361,17 @@ a:hover{
 
 .songDescription-container {
   border-radius: 5px;
-  margin-top: 3%;
+  margin-top: 2%;
   padding: 10px 20px 15px 20px;
   text-align: center;
-  width: 400px;
+  width: 100%;
 }
 .songDescription-title {
-  font-size: 1.5em;
+  font-size: 1.4em;
   margin-top: 1%;
 }
 .songDescription-artists{
-  margin: -6% 0% 3% 0%;
+  margin: -4% 0% 3% 0%;
   display:flex;
   justify-content: center;
   overflow-x: auto;
@@ -377,7 +382,7 @@ a:hover{
   border: none;
   outline: none;
   background-color: transparent;
-  font-size: 1em;
+  font-size: 0.95em;
   cursor: pointer;
 }
 .songDescription-artist:hover, .songDescription-album-name:hover {
@@ -392,7 +397,7 @@ a:hover{
   padding: 1px 4px 1px 20px;
 }
 .songDescription-info p{
-  line-height: 1.8;
+  line-height: 1.6;
   font-size: 0.95em;
 }
 .songDrescription-info-subtitle {
@@ -401,14 +406,14 @@ a:hover{
 
 .recommend-container {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 12px;
 }
 .recommend-input {
   margin-right: 1px;
   width: 140px;
   height: 15px;
   padding: 5px 5px 5px 4px;
-  font-size: 13px;
+  font-size: 0.9em;
 }
 .rcmnd-btn i {
   padding: 4px 0px 4px 0px;
