@@ -6,8 +6,8 @@ export default function SongDescription(props) {
   const artistClick = (e) => {
     e.preventDefault() 
 
-    const artistId = e.target.getAttribute("data-artist-id")
-    const artistIndex = e.target.getAttribute("data-artist-index")
+    const artistId = e.currentTarget.getAttribute("data-artist-id")
+    const artistIndex = e.currentTarget.getAttribute("data-artist-index")
     
     props.sendUrl(`/artistTopTracks/${artistId}`)
     props.sendUserSearchTerm(props.songInfo.artists[artistIndex].name +"'s Top 10 tracks")
@@ -18,7 +18,7 @@ export default function SongDescription(props) {
   const albumClick = (e) => {
     e.preventDefault()
 
-    const albumId = e.target.getAttribute("data-album-id")
+    const albumId = e.currentTarget.getAttribute("data-album-id")
 
     props.sendUrl(`/album/${albumId}/tracks?limit=10&offset=0`)
     props.sendUserSearchTerm(props.songInfo.albumName)

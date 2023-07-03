@@ -7,7 +7,7 @@ export default function SearchResults(props) {
   const onSongClick = (e) => {
     e.preventDefault()
 
-    const songId = e.target.getAttribute("data-index-songid")
+    const songId = e.currentTarget.getAttribute("data-index-songid")
     props.sendChosenSongId(songId)
     props.sendUrl(`/search/${songId}/details?searchTerm=${props.userSearchTerm}`)
   }

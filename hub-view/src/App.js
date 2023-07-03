@@ -34,7 +34,7 @@ export default function App() {
   useEffect(() => {
     if(!url.includes('details')){ 
       setEndpointUsed(url.split('/')[1])
-
+      
       fetch(url)
         .then(response => {
             return response.json()
@@ -62,6 +62,9 @@ export default function App() {
         })
         .then(data => {
           setSongInfo(data.info[0])
+        })
+        .catch(error => {
+          console.log(error)
         })
     }
 
