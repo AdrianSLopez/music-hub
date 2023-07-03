@@ -19,8 +19,7 @@ export default function SearchResults(props) {
   return(
     <div className="searchResults"> 
       <div className="searchResults-topBar">
-        {/* if null get the # of tracks returned */}
-        <p> Results ({props.prev === null? 1: Number(props.prev)+11}-{(props.next == null)? Number(props.prev)+20: props.next}) : </p>
+        <p>Results ({props.prev === null? 1: Number(props.prev)+11}-{props.prev === null? props.results.length: 10+props.results.length + Number(props.prev)}): </p>
         <TraverseResults  className="searchResults-traverse-container" userSearchTerm={props.userSearchTerm} sendUrl={props.sendUrl} next={props.next} prev={props.prev} sendChosenSongId={props.sendChosenSongId} endpointUsed={props.endpointUsed} chosenAlbumId={props.chosenAlbumId}/>
       </div>
 
