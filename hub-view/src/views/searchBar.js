@@ -4,7 +4,7 @@ export default function SearchBar(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
   
-    const form = e.target;
+    const form = e.currentTarget;
     const formData = new FormData(form);
     const userInput = formData.get('song')
 
@@ -18,6 +18,8 @@ export default function SearchBar(props) {
     }else {
       props.sendUrl(`/search/?song=${userInput}`)      
     }
+
+    form[0].value = "";
   }
 
   return (

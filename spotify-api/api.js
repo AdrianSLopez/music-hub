@@ -42,6 +42,9 @@ const getTracks = async (name, offset, limit) => {
     
     try {
         const tracks = await axios.request(options);
+        
+        if(tracks.data.tracks.items.length === 0) tracks.data.tracks.next = null
+        
         return tracks.data.tracks
     } catch (error) {
         console.error(error);

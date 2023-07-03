@@ -40,6 +40,7 @@ export default function Recommend(props) {
       props.updatePublicRec(true)
       setFormName("")
       form[1].focus()
+      form[0].value = "";
     }
 
   return (   

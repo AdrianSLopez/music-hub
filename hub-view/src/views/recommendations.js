@@ -6,13 +6,12 @@ export default function Recommendations(props) {
     const onRecClick = (e) => {
         e.preventDefault()
 
-        const songId = e.target.getAttribute("data-songid")
-        const albumId = e.target.getAttribute("data-albumid")
-        const artistId = e.target.getAttribute("data-artistid")
-        const term = e.target.getAttribute("data-term");
-        const offSet = e.target.getAttribute("data-offset")
-        const endpointUsed = e.target.getAttribute("data-endpointused")
-
+        const songId = e.currentTarget.getAttribute("data-songid")
+        const albumId = e.currentTarget.getAttribute("data-albumid")
+        const artistId = e.currentTarget.getAttribute("data-artistid")
+        const term = e.currentTarget.getAttribute("data-term");
+        const offSet = e.currentTarget.getAttribute("data-offset")
+        const endpointUsed = e.currentTarget.getAttribute("data-endpointused")
 
         props.sendChosenSongId(songId)
         props.sendChosenAlbumId(albumId)
@@ -46,8 +45,8 @@ export default function Recommendations(props) {
     const content = props.publicRecommendations.map((rec, i) => {
         return (
             <div className="recommendations-item-container" key={rec._id}>
-                <div onClick={onRecClick} data-songid={rec.songId} data-term={rec.userSearchTerm} data-albumid={rec.albumId} data-artistid={rec.artistId} data-endpointused={rec.endpointUsed} data-offset={rec.offset} className={i===0? "recommendations-item-img-first":"recommendations-item-img"}><img  data-index-song={i} src={rec.albumImages[0].url} alt="album"/></div>
-                <div className={i===0? "recommendations-item-description-first":"recommendations-item-description"}>Recommended by <br /> {rec.userName}</div>
+                <div  className="recommendations-item-img"><img  data-index-song={i} src={rec.albumImages[0].url} alt="album"/></div>
+                <div onClick={onRecClick} data-songid={rec.songId} data-term={rec.userSearchTerm} data-albumid={rec.albumId} data-artistid={rec.artistId} data-endpointused={rec.endpointUsed} data-offset={rec.offset} className="recommendations-item-description"><p>Recommended by <br /> {rec.userName}</p></div>
             </div>
             
         )
