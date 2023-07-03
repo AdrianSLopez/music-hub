@@ -34,54 +34,33 @@
     }
 
     .recommendations-section {
-        width: 320px;
-        margin-right: 1px;                                         
+        width: 10%;                                 
     }
     .recommendations-title {
         font-size: 0.9em;                                                                                                                                                    ;
     }
     .recommendations {
         height: 460px;
-        overflow-x: hidden;
     }
-    .recommendations-item-img, .recommendations-item-img-first {
-        margin-left: 10px;
-        transition: 0.5s;
+    .recommendations-item-img{
+        margin: 0 7% 0;
     }
-    .recommendations-item-img-first::after, .recommendations-item-img::after{
-        width: 105px;
-        height: 111px;
-        margin-top: -127px;
-        margin-left: -15px;
-    }
-    .recommendations-item-img-first {
-        margin-top: 1px;
-        margin-bottom: 33px;
-    }
-    .recommendations-item-img img, .recommendations-item-img-first img{
+    .recommendations-item-img img, .recommendations-item-description{
         width: 115px;
         height: 115px;
     }
-    .recommendations-item-img:hover{
-        margin-left: 10px;
+    .recommendations-item-description {
+        margin: 0% 0 0 -125px;
     }
-    .recommendations-item-img:hover ~ .recommendations-item-description {
-        width: 130px;
-        font-size: 12px;
-        margin: -70px 10px 95px 10px;
-    }
-    .recommendations-item-img-first:hover ~ .recommendations-item-description-first {
-        width: 130px;
-        font-size: 12px;
-        margin: 0px 10px 100px 10px;
+    .recommendations-item-img:hover ~ .recommendations-item-description,
+    .recommendations-item-description:hover {
+        font-size: 0.78em;
     }
 
     .searchResults {
         width: 610px;
         height: 100%;
         transition: 0s;
-        margin-left: -2%;
-        margin-right: 5%;
     }
     .searchResults-topBar p{
         padding: 5px 0px 2px 10px;
@@ -167,9 +146,6 @@
 }
 
 @media  screen and (max-width: 1400px) and (min-width: 1201px) {
-    *{
-        transition: 0.3s 
-    }
     /* .logo-container {
         background-color: darkslategray;
     } */
@@ -195,51 +171,31 @@
     }
 
     .recommendations-section {
-        width: 290px;
-        margin-right: 1px;                                         
+        width: 10%;                                       
     }
     .recommendations-title {
-        width: 50%;
         font-size: 0.8em;                                                                                                                                                    ;
     }
     .recommendations {
         height: 390px;
-        overflow-x: hidden;
     }
-    .recommendations-item-img, .recommendations-item-img-first {
-        margin-left: 10px;
-        transition: 0.5s;
+    .recommendations-item-img{
+        margin: 0 5% 0;
     }
-    .recommendations-item-img-first::after, .recommendations-item-img::after{
-        width: 99px;
-        height: 99px;
-        margin: -114px 0px 0px -14px;
-    }
-    .recommendations-item-img-first {
-        margin: 1px 0px 33px 0px;
-    }
-    .recommendations-item-img img, .recommendations-item-img-first img{
+    .recommendations-item-img img, .recommendations-item-description{
         width: 105px;
         height: 105px;
     }
-    .recommendations-item-img:hover{
-        margin-left: 10px;
+    .recommendations-item-description {
+        margin: 0% 0 0 -111px;
     }
-    .recommendations-item-img:hover ~ .recommendations-item-description {
-        width: 130px;
-        font-size: 11px;
-        margin: -60px 10px 85px 10px;
-    }
-      .recommendations-item-img-first:hover ~ .recommendations-item-description-first {
-        width: 130px;
-        font-size: 11px;
-        margin: 0px 10px 100px 10px;
+    .recommendations-item-img:hover ~ .recommendations-item-description,
+    .recommendations-item-description:hover {
+        font-size: 0.70em;
     }
 
     .searchResults {
-        margin-left: -1%;
-        margin-right: 3%;
-        width: 550px;
+        width: 500px;
         height: 100%;
         transition: 0s;
     }
@@ -338,9 +294,6 @@
 }
 
 @media screen and (max-width: 1200px) and (min-width: 1025px) {
-    *{
-        transition: 0.3s 
-    }
     /* .logo-container {
         background-color: cyan;
     } */
@@ -366,49 +319,31 @@
     }
 
     .recommendations-section {
-        width: 290px;
-        margin-right: 1px;                                         
+        width: 10%;                                    
     }
-    .recommendations-title {
-        width: 50%; 
+    .recommendations-title { 
         font-size: 0.7em;                                                                                                                                                ;
     }
     .recommendations {
         height: 300px;
-        overflow-x: hidden;
     }
-    .recommendations-item-img, .recommendations-item-img-first {
-        margin-left: 10px;
-        transition: 0.5s;
+    .recommendations-item-img{
+        margin: 0 5% 0;
     }
-    .recommendations-item-img-first::after, .recommendations-item-img::after{
+    .recommendations-item-img img, .recommendations-item-description{
         width: 85px;
         height: 85px;
-        margin: -105px 0px 0px -12px;
     }
-    .recommendations-item-img-first {
-        margin: 1px 0px 33px 0px;
+    .recommendations-item-description {
+        margin: 0% 0 0 -90px;
     }
-    .recommendations-item-img img, .recommendations-item-img-first img{
-        width: 95px;
-        height: 95px;
-    }
-    .recommendations-item-img:hover{
-        margin-left: 10px;
-    }
-    .recommendations-item-img:hover ~ .recommendations-item-description {
-        width: 110px;
-        font-size: 10px;
-        margin: -60px 10px 75px 10px;
-    }
-      .recommendations-item-img-first:hover ~ .recommendations-item-description-first {
-        width: 110px;
-        font-size: 10px;
-        margin: 0px 10px 90px 10px;
+    .recommendations-item-img:hover ~ .recommendations-item-description,
+    .recommendations-item-description:hover {
+        font-size: 0.55em;
     }
 
     .searchResults {
-        width: 560px;
+        width: 400px;
         height: 100%;
         transition: 0s;
     }
@@ -433,7 +368,7 @@
     }
 
     .songInfo {
-        width: 45%;
+        width: 40%;
         height: 100%;
         margin-top: 0%;
         margin-right: 2%;
@@ -510,9 +445,6 @@
     /* .logo-container {
         background-color: green;
     } */
-    *{
-        transition: 0.3s 
-    }
     .logo-title {
         font-size: 1em;
     }
@@ -534,53 +466,32 @@
     }
 
     .recommendations-section {
-        width: 215px;
-        margin-right: 1px;                                    
+        width: 11%; 
+        margin-right: 4%;                                 
     }
-    .recommendations-title {
-        width: 50%; 
-        font-size: 0.55em;                                                                                                                                                    ;
+    .recommendations-title { 
+        font-size: 0.55em;                                                                                                                                                ;
     }
     .recommendations {
-        height: 270px;
-        overflow-x: hidden;
+        height: 255px;
     }
-    .recommendations-item-img, .recommendations-item-img-first {
-        margin-left: 10px;
-        transition: 0.5s;
+    .recommendations-item-img{
+        margin: 0 10% 0;
     }
-    .recommendations-item-img-first::after, .recommendations-item-img::after{
+    .recommendations-item-img img, .recommendations-item-description{
         width: 75px;
         height: 75px;
-        margin-top: -90px;
-        margin-left: -13px;
     }
-    .recommendations-item-img-first {
-        margin-top: 1px;
-        margin-bottom: 31px;
+    .recommendations-item-description {
+        margin: 0% 0 0 -84.9px;
     }
-    .recommendations-item-img img, .recommendations-item-img-first img{
-        width: 80px;
-        height: 80px;
-    }
-    .recommendations-item-img:hover{
-        margin-left: 10px;
-    }
-    .recommendations-item-img:hover ~ .recommendations-item-description {
-        width: 90px;
-        font-size: 8px;
-        margin: -70px 10px 75px 10px;
-    }
-      .recommendations-item-img-first:hover ~ .recommendations-item-description-first {
-        width: 90px;
-        font-size: 8px;
-        margin: 0px 10px 80px 10px;
+    .recommendations-item-img:hover ~ .recommendations-item-description,
+    .recommendations-item-description:hover {
+        font-size: 0.45em;
     }
 
     .searchResults {
-        margin-left: 0%;
-        margin-right: 1%;
-        width: 500px;
+        width: 350px;
         height: 100%;
         transition: 0s;
     }
@@ -607,8 +518,7 @@
     .songInfo {
         width: 45%;
         height: 305px;
-        margin-top: 0%;
-        margin-right: 1%;
+        margin-right: 0%;
     }
     .songImage-container {
         transition: 0s;
@@ -695,9 +605,6 @@
     /* .logo-container {
         background-color: greenyellow;
     } */
-    *{
-        transition: 0.3s 
-    }
     .logo-title {
         font-size: 1em;
     }
@@ -719,53 +626,32 @@
     }
 
     .recommendations-section {
-        width: 210px;
-        margin-right: 1px;                                    
+        width: 10%; 
+        margin-right: 4%;                                 
     }
-    .recommendations-title {
-        width: 60%; 
-        font-size: 0.5em;                                                                                                                                                 ;
+    .recommendations-title { 
+        font-size: 0.5em;                                                                                                                                                ;
     }
     .recommendations {
-        height: 250px;
-        overflow-x: hidden;
+        height: 255px;
     }
-    .recommendations-item-img, .recommendations-item-img-first {
-        margin-left: 10px;
-        transition: 0.5s;
+    .recommendations-item-img{
+        margin: 0 5% 0;
     }
-    .recommendations-item-img-first::after, .recommendations-item-img::after{
-        width: 74px;
-        height: 75px;
-        margin-top: -90px;
-        margin-left: -15px;
+    .recommendations-item-img img, .recommendations-item-description{
+        width: 65px;
+        height: 65px;
     }
-    .recommendations-item-img-first {
-        margin-top: 1px;
-        margin-bottom: 31px;
+    .recommendations-item-description {
+        margin: 0% 0 0 -68.5px;
     }
-    .recommendations-item-img img, .recommendations-item-img-first img{
-        width: 80px;
-        height: 80px;
-    }
-    .recommendations-item-img:hover{
-        margin-left: 10px;
-    }
-    .recommendations-item-img:hover ~ .recommendations-item-description {
-        width: 75px;
-        font-size: 7px;
-        margin: -70px 10px 80px 10px;
-    }
-      .recommendations-item-img-first:hover ~ .recommendations-item-description-first {
-        width: 75px;
-        font-size: 7px;
-        margin: 0px 10px 85px 10px;
+    .recommendations-item-img:hover ~ .recommendations-item-description,
+    .recommendations-item-description:hover {
+        font-size: 0.4em;
     }
 
     .searchResults {
-        margin-right: 2%;
-        margin-left: 1%;
-        width: 420px;
+        width: 300px;
         height: 100%;
         transition: 0s;
     }
