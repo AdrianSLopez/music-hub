@@ -41,6 +41,8 @@ export default function App() {
         })
         .then(data => {
           const tracks = data.tracks;
+
+          if(tracks.length === 0) { return }
           
           url.includes('topGlobalSongs')? setCurrent(data.next === null? Number(data.previous)+10:Number(data.next)-10 ): setCurrent(data.current);
 
