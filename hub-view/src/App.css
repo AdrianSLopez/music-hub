@@ -159,7 +159,7 @@ a:hover{
 .recommendations-item-img:hover ~ .recommendations-item-description,
 .recommendations-item-description:hover {
   font-size: 0.85em;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   transition: 0.1s;
   animation: 1s;
 }
