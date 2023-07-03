@@ -45,8 +45,8 @@ export default function Recommendations(props) {
     const content = props.publicRecommendations.map((rec, i) => {
         return (
             <div className="recommendations-item-container" key={rec._id}>
-                <div  className={i===0? "recommendations-item-img-first":"recommendations-item-img"}><img  data-index-song={i} src={rec.albumImages[0].url} alt="album"/></div>
-                <div onClick={onRecClick} data-songid={rec.songId} data-term={rec.userSearchTerm} data-albumid={rec.albumId} data-artistid={rec.artistId} data-endpointused={rec.endpointUsed} data-offset={rec.offset} className={i===0? "recommendations-item-description-first":"recommendations-item-description"}><p>Recommended by <br /> {rec.userName}</p></div>
+                <div  className="recommendations-item-img"><img  data-index-song={i} src={rec.albumImages[0].url} alt="album"/></div>
+                <div onClick={onRecClick} data-songid={rec.songId} data-term={rec.userSearchTerm} data-albumid={rec.albumId} data-artistid={rec.artistId} data-endpointused={rec.endpointUsed} data-offset={rec.offset} className="recommendations-item-description"><p>Recommended by <br /> {rec.userName}</p></div>
             </div>
             
         )
