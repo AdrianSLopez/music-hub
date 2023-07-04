@@ -26,11 +26,11 @@ Here are the following steps to be able to do so. (Guide was created with Micros
 
 ### Setup
 #### Tools needed
-[ ] Visual Studio Code
-[ ] Git 
-[ ] Node.js & NPM
-[ ] MongoDB free account
-[ ] Spotify developer account
+- [ ] Visual Studio Code
+- [ ] Git 
+- [ ] Node.js & NPM
+- [ ] MongoDB free account
+- [ ] Spotify developer account
 #### Installation
 ##### Visual Studio Code
 - Install VSC [here](https://code.visualstudio.com/download)
