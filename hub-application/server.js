@@ -1,10 +1,10 @@
 const express = require('express');
-const api = require('spotify-api');
+const spotify = require('./spotify');
 const mongo = require('./db');
 const app = express();
 const port = 8888;
 
-api.generateToken()
+spotify.generateToken()
 
 setInterval(() => {
     api.generateToken()

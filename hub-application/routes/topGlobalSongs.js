@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const api = require('spotify-api');
+const api = require('../spotify');
 
 const _filterTracks = (tracks) => {
     return tracks.map((track) => {
