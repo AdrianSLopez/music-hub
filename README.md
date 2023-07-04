@@ -49,7 +49,9 @@ Here are the following steps to be able to do so. (Guide was created with Micros
 
 ### Startup
 Open a command prompt and clone a the repository at any location with the following command:
-    ```git clone (repo url)```
+
+        ```git clone (repo url)```
+
 - to get repo url, click on `Code` in repository main repo and copy the url.
 
 Once repo is installed, open the folder with VSC or any IDE of your choice.
