@@ -2,7 +2,7 @@ const axios = require("axios");
 const fs = require('fs')
 const config = require('../../config.json');
 const headers = {
-    Authorization: `${config.spotifyToken.token_type} ${config.spotifyToken.access_token}`
+    Authorization: ` `
 }
 
 //generate spotify Token
@@ -21,11 +21,8 @@ const generateToken = async () => {
 
     try {
         const token = await axios.request(options)
-        const file = fs.readFileSync('config.json')
 
-        var json = JSON.parse(file.toString())
-        json.spotifyToken = token.data
-        fs.writeFileSync('config.json', JSON.stringify(json))
+        headers.Authorization = `${token.data.token_type} ${token.data.access_token}`
     } catch (error) {
         console.error(error);
     }
