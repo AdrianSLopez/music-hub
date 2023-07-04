@@ -8,7 +8,7 @@ api.generateToken()
 
 setInterval(() => {
     api.generateToken()
-    console.log("new token")
+    console.log("new token generated")
 }, 3300000)
 
 
