@@ -6,6 +6,12 @@ const port = 8888;
 
 api.generateToken()
 
+setInterval(() => {
+    api.generateToken()
+    console.log("new token")
+}, 3300000)
+
+
 const search = require('./routes/search.js');
 app.use('/search', search);
 
