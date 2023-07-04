@@ -22,12 +22,23 @@ const mongo = () => {
 
     async function save(data) {
         try {
+            await deleteFirstIn()
+
             const collection = db.collection("public-recommendations");
-            await collection.findOneAndDelete({}, {sort:{_id:1}})
 
             await collection.insertOne(data);
         } catch (error) {
             console.log(error);
+        }
+    }
+
+    async function deleteFirstIn() {
+        try {
+            const collection = db.collection("public-recommendations");
+
+            await collection.findOneAndDelete({}, {sort:{_id:1}})
+        } catch (error) {
+            console.log(error)
         }
     }
 

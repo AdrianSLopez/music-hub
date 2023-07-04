@@ -12,7 +12,6 @@ export default function App() {
   const [chosenAlbumId, setChosenAlbumId] = useState([])
   const [chosenArtistId, setChosenArtistId] = useState([])
   const [songInfo, setSongInfo] = useState([])
-  const [refreshPublicRec, setrefreshPublicRec] = useState(true)
   const [publicRecommendations, setPublicRecommendations] = useState([])
   const [endpointUsed, setEndpointUsed] = useState('topGlobalSongs')
   const [url, setUrl] = useState('/topGlobalSongs/?offset=0')
@@ -27,11 +26,20 @@ export default function App() {
   const sendEndpointUsed = (endpoint) => setEndpointUsed(endpoint)
   const sendChosenArtistId = (artistId) => setChosenArtistId(artistId)
 
-  const updatePublicRec = (refresh) => {
-    setrefreshPublicRec(refresh)
-  }
-
   useEffect(() => {
+    fetch('/publicRecommendations/recent')
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        if(data.length !== 0) {
+          setPublicRecommendations(data)
+        }
+      })
+      .catch(error => {
+        console.log(error)
+      })
+
     if(!url.includes('details')){ 
       setEndpointUsed(url.split('/')[1])
       
@@ -68,26 +76,8 @@ export default function App() {
         .catch(error => {
           console.log(error)
         })
-    }
-
-    //fetch public recommendations
-    if(refreshPublicRec){
-      fetch('/publicRecommendations/recent')
-        .then(response => {
-          return response.json();
-        })
-        .then(data => {
-          if(data.length !== 0) {
-            setPublicRecommendations(data)
-          }
-        })
-        .catch(error => {
-          console.log(error)
-        })
-      
-        updatePublicRec(false)
-    }
-  }, [url, userSearchTerm, chosenSongId, refreshPublicRec]);
+    }    
+  }, [url, userSearchTerm, chosenSongId]);
 
   return (
     <div className="app-container">
@@ -95,7 +85,7 @@ export default function App() {
 
       <TopBar sendUserSearchTerm={sendUserSearchTerm} sendUrl={sendUrl} userSearchTerm={userSearchTerm} sendChosenSongId={sendChosenSongId}/>
 
-      <Body sendUserSearchTerm={sendUserSearchTerm} sendEndpointUsed={sendEndpointUsed} sendChosenAlbumId={sendChosenAlbumId} songResults={songResults} songInfo={songInfo} publicRecommendations={publicRecommendations} sendChosenSongId={sendChosenSongId} chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl} updatePublicRec={updatePublicRec} next={next} prev={prev} current={current} endpointUsed={endpointUsed} chosenAlbumId={chosenAlbumId} sendChosenArtistId={sendChosenArtistId} chosenArtistId={chosenArtistId}/>
+      <Body sendUserSearchTerm={sendUserSearchTerm} sendEndpointUsed={sendEndpointUsed} sendChosenAlbumId={sendChosenAlbumId} songResults={songResults} songInfo={songInfo} publicRecommendations={publicRecommendations} sendChosenSongId={sendChosenSongId} chosenSongId={chosenSongId} userSearchTerm={userSearchTerm} sendUrl={sendUrl} next={next} prev={prev} current={current} endpointUsed={endpointUsed} chosenAlbumId={chosenAlbumId} sendChosenArtistId={sendChosenArtistId} chosenArtistId={chosenArtistId}/>
     </div>
     
   );
