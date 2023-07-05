@@ -2,7 +2,8 @@ const express = require('express');
 const spotify = require('./spotify');
 const mongo = require('./db');
 const app = express();
-const port = 8888;
+const path = require("path");
+const port = 4000;
 
 spotify.generateToken()
 
@@ -11,6 +12,10 @@ setInterval(() => {
     console.log("new token generated")
 }, 3300000)
 
+app.use(express.static(path.join(__dirname, "../hub-view/build")));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname + "../hub-view/build/index.html"));
+});
 
 const search = require('./routes/search.js');
 app.use('/search', search);
