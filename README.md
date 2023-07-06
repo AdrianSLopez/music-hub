@@ -9,7 +9,7 @@ and share the song to other users on the website.
 
 Purpose for this website? Simply out of fun of learning new things and expanding my skill set.
 
-View the website [here](#) _Currently figuring how to host my website_
+View the website [here](http://songsearch-byadrian.com/) _mobile style coming soon_
 
 ## Development
 This website was created with MERN stack!
