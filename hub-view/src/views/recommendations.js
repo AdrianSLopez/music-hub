@@ -1,6 +1,26 @@
-import React from "react"
+import React, {useEffect, useRef} from "react"
 
 export default function Recommendations(props) {
+    const scroll = useRef()
+
+    useEffect((e) => {
+        const r = scroll.current;
+
+        if(r) {
+            const onWheel = (e) => {
+                if (e.deltaY === 0) return;
+                e.preventDefault();
+                r.scrollTo({
+                left: r.scrollLeft + e.deltaY+50,
+                behavior: "smooth"
+                });
+            }        
+            r.addEventListener("wheel", onWheel);
+            return () => r.removeEventListener("wheel", onWheel);
+        }
+
+    }, [])
+
     if(props.publicRecommendations === undefined) return 
 
     const onRecClick = (e) => {
@@ -52,14 +72,11 @@ export default function Recommendations(props) {
         )
     })
 
+
+
     return (   
-        <div className="recommendations-section">
-            <div>
-                <div className="recommendations-title">Public <br/>Recommendations</div>
-                <div className="recommendations">
-                    {content}
-                </div>    
-            </div>
-        </div>
+        <div className="recommendations" ref={scroll}>
+            {content}
+        </div>  
     );
 }

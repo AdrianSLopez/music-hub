@@ -25,7 +25,7 @@ export default function SearchBar(props) {
   return (
     <div className="searchBar-container">
       <form method="post" onSubmit={handleSubmit} >
-        <input name="song" className="searchBar-input" placeholder={`${props.userSearchTerm}...`}/>
+        <input name="song" className="searchBar-input" placeholder={`${props.userSearchTerm}`}/>
       </form>
     </div>
   );
