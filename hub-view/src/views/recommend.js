@@ -46,8 +46,10 @@ export default function Recommend(props) {
       <div className="recommend-container">
           <form method="post" onSubmit={handleSubmit}>
               <label className="recommend-label">Recommended by: </label>
-              <input type="text" name="display-name" placeholder="Name..." value={formName} onChange={(e)=>{setFormName(e.target.value)}} className="recommend-input"/>
-              <button className="rcmnd-btn" ref={hrtBtn}><i type="submit" className="fa fa-heart"/> </button>
+              <div>
+                <input type="text" name="display-name" placeholder="Name..." value={formName} onChange={(e)=>{setFormName(e.target.value)}} className="recommend-input"/>
+                <button className="rcmnd-btn" ref={hrtBtn}><i type="submit" className="fa fa-heart"/> </button>
+              </div>
           </form>
       </div>
   );

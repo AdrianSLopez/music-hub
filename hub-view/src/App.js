@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.css"
 import "./responsive.css"
 import React, {useState, useEffect} from "react"
 import TopBar from "./views/topBar";

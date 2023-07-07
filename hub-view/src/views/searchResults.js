@@ -20,13 +20,12 @@ export default function SearchResults(props) {
     <div className="searchResults"> 
       <div className="searchResults-topBar">
         <p>Results ({props.prev === null? 1: Number(props.prev)+11}-{props.prev === null? props.results.length: 10+props.results.length + Number(props.prev)}): </p>
-        <TraverseResults  className="searchResults-traverse-container" userSearchTerm={props.userSearchTerm} sendUrl={props.sendUrl} next={props.next} prev={props.prev} sendChosenSongId={props.sendChosenSongId} endpointUsed={props.endpointUsed} chosenAlbumId={props.chosenAlbumId}/>
       </div>
 
       <div className="searchResults-container">
         {songResults}
       </div>
-      <div className="searchResults-bottomBar"><TraverseResults className="searchResults-traverse-container-bottom" userSearchTerm={props.userSearchTerm} sendUrl={props.sendUrl} next={props.next} prev={props.prev} sendChosenSongId={props.sendChosenSongId} endpointUsed={props.endpointUsed} chosenAlbumId={props.chosenAlbumId}/></div>
+      <TraverseResults className="searchResults-traverse-container-bottom" userSearchTerm={props.userSearchTerm} sendUrl={props.sendUrl} next={props.next} prev={props.prev} sendChosenSongId={props.sendChosenSongId} endpointUsed={props.endpointUsed} chosenAlbumId={props.chosenAlbumId}/>
     </div>
   )
 }

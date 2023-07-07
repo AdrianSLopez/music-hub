@@ -53,13 +53,8 @@ export default function Recommendations(props) {
     })
 
     return (   
-        <div className="recommendations-section">
-            <div>
-                <div className="recommendations-title">Public <br/>Recommendations</div>
-                <div className="recommendations">
-                    {content}
-                </div>    
-            </div>
-        </div>
+        <div className="recommendations">
+            {content}
+        </div>  
     );
 }

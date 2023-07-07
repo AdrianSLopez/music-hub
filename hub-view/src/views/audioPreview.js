@@ -10,7 +10,7 @@ export default function AudioPreview(props) {
     )
   } else{
     return (
-        <div>
+        <div className="audio-preview-container">
             <audio ref={audio} src={props.songPreview}/>
             <AudioControls audioSrc={audio}/>
         </div>
