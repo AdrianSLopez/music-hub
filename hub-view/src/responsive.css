@@ -35,6 +35,25 @@
     .recommendations-item-description {
         margin-left: -130px;
     }
+
+    .songImage-container:hover {
+        max-width: 450px;
+        transition: 0.8s;
+        animation: 5s;
+    }
+    .songImage-container:hover > .songImage-image img,
+    .songImage-container:hover > .songImage-vinyl img {
+       width: 220px;
+    }
+    .songImage-container:hover > .songImage-image img {
+        margin-left: 10%;
+    }
+    .songImage-container:hover > .songImage-image-vinyl img {
+        width: 60%;
+        height: 60%;
+        margin-left: 35%;
+        margin-top: -62%;
+    }
 }
 @media screen and (min-width: 1400px) {
     .body {
