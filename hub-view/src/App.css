@@ -305,7 +305,7 @@ a:hover, a:active, .songDescription-artist:hover, .songDescription-artist:active
     font-size: 1em;
     outline: none;
 }
-.rcmnd-btn:hover > i, .rcmnd-btn:active > i .rcmnd-btn:focus > i{
+.rcmnd-btn:hover > i, .rcmnd-btn:active > i, .rcmnd-btn:focus > i{
     color: red;
     cursor: pointer;
 }
