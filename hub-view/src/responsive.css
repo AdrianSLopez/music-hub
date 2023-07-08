@@ -1,3 +1,16 @@
+@media screen and (min-width: 500px) {
+    .searchResults-traverse-container-bottom {
+        margin-left: 65%;
+    }
+    .searchResults-traverse-container-bottom button{
+        background-color: transparent;
+        border: none;
+        font-size: 1.1em;
+        margin: 0 5% 0;
+        cursor: pointer;
+    }
+}
+
 @media screen and (min-width: 700px) {
     .songDescription-artists{
         height: auto;
@@ -24,6 +37,9 @@
     .searchBar-input:hover,  .searchBar-input:active, .searchBar-input:focus {
         background-position: 18.8em -0.2em; 
         background-size: 13%;
+    }
+    .searchResults-traverse-container-bottom {
+        margin-left: 75%;
     }
 }
 
@@ -95,7 +111,6 @@
     }
     .searchResults-traverse-container-bottom {
         padding: 1% 0% 1% 0%;
-        margin-left: 85%;
     }
     .searchResults-traverse-container-bottom button{
         font-size: 1.45em;
