@@ -165,7 +165,7 @@ a:hover, a:active, .songDescription-artist:hover, .songDescription-artist:active
 .searchResults-traverse-container-bottom {
     padding: 1% 0% 1% 0%;
     margin-right: auto;
-    margin-left: 55%;
+    margin-left: 45%;
     border-top: none;
     text-align: center;
     border-top-right-radius: 0px;
@@ -174,7 +174,7 @@ a:hover, a:active, .songDescription-artist:hover, .songDescription-artist:active
 .searchResults-traverse-container-bottom button{
     background-color: transparent;
     border: none;
-    font-size: 1.4em;
+    font-size: 1.3em;
     margin: 0 1% 0;
     cursor: pointer;
 }
@@ -266,8 +266,11 @@ a:hover, a:active, .songDescription-artist:hover, .songDescription-artist:active
     margin-top: 5%;
 }
 .songDescription-artists{
-    margin: -6% 0% 3% 0%;
-  }
+    margin: -3% 10% 3% 10%;
+    padding: 0 0 6px 0;
+    height: 50px;
+    overflow-y: auto;
+}
 .songDescription-artist, .songDescription-album-name {
     border: none;
     outline: none;
@@ -275,6 +278,9 @@ a:hover, a:active, .songDescription-artist:hover, .songDescription-artist:active
     font-size: 0.92em;
     cursor: pointer;
     text-decoration: underline;
+}
+.songDescription-artist {
+    white-space: nowrap;
 }
 .songDescription-info {
     width: 90%;
