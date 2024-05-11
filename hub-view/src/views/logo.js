@@ -10,7 +10,7 @@ export default function Logo(props) {
   return (
     <div className="logo-container">
         <p className="logo-title" onClick={logoClick}>Song search</p>
-        <p className="logo-subtitle">by <a href="https://adrianslopez.github.io/">Adrian Salgado Lopez</a></p>
+        <p className="logo-subtitle">by <a href="https://www.linkedin.com/in/adriansalgadocsula/">Adrian Salgado Lopez</a></p>
     </div>
   );
 }
