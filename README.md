@@ -1,7 +1,7 @@
 # [Song search](http://songsearch-byadrian.com/)
-Created by [Adrian Salgado Lopez](https://www.linkedin.com/in/adriansalgadocsula/), new grad 2023, with a bachelor's degree in Computer Science.
+Created by [Adrian Salgado Lopez](https://www.linkedin.com/in/adriansalgadocsula/), BSCS at CSULA.
 
-[LinkedIn](https://www.linkedin.com/in/adriansalgadocsula/) | [Github](https://github.com/AdrianSLopez) | [Portfolio](https://adrianslopez.github.io/)
+[LinkedIn](https://www.linkedin.com/in/adriansalgadocsula/) | [Github](https://github.com/AdrianSLopez)
 
 Song search, as the name implies, allows the user to search for a song. Powered by Spotify API, on search input you will receive a list of song results. On every song result you are able to
 view more information, listen to a preview if available, click on the artists and look at their top 10 songs, click on the album name to see all tracks from that album, as well as be able to recommend 
